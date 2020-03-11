@@ -1,0 +1,57 @@
+#!/bin/sh
+# Start/stop the iodine daemon.
+#
+### BEGIN INIT INFO
+# Provides:          iodined
+# Required-Start:    $network $remote_fs $syslog
+# Required-Stop:     $network $remote_fs $syslog
+# Should-Start:      $network $named slapd autofs ypbind nscd nslcd winbind
+# Should-Stop:       $network $named slapd autofs ypbind nscd nslcd winbind
+# Default-Start:     1 2 3 4 5
+# Default-Stop:      0 6
+# Short-Description: Setups up a DNS listening service.
+# Description:       Allows for DNS tunnels to the server.
+### END INIT INFOu
+
+IODINED_CONFIG_FILE="/etc/iodined/iodined.config"
+. $IODINED_CONFIG_FILE
+
+PATH=/bin:/usr/bin:/sbin:/usr/sbin:/usr/local/sbin
+DESC="iodine daemon"
+NAME=iodined
+DAEMON=/usr/local/sbin/iodined
+PIDFILE=/var/run/iodined.pid
+SCRIPTNAME=/etc/init.d/"$NAME"
+#EXTRA_OPTS="-F $PIDFILE -u nobody -m 1186 -i 300 -c -P magicpassword 10.0.0.1 tn.freeupmobile.club"
+
+test -x $DAEMON || exit 0
+
+. /lib/lsb/init-functions
+
+case "$1" in
+start)	log_daemon_msg "Starting DNS tunnel" "iodined"
+        start_daemon -p $PIDFILE $DAEMON $EXTRA_OPTS
+        log_end_msg $?
+	;;
+stop)	log_daemon_msg "Stopping DNS tunnel" "iodined"
+        killproc -p $PIDFILE $DAEMON
+        RETVAL=$?
+        [ $RETVAL -eq 0 ] && [ -e "$PIDFILE" ] && rm -f $PIDFILE
+        log_end_msg $RETVAL
+        ;;
+restart) log_daemon_msg "Restarting DNS tunnel" "iodined" 
+        $0 stop
+        $0 start
+        ;;
+reload|force-reload) log_daemon_msg "Reloading configuration files for DNS tunnel" "iodined"
+	# cron reloads automatically
+        log_end_msg 0
+        ;;
+status)
+        status_of_proc -p $PIDFILE $DAEMON $NAME && exit 0 || exit $?
+        ;;
+*)	log_action_msg "Usage: /etc/init.d/iodined {start|stop|status|restart|reload|force-reload}"
+        exit 2
+        ;;
+esac
+exit 0
