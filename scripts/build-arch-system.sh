@@ -9,9 +9,13 @@
 # 6) make sure all prerequisites are installed for gatsbyjs + react
 # 12) optional - tmpfs ram disks for specified directories such as /var/log /tmp
 # add: pacman -Ss --asexplicit
-
-test:
-jpegoptim
+# omxplayer
+# zathura zathura-cb zathura-djvu zathura-pdf-mupdf zathura-ps
+# git lfs install
+# pacman -S git-lfs
+# 
+#test:
+#jpegoptim
 
 declare -a pacman_packages=()
 declare -a aur_packages=()
@@ -123,7 +127,7 @@ pacman_packages+=(dgen-sdl mednafen snes9x)
 pacman_packages+=(gimp gimp-help-en inkscape)
 
 # Browser packages
-pacman_packages+=(chromium firefox opera otter-browser brave)
+pacman_packages+=(chromium firefox opera otter-browser brave midori)
 
 # Misc Desktop packages
 pacman_packages+=(gparted libreoffice-fresh keepass dia)
@@ -208,7 +212,3 @@ chmod +x /usr/local/bin/youtube-dl
 
 # System setup
 systemctl enable alsa-restore cronie
-omxplayer
-zathura zathura-cb zathura-djvu zathura-pdf-mupdf zathura-ps
-git lfs install
-pacman -S git-lfs
