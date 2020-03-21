@@ -112,9 +112,10 @@ set $mod Mod4
 
 focus_follows_mouse no
 
-bindsym $mod+b exec brave
+#bindsym $mod+b exec brave
 bindsym $mod+c exec chromium
-bindsym $mod+m exec vlc
+bindsym $mod+m exec midori
+bindsym $mod+v exec vlc
 bindsym $mod+k exec keepass
 
 # exit i3 (logs you out of your X session)
