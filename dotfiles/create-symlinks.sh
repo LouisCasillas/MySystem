@@ -6,7 +6,9 @@ find . -type f \( -not -name "*.md" -and -not -name "*.sh" -and -not -name ".git
 	sed -e 's@^./@@g' |
 	while read file; do
 		base_dir="$(dirname "$file")"
-		mkdir -p "~/$base_dir"
+		if [[ "$base_dir" != "." ]]; then
+			mkdir -p ~/$base_dir
+		fi
 
 		ln -s -n -f "$current_dir/$file" ~/$file
 	done
