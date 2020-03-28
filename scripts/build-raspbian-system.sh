@@ -98,7 +98,7 @@ apt_packages+=(solaar)
 apt_packages+=(lightdm xserver-xorg x11-utils x11-server-utils xinit xdg-utils xsel)
 
 # Desktop window manager packages
-apt_packages+=(i3-wm unclutter)
+apt_packages+=(i3-wm unclutter rofi)
 
 # Downloading packages
 apt_packages+=()
