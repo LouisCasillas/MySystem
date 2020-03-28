@@ -64,7 +64,8 @@ export HISTSIZE=100000
 export HISTFILESIZE="$HISTSIZE"
 export EDITOR="vim"
 
-alias mtop='top -o PID,%CPU,%MEM,CMDLINE'
+alias mtop='top -o %MEM'
+alias ctop='top -o %CPU'
 
 for file in ~/.bash_functions_*; do
 	if [[ -f "$file" ]] ; then
