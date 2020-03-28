@@ -2,7 +2,7 @@
 
 current_dir="$(pwd)"
 
-find . -type f \( -not -name "*.md" -and -not -name "*.sh" -and -not -name ".gitconfig" \) |
+find . -type f \( -not -name "*.md" -and -not -name "*.sh" \) |
 	sed -e 's@^./@@g' |
 	while read file; do
 		base_dir="$(dirname "$file")"
