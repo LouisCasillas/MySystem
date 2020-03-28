@@ -1,0 +1,154 @@
+alias rclone="/usr/bin/rclone \
+	--verbose \
+	--progress \
+	--retries=1 \
+	--fast-list \
+	--no-traverse \
+	--transfers=1 \
+	--checkers=1 \
+	--transfers=1 \
+	--drive-use-trash=false \
+	--drive-acknowledge-abuse"
+
+function rls ()
+{
+(
+	dir_name="$(dirname $1/-)/"
+	/usr/bin/rclone -R --files-only --format="sp" lsf GoogleDrive:"$dir_name" \
+			| grep -v -e uploading -e downloading \
+			| sort -rn \
+			| cut -d';' -f2 \
+			| awk -v dir="$dir_name" '{print dir $0}' \
+			| sed -e 's/[/][/]/\//g'
+)
+}
+
+function rlsd ()
+{
+(
+	dir_name="$(dirname $1/-)/"
+	/usr/bin/rclone -R --dirs-only --format="sp" lsf GoogleDrive:"$dir_name" \
+			| grep -v -e uploading -e downloading \
+			| sort -rn \
+			| cut -d';' -f2 \
+			| awk -v dir="$dir_name" '{print dir $0}' \
+			| sed -e 's/[/][/]/\//g'
+)
+}
+
+function rls_count()
+{
+(
+	dir_name="$(dirname $1/-)/"
+	/usr/bin/rclone -R --files-only --format="sp" lsf GoogleDrive:"$dir_name" \
+			| grep -v -e uploading -e downloading \
+			| wc -l \
+			| awk '{print $1}'
+)
+}
+
+function rlsd_count()
+{
+(
+	dir_name="$(dirname $1/-)/"
+	/usr/bin/rclone -R --dirs-only --format="sp" lsf GoogleDrive:"$dir_name" \
+			| grep -v -e uploading -e downloading \
+			| wc -l \
+			| awk '{print $1}'
+)
+}
+
+function rput()
+{
+(
+	echo "$1" | grep -q -e '[/]'
+	if [[ "$?" == "0" ]]; then
+		dir_name="$2/$(dirname $1/-)/"
+	else
+		dir_name="$2/"
+	fi
+
+	dir_name="$(echo $dir_name | sed -e 's/[/][/]/\//g')"
+	
+	if [ -e "$1" ]; then
+		rclone copy "$1" GoogleDrive:"$dir_name" && \
+			rm -rf "$1"
+	else
+		touch "$1"
+		rclone copy "$1" GoogleDrive:"$dir_name"
+		rm "$1"
+	fi
+)
+}
+
+function rputs()
+{
+(
+	while read file; do
+		while true; do
+			echo "Trying to upload: $file"
+			drive_disk_usage="$(/usr/bin/rclone size GoogleDrive:/ --json | jshon -e bytes)"
+			drive_disk_remaining=$(( 15000000000 - $drive_disk_usage ))
+			file_size="$(stat --format="%s" "$file")"
+
+			if [[ "$file_size" < "$drive_disk_remaining" ]]; then
+				dir_name="$(dirname "$file")"
+				rput "$file" "$dir_name" && \ 
+					echo -e "Done.\n" && \
+					break
+			else
+				echo -e "Drive full... sleeping..."
+				sleep 1m
+			fi
+		done
+	done < <(find "$1" -type f)
+
+	find . -type d -empty -delete
+)
+}
+
+function rget()
+{
+( 
+	i=1
+	total_files="$(rls_count "$1")"
+	while read file; do
+		out_dir_prefix=""
+
+		if [[ ! -z "$2" ]]; then
+			out_dir_prefix="$2/"
+			echo '1'
+		else
+			out_dir="$out_dir_prefix$(dirname "$file" | sed -e 's/^\///')"
+			echo '2'
+		fi
+
+		echo -e "\n[$((i++))/$total_files] Trying to download:\nGoogleDrive:$file\n=>\n$(pwd)/$out_dir/\n"
+
+		rclone copy GoogleDrive:"$file" "$out_dir" && \
+			rclone delete GoogleDrive:"$file"
+	done < <(rls "$1" | shuf) 
+)
+}
+
+function rred()
+{
+(
+	i=1
+	total_dirs="$(rlsd_count)"
+	while read dir; do
+		echo -e "\n[$((i++))/$total_dirs] Looking at dir:\nGoogleDrive:$dir\n"
+
+		dir_disk_usage="$(/usr/bin/rclone size GoogleDrive:/"$dir" --json | jshon -e bytes)"
+		if [[ "$dir_disk_usage" == "0" ]]; then
+			echo -e "\n[$i/$total_dirs] Deleting empty dir:\nGoogleDrive:$dir\n"
+			rclone purge GoogleDrive:/"$dir"
+		else
+			echo -e "\n[$i/$total_dirs] Dir not empty:\nGoogleDrive:$dir\n"
+		fi
+
+	done < <(rlsd | tac)
+)
+}
+
+

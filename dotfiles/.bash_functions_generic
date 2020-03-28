@@ -1,0 +1,22 @@
+function adbprm()
+{ 
+(
+	adb pull "$1" && \
+		adb shell "rm -rf $1/*"
+)
+}
+
+function xpid()
+{
+(
+	xprop | grep PID | awk '{print $NF}'
+)
+}
+
+function ded()
+{
+(
+	find . -type d -empty -delete
+)
+}
+
