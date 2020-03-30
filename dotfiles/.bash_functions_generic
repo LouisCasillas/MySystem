@@ -1,11 +1,3 @@
-function adbprm()
-{ 
-(
-	adb pull "$1" && \
-		adb shell "rm -rf $1/*"
-)
-}
-
 function xpid()
 {
 (
@@ -20,3 +12,9 @@ function ded()
 )
 }
 
+function ds()
+{
+(
+	du -hs * | sort -h
+)
+}
