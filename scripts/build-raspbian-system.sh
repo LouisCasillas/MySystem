@@ -70,6 +70,9 @@ apt_packages+=(mpv ffmpeg alsa-utils minidlna moc omxplayer)
 # AWS tool packages
 apt_packages+=()
 
+# Bluetooth tool packages
+apt_packages+=(bluez)
+
 # Wifi tool packages
 apt_packages+=(wpasupplicant wavemon hostapd)
 
