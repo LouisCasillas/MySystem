@@ -22,6 +22,6 @@
 # 
 # m h  dom mon dow   command
 #* * * * * touch ~/cron-ran
-*/10 8-20 * * * /usr/bin/mpv ~/system-sounds/gong.mp3 && /usr/bin/zenity --info --title="Exercise!" --text="Do 5 burpees" --display=:0.0
+*/10 8-20 * * * /usr/local/bin/exercise-popup.sh
 
 00 21 * * * /usr/bin/mpv ~/system-sounds/gong.mp3 && /usr/bin/zenity --info --title="Time for bed!" --text="Get ready for bed" --display=:0.0
