@@ -126,9 +126,9 @@ bindsym $mod+l exec i3lock --no-unlock-indicator --color=000000 --ignore-empty-p
 
 new_window pixel 0
 
-bindsym XF86AudioRaiseVolume exec --no-startup-id amixer set PCM 10%+
-bindsym XF86AudioLowerVolume exec --no-startup-id amixer set PCM 10%-
-bindsym XF86AudioMute exec --no-startup-id amixer set PCM 100%-
+bindsym XF86AudioRaiseVolume exec --no-startup-id amixer set PCM toggle
+bindsym XF86AudioLowerVolume exec --no-startup-id amixer set PCM 500+
+bindsym XF86AudioMute exec --no-startup-id amixer set PCM 500-
 
 exec unclutter --timeout 2 --jitter 5 --ignore-scrolling --fork 
 exec i3-sensible-terminal
