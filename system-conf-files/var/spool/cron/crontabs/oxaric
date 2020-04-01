@@ -24,4 +24,4 @@
 #* * * * * touch ~/cron-ran
 */10 * * * * /usr/bin/mpv ~/system-sounds/gong.mp3 && /usr/bin/zenity --info --title="Exercise!" --text="Do 5 burpees" --display=:0.0
 
-40 21 * * * /usr/bin/mpv ~/system-sounds/gong.mp3 && /usr/bin/zenity --info --title="Time for bed!" --text="Get ready for bed" --display=:0.0
+00 21 * * * /usr/bin/mpv ~/system-sounds/gong.mp3 && /usr/bin/zenity --info --title="Time for bed!" --text="Get ready for bed" --display=:0.0
