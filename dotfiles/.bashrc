@@ -68,6 +68,8 @@ alias mtop='top -d 1 -o %MEM'
 alias ctop='top -d 1 -o %CPU'
 
 alias fd='sudo fdisk -l'
+alias m='sudo mount'
+alias u='sudo umount'
 
 function gc()
 {
