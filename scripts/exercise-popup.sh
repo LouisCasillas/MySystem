@@ -1,6 +1,7 @@
 #!/bin/bash
 
 popup_program="/usr/bin/zenity"
+popup_timeout="30"
 
 play_sound=1
 sound_program="/usr/bin/mpv --really-quiet"
@@ -34,7 +35,7 @@ else
 	total=0
 fi
 
-$popup_program --no-wrap --timeout=15 --question --ok-label "Did them!" --title="Exercise!" --text="Do $exercise_count $exercise!\nTotal: $total" --display=:0.0
+$popup_program --no-wrap --timeout="$popup_timeout" --question --ok-label "Did them!" --title="Exercise!" --text="Do $exercise_count $exercise!\nTotal: $total" --display=:0.0
 
 if [ $? -eq 0 ]; then
 	total=$(( total + $exercise_count ))
