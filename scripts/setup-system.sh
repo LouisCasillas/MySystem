@@ -47,18 +47,21 @@ echo 'US/Hawaii' > /etc/timezone
 echo 'WindowsP3249P' > /etc/hostname
 echo '127.0.0.1 WindowsP3249P' > /etc/hosts
 
-ln -f -s "$(pwd)/../system-sounds" "$HOME"
+ln -f -s "$(pwd)/../system-sounds/" "$HOME/.system-sounds"
 
 cp "$(pwd)/../system-conf-files/var/spool/cron/crontabs/oxaric" /var/spool/cron/crontabs/
 chown -h oxaric:crontab /var/spool/cron/crontabs/oxaric
 
 ln -f -s "$(pwd)/../system-conf-files/etc/dnsmasq.conf" /etc/
 
-ln -f -s "$(pwd)/exercises/exercise_list.txt" "$HOME/.exercise_list.txt"
+mkdir -p "$HOME/.exercise/"
+
+ln -f -s "$(pwd)/exercises/exercise_list.txt" "$HOME/.exercise/exercise_list.txt"
+
+ln -f -s "$(pwd)/exercises/exercise_counts/" "$HOME/.exercise/exercise_counts"
 
 ln -f -s "$(pwd)/exercise-popup.sh" /usr/local/bin/
 
-ln -f -s "$(pwd)/exercise_counts" "$HOME/.exercise_counts"
 
 #alsa-restore 
 declare -a services_to_enable=(cron hciuart bluetooth)
