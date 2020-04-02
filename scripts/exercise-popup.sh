@@ -34,7 +34,7 @@ else
 	total=0
 fi
 
-$popup_program --no-wrap --question --ok-label "Did them!" --title="Exercise!" --text="Do $exercise_count $exercise!\nTotal: $total" --display=:0.0
+$popup_program --no-wrap --timeout=15 --question --ok-label "Did them!" --title="Exercise!" --text="Do $exercise_count $exercise!\nTotal: $total" --display=:0.0
 
 if [ $? -eq 0 ]; then
 	total=$(( total + $exercise_count ))
