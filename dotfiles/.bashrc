@@ -69,6 +69,15 @@ alias ctop='top -d 1 -o %CPU'
 
 alias fd='sudo fdisk -l'
 
+function gc()
+{
+	git commit -m "$1"
+}
+
+alias ga='git add'
+alias gd='git diff'
+alias gs='git status'
+
 # fixes for common typing mistakes
 alias vm='mv'
 alias sl='ls'
