@@ -183,4 +183,4 @@ chmod +x /usr/local/bin/youtube-dl
 # npm install
 # other?
 
-bash setup-system-files.sh
+bash setup-system.sh
