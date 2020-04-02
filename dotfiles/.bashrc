@@ -67,6 +67,8 @@ export EDITOR="vim"
 alias mtop='top -d 1 -o %MEM'
 alias ctop='top -d 1 -o %CPU'
 
+alias fd='sudo fdisk -l'
+
 # fixes for common typing mistakes
 alias vm='mv'
 alias sl='ls'
