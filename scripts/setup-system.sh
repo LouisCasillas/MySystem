@@ -58,6 +58,8 @@ ln -f -s "$(pwd)/exercises/exercise_list.txt" "$HOME/.exercise_list.txt"
 
 ln -f -s "$(pwd)/exercise-popup.sh" /usr/local/bin/
 
+ln -f -s "$(pwd)/exercise_counts" "$HOME/.exercise_counts"
+
 #alsa-restore 
 declare -a services_to_enable=(cron hciuart bluetooth)
 declare -a services_to_disable=(avahi-daemon lvm2-monitor lm-sensors udisks2 rpi-eeprom-update ModemManager raspi-config sysstat keyboard-setup)
