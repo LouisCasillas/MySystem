@@ -183,17 +183,4 @@ chmod +x /usr/local/bin/youtube-dl
 # npm install
 # other?
 
-# System setup
-systemctl enable alsa-restore cron
-
-#setupcon
-# echo 'en_US.UTF-8' >> /etc/localgen
-# sudo localegen
-
-# tmpfs for /tmp and /var/log
-
-echo 'en_US.UTF-8' > /etc/default/locale
-
-dpkg-reconfigure locales
-
-ldconfig
+bash setup-system-files.sh
