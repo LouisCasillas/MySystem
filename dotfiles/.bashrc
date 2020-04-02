@@ -76,6 +76,8 @@ function gc()
 
 alias ga='git add'
 alias gd='git diff'
+alias gl='git log'
+alias gp='git push'
 alias gs='git status'
 
 # fixes for common typing mistakes
