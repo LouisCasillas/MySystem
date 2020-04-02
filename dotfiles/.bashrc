@@ -76,6 +76,19 @@ function gc()
 	git commit -m "$1"
 }
 
+function mcd()
+{
+	dir="$1"
+
+	pushd .
+
+	if [ ! -d "$dir" ]; then
+		mkdir -p "$dir"
+	fi
+
+	cd "$dir"
+}
+
 alias ga='git add'
 alias gd='git diff'
 alias gl='git log'
