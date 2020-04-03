@@ -93,7 +93,7 @@ function mcd()
 alias ga='git add'
 alias gd='git diff'
 alias gl='git log'
-alias gm='git mv'
+alias gmv='git mv'
 alias gp='git push'
 alias gr='git reset'
 alias gs='git status'
