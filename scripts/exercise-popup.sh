@@ -35,6 +35,10 @@ else
 	total=0
 fi
 
+$popup_program --no-wrap --timeout="$popup_timeout" --info --title="Exercise!" --text="Time to exercise!" --display=:0.0
+
+sleep 2s
+
 $popup_program --no-wrap --timeout="$popup_timeout" --question --ok-label "Did them!" --title="Exercise!" --text="Do $exercise_count $exercise!\nTotal: $total" --display=:0.0
 
 if [ $? -eq 0 ]; then
