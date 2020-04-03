@@ -6,7 +6,7 @@ if [[ -z "$total_days" ]]; then
 	total_days="6"
 fi
 
-exercise_count_total_dir="$HOME/.exercise/exercise_counts"
+exercise_count_total_dir="$HOME/.exercise/exercise-counts"
 
 find -L "$exercise_count_total_dir" -type f |
 	while read exercise_count_total_file; do

@@ -7,7 +7,7 @@ play_sound=1
 sound_program="/usr/bin/mpv --really-quiet"
 sound_file="$HOME/.system-sounds/gong.mp3"
 
-exercise_list="$HOME/.exercise/exercise_list.txt"
+exercise_list="$HOME/.exercise/exercise-list.txt"
 exercise="burpee"
 
 if [ -f "$exercise_list" ]; then
@@ -17,7 +17,7 @@ fi
 exercise_max_count=8
 exercise_min_count=3
 exercise_count=$(( ($RANDOM % $exercise_max_count) + $exercise_min_count ))
-exercise_count_total_dir="$HOME/.exercise/exercise_counts"
+exercise_count_total_dir="$HOME/.exercise/exercise-counts"
 exercise_count_total_file="$exercise_count_total_dir/$(echo "$exercise" | sed -e 's/ /-/g')-total.txt"
 
 

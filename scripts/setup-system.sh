@@ -56,9 +56,9 @@ ln -f -s "$(pwd)/../system-conf-files/etc/dnsmasq.conf" /etc/
 
 mkdir -p "$HOME/.exercise/"
 
-ln -f -s "$(pwd)/exercises/exercise_list.txt" "$HOME/.exercise/exercise_list.txt"
+ln -f -s "$(pwd)/exercises/exercise-list.txt" "$HOME/.exercise/exercise-list.txt"
 
-ln -f -s "$(pwd)/exercises/exercise_counts/" "$HOME/.exercise/exercise_counts"
+ln -f -s "$(pwd)/exercises/exercise-counts/" "$HOME/.exercise/exercise-counts"
 
 chmod +x exercise-popup.sh
 chmod +x exercise-reset-total.sh
