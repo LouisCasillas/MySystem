@@ -94,6 +94,7 @@ alias ga='git add'
 alias gd='git diff'
 alias gl='git log'
 alias gp='git push'
+alias gr='git reset'
 alias gs='git status'
 
 # fixes for common typing mistakes
