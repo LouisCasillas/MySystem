@@ -28,11 +28,11 @@ if [ $play_sound -eq 1 ]; then
 	$sound_program "$sound_file"
 fi
 
-$popup_program --no-wrap --info --title="Exercise!" --text="Time to exercise!" --display=:0.0
+$popup_program --no-wrap --info --title="Exercise!" --text="Time to exercise!" --display=:0.0 &>/dev/null
 
 echo "Do $exercise_count $exercise!"
 
-$popup_program --no-wrap --timeout="$popup_timeout" --question --ok-label "Did them!" --title="Exercise!" --text="Do $exercise_count $exercise!" --display=:0.0
+$popup_program --no-wrap --timeout="$popup_timeout" --question --ok-label "Did them!" --title="Exercise!" --text="Do $exercise_count $exercise!" --display=:0.0 &>/dev/null
 
 if [ $? -eq 0 ]; then
 	if [ -f "$exercise_count_total_file" ]; then
