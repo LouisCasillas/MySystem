@@ -98,6 +98,8 @@ alias gp='git push'
 alias gr='git reset'
 alias gs='git status'
 
+alias df='df -h'
+
 # fixes for common typing mistakes
 alias vm='mv'
 alias sl='ls'
