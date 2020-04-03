@@ -30,7 +30,7 @@ if [ $play_sound -eq 1 ]; then
 fi
 
 if [ -f "$exercise_count_total_file" ]; then
-	total="$(cat "$exercise_count_total_file")"
+	total="$(head -n 1 "$exercise_count_total_file")"
 else
 	total=0
 fi
@@ -43,5 +43,6 @@ $popup_program --no-wrap --timeout="$popup_timeout" --question --ok-label "Did t
 
 if [ $? -eq 0 ]; then
 	total=$(( total + $exercise_count ))
-	echo "$total" > "$exercise_count_total_file"
+	(echo "$total"; tail -n+2 "$exercise_count_total_file") > "$exercise_count_total_file.tmp"
+	mv "$exercise_count_total_file.tmp" "$exercise_count_total_file"
 fi
