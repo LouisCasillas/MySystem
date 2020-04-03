@@ -35,7 +35,7 @@ else
 	total=0
 fi
 
-$popup_program --no-wrap --timeout="$popup_timeout" --info --title="Exercise!" --text="Time to exercise!" --display=:0.0
+$popup_program --no-wrap --info --title="Exercise!" --text="Time to exercise!" --display=:0.0
 
 sleep 2s
 
