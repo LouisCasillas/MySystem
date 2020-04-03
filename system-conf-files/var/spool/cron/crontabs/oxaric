@@ -19,9 +19,18 @@
 # 0 5 * * 1 tar -zcf /var/backups/home.tgz /home/
 # 
 # For more information see the manual pages of crontab(5) and cron(8)
-# 
+#
+#  +---------------- minute (0 - 59)
+# |  +------------- hour (0 - 23)
+# |  |  +---------- day of month (1 - 31)
+# |  |  |  +------- month (1 - 12)
+# |  |  |  |  +---- day of week (0 - 6) (Sunday=0 or 7)
+# |  |  |  |  |
+# *  *  *  *  *  command to be executed
 # m h  dom mon dow   command
 #* * * * * touch ~/cron-ran
 */10 8-20 * * * /usr/local/bin/exercise-popup.sh
+5 12 * * *  cd ~/.exercise/exercise_counts/ && git add * && git commit -m "Updating exercise count" && git push
+55 23 * * 7  /usr/local/bin/exercise-reset-total.sh
 
 00 21 * * * /usr/bin/mpv ~/system-sounds/gong.mp3 && /usr/bin/zenity --info --title="Time for bed!" --text="Get ready for bed" --display=:0.0
