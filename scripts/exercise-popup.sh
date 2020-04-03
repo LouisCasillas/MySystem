@@ -18,7 +18,7 @@ exercise_max_count=8
 exercise_min_count=3
 exercise_count=$(( ($RANDOM % $exercise_max_count) + $exercise_min_count ))
 exercise_count_total_dir="$HOME/.exercise/exercise_counts"
-exercise_count_total_file="$exercise_count_total_dir/$exercise-total.txt"
+exercise_count_total_file="$exercise_count_total_dir/$(echo "$exercise" | sed -e 's/ /-/g')-total.txt"
 
 
 if [ ! -d "$exercise_count_total_dir" ]; then
