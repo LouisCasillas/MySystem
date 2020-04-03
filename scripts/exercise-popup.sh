@@ -30,7 +30,7 @@ fi
 
 $popup_program --no-wrap --info --title="Exercise!" --text="Time to exercise!" --display=:0.0
 
-sleep 2s
+echo "Do $exercise_count $exercise!"
 
 $popup_program --no-wrap --timeout="$popup_timeout" --question --ok-label "Did them!" --title="Exercise!" --text="Do $exercise_count $exercise!" --display=:0.0
 
