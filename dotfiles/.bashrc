@@ -90,6 +90,20 @@ function mcd()
 	cd "$dir"
 }
 
+function mini-workout()
+{
+	sets="$1"
+
+	if [[ -z "$sets" ]]; then
+		sets=10
+	fi
+
+	for i in $(seq "$sets"); do
+		exercise-popup
+	done
+
+}
+
 alias ga='git add'
 alias gd='git diff'
 alias gl='git log'
