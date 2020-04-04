@@ -1,7 +1,7 @@
 #!/bin/bash
 
 popup_program="/usr/bin/zenity"
-popup_timeout="30"
+popup_timeout="0"
 
 play_sound=1
 sound_program="/usr/bin/mpv --really-quiet"
