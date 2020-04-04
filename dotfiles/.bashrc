@@ -99,9 +99,9 @@ function mini-workout()
 	fi
 
 	for i in $(seq "$sets"); do
+		echo "Exercise $i of $sets"
 		exercise-popup
 	done
-
 }
 
 alias ga='git add'
