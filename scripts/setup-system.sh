@@ -62,8 +62,8 @@ ln -f -s "$(pwd)/exercises/exercise-counts/" "$HOME/.exercise/exercise-counts"
 
 chmod +x exercise-popup.sh
 chmod +x exercise-reset-total.sh
-ln -f -s "$(pwd)/exercise-popup.sh" /usr/local/bin/
-ln -f -s "$(pwd)/exercise-reset-total.sh" /usr/local/bin/
+ln -f -s "$(pwd)/exercise-popup.sh" /usr/local/bin/exercise-popup
+ln -f -s "$(pwd)/exercise-reset-total.sh" /usr/local/bin/exercise-reset-total
 
 #alsa-restore 
 declare -a services_to_enable=(cron hciuart bluetooth)
