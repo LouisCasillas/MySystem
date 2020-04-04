@@ -24,7 +24,7 @@ if [ ! -d "$exercise_count_total_dir" ]; then
 	mkdir -p "$exercise_count_total_dir"
 fi
 
-if [ $play_sound -eq 1 ]; then
+if [[ $play_sound -eq 1 && ! -f "$HOME/.exercise/quiet" ]]; then
 	$sound_program "$sound_file"
 fi
 
