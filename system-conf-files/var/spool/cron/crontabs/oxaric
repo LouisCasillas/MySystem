@@ -30,7 +30,7 @@
 # m h  dom mon dow   command
 #* * * * * touch ~/cron-ran
 */10 8-19 * * * /usr/local/bin/exercise-popup
-5 12 * * *  cd ~/.exercise/exercise-counts/ && git add * && git commit -m "Updating exercise count" && git push
+5 8-20 * * *  cd ~/.exercise/exercise-counts/ && git add * && git commit -m "Auto-updating exercise count" && git push
 55 23 * * 7  /usr/local/bin/exercise-reset-total
 
-00 21 * * * /usr/bin/mpv ~/system-sounds/gong.mp3 && /usr/bin/zenity --info --title="Time for bed!" --text="Get ready for bed" --display=:0.0
+5 8-20 * * *  cd ~/notes/ && git add -A && git commit -m "Auto-updating notes" && git push
