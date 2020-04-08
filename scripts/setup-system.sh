@@ -4,10 +4,8 @@ grep -v -q -e '^en_US.UTF-8 UTF-8$' /etc/locale.gen
 if [ $? -eq 0 ]; then
 	echo 'en_US.UTF-8 UTF-8' >> /etc/locale.gen
 fi
-grep -v -q -e '^en_US.UTF-8$' /etc/default/locale
-if [ $? -eq 0 ]; then
-	echo 'en_US.UTF-8' > /etc/default/locale
-fi
+
+echo 'LANG=en_US.UTF-8' > /etc/default/locale
 
 cat << EOF /etc/default/keyboard
 # KEYBOARD CONFIGURATION FILE
