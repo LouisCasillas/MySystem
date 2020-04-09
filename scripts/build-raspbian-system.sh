@@ -32,7 +32,7 @@ declare -a apt_packages=()
 
 # *** Command-line packages
 # Core utility packages
-apt_packages+=(tmux sudo sed man-db bash-completion findutils file less psmisc fakeroot fakechroot inotify-tools tree busybox lsof gawk bc coreutils util-linux kmod grep cron)
+apt_packages+=(tmux sudo sed man-db bash-completion findutils file less psmisc fakeroot fakechroot inotify-tools tree busybox lsof gawk bc coreutils util-linux kmod grep cron anacron)
 
 # Misc utility packages
 apt_packages+=(kpcli asciinema ncdu lm-sensors discount hexedit terminator megadown units)
