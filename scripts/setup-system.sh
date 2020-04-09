@@ -58,13 +58,15 @@ ln -f -s "$(pwd)/exercises/exercise-list.txt" "$HOME/.exercise/exercise-list.txt
 
 ln -f -s "$(pwd)/exercises/exercise-counts/" "$HOME/.exercise/exercise-counts"
 
+ln -f -s "$(pwd)/../system-conf-files/etc/anacrontab" /etc/
+
 chmod +x exercise-popup.sh
 chmod +x exercise-reset-total.sh
 ln -f -s "$(pwd)/exercise-popup.sh" /usr/local/bin/exercise-popup
 ln -f -s "$(pwd)/exercise-reset-total.sh" /usr/local/bin/exercise-reset-total
 
 #alsa-restore 
-declare -a services_to_enable=(cron hciuart bluetooth)
+declare -a services_to_enable=(anacron cron hciuart bluetooth)
 declare -a services_to_disable=(avahi-daemon lvm2-monitor lm-sensors udisks2 rpi-eeprom-update ModemManager raspi-config sysstat keyboard-setup)
 
 for service in "${services_to_enable[@]}"
