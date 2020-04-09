@@ -13,7 +13,7 @@ if [ ! -f "$HOME/.exercise/stop" ]; then
 	exercise="burpee"
 
 	if [ -f "$exercise_list" ]; then
-		exercise="$(shuf "$exercise_list" | head -n1)"
+		exercise="$(sed -e 's/#.*$//g' -e 's/^\s*$//g' "$exercise_list" | sed '/^$/d' | shuf | head -n1)"
 	fi
 
 	exercise_max_count=8
