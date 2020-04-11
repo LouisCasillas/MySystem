@@ -3,7 +3,6 @@
 if [ ! -f "$HOME/.exercise/stop" ]; then
 
 	popup_program="/usr/bin/zenity"
-	popup_timeout="0"
 
 	play_sound=1
 	sound_program="/usr/bin/mpv --really-quiet"
@@ -16,8 +15,17 @@ if [ ! -f "$HOME/.exercise/stop" ]; then
 		exercise="$(sed -e 's/#.*$//g' -e 's/^\s*$//g' "$exercise_list" | sed '/^$/d' | shuf | head -n1)"
 	fi
 
-	exercise_max_count=8
 	exercise_min_count=3
+	exercise_max_count=8
+
+	if [ -f "$HOME/.exercise/min" ]; then
+		exercise_min_count="$(cat "$HOME/.exercise/min")"
+	fi
+
+	if [ -f "$HOME/.exercise/max" ]; then
+		exercise_max_count="$(cat "$HOME/.exercise/max")"
+	fi
+
 	exercise_count=$(( ($RANDOM % $exercise_max_count) + $exercise_min_count ))
 	exercise_count_total_dir="$HOME/.exercise/exercise-counts"
 	exercise_count_total_file="$exercise_count_total_dir/$(echo "$exercise" | sed -e 's/ /-/g')-total.txt"
@@ -34,7 +42,7 @@ if [ ! -f "$HOME/.exercise/stop" ]; then
 
 	echo "Do $exercise_count $exercise!"
 
-	$popup_program --no-wrap --timeout="$popup_timeout" --question --ok-label "Did them!" --title="Exercise!" --text="Do $exercise_count $exercise!" --display=:0.0 &>/dev/null
+	$popup_program --no-wrap --question --ok-label "Did them!" --title="Exercise!" --text="Do $exercise_count $exercise!" --display=:0.0 &>/dev/null
 
 	if [ $? -eq 0 ]; then
 		if [ -f "$exercise_count_total_file" ]; then
