@@ -29,7 +29,7 @@
 # *  *  *  *  *  command to be executed
 # m h  dom mon dow   command
 #* * * * * touch ~/cron-ran
-*/10 8-19 * * * /usr/local/bin/exercise-popup
+*/15 8-19 * * * /usr/local/bin/exercise-popup
 5 8-20 * * *  cd ~/.exercise/exercise-counts/ && git add * && git commit -m "Auto-updating exercise count" && git push
 55 23 * * 7  /usr/local/bin/exercise-reset-total
 
