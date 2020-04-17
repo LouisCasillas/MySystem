@@ -109,6 +109,7 @@ alias gd='git diff'
 alias gl='git log'
 alias gmv='git mv'
 alias gp='git push'
+alias gpl='git pull'
 alias gr='git reset'
 alias gs='git status'
 
