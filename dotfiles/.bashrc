@@ -116,6 +116,7 @@ alias gs='git status'
 alias df='df -h'
 
 # fixes for common typing mistakes
+alias cd..='cd ..'
 alias vm='mv'
 alias sl='ls'
 
