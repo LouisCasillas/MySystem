@@ -109,6 +109,7 @@ alias gd='git diff'
 alias gl='git log'
 alias gmv='git mv'
 alias gp='git push'
+alias gpl='git pull'
 alias gr='git reset'
 alias gs='git status'
 alias gu='git config --get remote.origin.url'
@@ -116,6 +117,7 @@ alias gu='git config --get remote.origin.url'
 alias df='df -h'
 
 # fixes for common typing mistakes
+alias cd..='cd ..'
 alias vm='mv'
 alias sl='ls'
 
