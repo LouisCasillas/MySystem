@@ -18,3 +18,21 @@ function ds()
 	du -hs * | sort -h
 )
 }
+
+function sort-by-alpha()
+{
+(
+	ls | \
+		cut -c1 | \
+		sort -u | \
+		grep -E -e "[[:alpha:]]" | \
+		while read line; do
+			mkdir -p "$line"
+			mv "$line"* "$line/"
+		done
+	
+	mkdir -p misc
+
+	find . -maxdepth 1 -type f -exec mv "{}" misc/ \;
+)
+}
