@@ -111,6 +111,7 @@ alias gmv='git mv'
 alias gp='git push'
 alias gr='git reset'
 alias gs='git status'
+alias gu='git config --get remote.origin.url'
 
 alias df='df -h'
 
