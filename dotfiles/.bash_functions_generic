@@ -36,3 +36,25 @@ function sort-by-alpha()
 	find . -maxdepth 1 -type f -exec mv "{}" misc/ \;
 )
 }
+
+function randnum()
+{
+(
+	first_num="$1"
+	second_num="$2"
+
+	if [[ -z "$first_num" ]]; then
+		echo "$0: <start number> <optional end number>"
+		exit 1
+	fi
+
+	if [[ -z "$second_num" ]]; then
+		second_num="$first_num"
+		first_num="0"
+	else
+		second_num="$(( $second_num - $first_num ))"
+	fi
+
+	echo "$(( ($RANDOM % ($second_num + 1)) + $first_num ))"
+)
+}
