@@ -4,6 +4,7 @@ function gc()
 }
 
 alias ga='git add'
+alias gap='git add --patch'
 alias gd='git diff'
 alias gl='git log'
 alias gmv='git mv'
