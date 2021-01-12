@@ -72,11 +72,6 @@ alias m='sudo mount'
 alias u='sudo umount'
 alias d='sudo du -hs'
 
-function gc()
-{
-	git commit -m "$1"
-}
-
 function mcd()
 {
 	dir="$1"
@@ -103,16 +98,6 @@ function mini-workout()
 		exercise-popup
 	done
 }
-
-alias ga='git add'
-alias gd='git diff'
-alias gl='git log'
-alias gmv='git mv'
-alias gp='git push'
-alias gpl='git pull'
-alias gr='git reset'
-alias gs='git status'
-alias gu='git config --get remote.origin.url'
 
 alias df='df -h'
 
