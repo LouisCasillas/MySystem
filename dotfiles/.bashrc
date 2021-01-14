@@ -42,7 +42,7 @@ alias grep='grep --colour=auto'
 alias egrep='egrep --colour=auto'
 alias fgrep='fgrep --colour=auto'
 
-PS1='\[\033[01;31m\][\h\[\033[01;36m\] $(pwd)\[\033[01;31m\]]\$\[\033[00m\] '
+PS1='\[\033[01;31m\][\u@\h\[\033[01;36m\] $(pwd)\[\033[01;31m\]]\$\[\033[00m\] '
 
 complete -cf sudo
 

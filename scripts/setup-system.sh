@@ -20,7 +20,7 @@ XKBOPTIONS=""
 BACKSPACE="guess"
 EOF
 
-setupcon --force
+#setupcon --force
 locale-gen
 
 # tmpfs for /tmp and /var/log
@@ -42,8 +42,8 @@ ln -f -s /usr/share/zoneinfo/US/Hawaii /etc/localtime
 
 echo 'US/Hawaii' > /etc/timezone
 
-echo 'WindowsP3249P' > /etc/hostname
-echo '127.0.0.1 WindowsP3249P' > /etc/hosts
+#echo 'WindowsP3249P' > /etc/hostname
+#echo '127.0.0.1 WindowsP3249P' > /etc/hosts
 
 ln -f -s "$(pwd)/../system-sounds/" "$HOME/.system-sounds"
 
