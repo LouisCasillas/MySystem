@@ -106,6 +106,9 @@ alias cd..='cd ..'
 alias vm='mv'
 alias sl='ls'
 
+alias rsrm='rsync --remove-source-files --recursive --verbose --ipv4 --progress --partial --checksum --stats --human-readable --append-verify'
+alias rs='rsync --recursive --verbose --ipv4 --progress --partial --checksum --stats --human-readable --append-verify'
+
 for file in ~/.bash_functions_*; do
 	if [[ -f "$file" ]] ; then
 		. "$file"
