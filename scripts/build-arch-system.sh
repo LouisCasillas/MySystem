@@ -30,7 +30,7 @@ pacman_packages+=(base base-devel multilib-devel)
 
 # *** Command-line packages
 # Core utility packages
-pacman_packages+=(tmux sudo sed man-db man-pages bash-completion findutils file less psmisc fakeroot fakechroot inotify-tools tree busybox lsof gawk bc coreutils which util-linux procps-ng kmod grep cronie trizen)
+pacman_packages+=(tmux sudo sed man-db man-pages bash-completion findutils file less psmisc fakeroot fakechroot inotify-tools tree busybox lsof gawk bc coreutils which util-linux procps-ng kmod grep cronie)
 
 # Misc utility packages
 pacman_packages+=(asciinema ncdu lm_sensors discount hexedit)
