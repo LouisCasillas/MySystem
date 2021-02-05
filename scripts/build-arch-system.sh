@@ -20,7 +20,7 @@
 declare -a pacman_packages=()
 declare -a aur_packages=()
 
-aur_packages+=(kiwix-tools arch-wiki-man kpcli tor-browser)
+#aur_packages+=(kiwix-tools kpcli tor-browser)
 
 # Groups to install
 pacman_packages+=(base base-devel multilib-devel)
@@ -88,7 +88,10 @@ pacman_packages+=()
 
 # AMD specific packages
 #pacman_packages+=(linux-firmware amd-ucode mhwd-amdgpu amdvlk lib32-amdvlk catalyst-server catalyst-utils catalyst-video opencl-catalyst lib32-catalyst-utils lib32-opencl-catalyst)
-pacman_packages+=(amd-ucode amdvlk lib32-amdvlk opencl-mesa mesa lib32-mesa xf86-video-amdgpu vulkan-radeon lib32-vulkan-radeon lib32-libva-mesa-driver libvdpau-va-gl)
+#pacman_packages+=(amd-ucode amdvlk lib32-amdvlk opencl-mesa mesa lib32-mesa xf86-video-amdgpu vulkan-radeon lib32-vulkan-radeon lib32-libva-mesa-driver libvdpau-va-gl)
+
+# NVIDIA specific packages
+pacman_packages+=(mhwd-nvidia nvidia-utils)
 
 # Virtualization tools
 pacman_packages+=(qemu)
@@ -98,7 +101,7 @@ pacman_packages+=(imagemagick pngcrush scrot)
 
 # My computer device packages
 # solaar - for logitech k830 keyboard - logitech unifying receiver
-pacman_packages+=(solaar)
+#pacman_packages+=(solaar)
 
 # *** Desktop/Visual Packages
 
@@ -106,13 +109,13 @@ pacman_packages+=(solaar)
 pacman_packages+=(xorg-xkill xorg-server xorg-xset xorg-xprop xdg-utils xorg-xinit xorg-xrandr xorg-xauth xorg-xmodmap xorg-xgamma xorg-xinput xorg-xlsclients xorg-xrefresh xsel xorg-xmessage)
 
 # Desktop window manager packages
-pacman_packages+=(i3-wm unclutter termite)
+pacman_packages+=(i3-wm unclutter rofi)
 
 # Downloading packages
 pacman_packages+=()
 
 # Multimedia packages
-pacman_packages+=(vlc flashplugin xviewer xpdf mcomix calibre)
+pacman_packages+=(vlc xpdf atril calibre)
 
 # Development packages
 pacman_packages+=()
@@ -121,7 +124,7 @@ pacman_packages+=()
 pacman_packages+=()
 
 # Game packages
-pacman_packages+=(dgen-sdl mednafen snes9x)
+#pacman_packages+=(dgen-sdl mednafen snes9x)
 
 # Imaging packages
 pacman_packages+=(gimp gimp-help-en inkscape)
@@ -130,7 +133,7 @@ pacman_packages+=(gimp gimp-help-en inkscape)
 pacman_packages+=(chromium firefox opera otter-browser brave midori)
 
 # Misc Desktop packages
-pacman_packages+=(gparted libreoffice-fresh keepass dia)
+pacman_packages+=(gparted libreoffice-fresh keepassxc dia)
 
 # *** install packages
 
@@ -140,7 +143,7 @@ pacman -Syu
 read -r -p 'Install all packages together? (y/n) ' all_together
 
 if [[ "$all_together" == "y" ]]; then
-  pacman -S "${pacman_packages[@]}"
+  pamac install "${pacman_packages[@]}"
 else
   read -r -p 'Go through each package one-by-one? (y/n) ' one_by_one
 
@@ -154,39 +157,7 @@ else
   for package in "${pacman_packages[@]}"
   do
     echo -e "\t--------------------> Package: $package"
-    pacman -S "$package" && echo 'success' || echo 'fail'
-    echo -e "\t--------------------> Previous Package: $package"
-    echo -e "\t--------------------> Ready for the next package?"
-
-    if [ "$one_by_one" ]; then
-      read -r -p 'Continue? (y/n) ' should_continue
-      if [[ "$should_continue" == "n" ]]; then
-        echo 'Exiting...'
-        exit 1
-      fi
-    fi
-  done
-fi
-
-# upgrade the system
-trizen -Syu --aur
-
-if [[ "$all_together" == "y" ]]; then
-  trizen -Syu "${aur_packages[@]}"
-else
-  read -r -p 'Go through each package one-by-one? (y/n) ' one_by_one
-
-  if [[ "$one_by_one" == "y" ]]; then
-    one_by_one=1
-  else
-    one_by_one=0
-  fi
-
-  # install packages
-  for package in "${aur_packages[@]}"
-  do
-    echo -e "\t--------------------> Package: $package"
-    trizen -Syu "$package" && echo 'success' || echo 'fail'
+    pamac isntall "$package" && echo 'success' || echo 'fail'
     echo -e "\t--------------------> Previous Package: $package"
     echo -e "\t--------------------> Ready for the next package?"
 
@@ -211,4 +182,4 @@ chmod +x /usr/local/bin/youtube-dl
 # other?
 
 # System setup
-systemctl enable alsa-restore cronie
+#systemctl enable alsa-restore cronie

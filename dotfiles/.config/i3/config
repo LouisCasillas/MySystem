@@ -133,11 +133,11 @@ bindsym XF86AudioMute exec --no-startup-id amixer set PCM toggle
 exec unclutter --timeout 2 --jitter 5 --ignore-scrolling --fork 
 exec i3-sensible-terminal
 #exec xrandr --dpi 110
-exec xautolock -time 10 -locker 'i3lock --no-unlock-indicator --color=000000 --ignore-empty-password --show-failed-attempts'
+#exec xautolock -time 10 -locker 'i3lock --no-unlock-indicator --color=000000 --ignore-empty-password --show-failed-attempts'
 
-bar {
-	  status_command i3blocks
-}
+#bar {
+#	  status_command i3blocks
+#}
 
 # split in horizontal orientation
 #bindsym $mod+r split h

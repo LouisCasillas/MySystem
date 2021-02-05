@@ -3,6 +3,13 @@ function gc()
 	git commit -m "$1"
 }
 
+function gacp()
+{
+	git add "$1" && \
+	gc "$2" && \
+	git push
+}
+
 alias ga='git add'
 alias gap='git add --patch'
 alias gd='git diff'
@@ -11,5 +18,6 @@ alias gmv='git mv'
 alias gp='git push'
 alias gpl='git pull'
 alias gr='git reset'
+alias grm='git rm'
 alias gs='git status'
 alias gu='git config --get remote.origin.url'

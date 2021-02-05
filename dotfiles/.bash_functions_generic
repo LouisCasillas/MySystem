@@ -58,3 +58,13 @@ function randnum()
 	echo "$(( ($RANDOM % ($second_num + 1)) + $first_num ))"
 )
 }
+
+function getdir()
+{
+(
+	until sftp -b ~/get-sftp.batch 188.213.134.210:/share/completed/"$1"/; do 
+		echo 'sftp failed... waiting...'
+		sleep 1m
+	done
+)
+}

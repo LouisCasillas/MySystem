@@ -38,9 +38,9 @@ fi
 dpkg-reconfigure locales
 
 ldconfig
-ln -f -s /usr/share/zoneinfo/US/Hawaii /etc/localtime
+ln -f -s /usr/share/zoneinfo/America/Phoenix /etc/localtime
 
-echo 'US/Hawaii' > /etc/timezone
+echo 'America/Phoenix' > /etc/timezone
 
 #echo 'WindowsP3249P' > /etc/hostname
 #echo '127.0.0.1 WindowsP3249P' > /etc/hosts
@@ -66,8 +66,8 @@ ln -f -s "$(pwd)/exercise-popup.sh" /usr/local/bin/exercise-popup
 ln -f -s "$(pwd)/exercise-reset-total.sh" /usr/local/bin/exercise-reset-total
 
 #alsa-restore 
-declare -a services_to_enable=(anacron cron hciuart bluetooth)
-declare -a services_to_disable=(avahi-daemon lvm2-monitor lm-sensors udisks2 rpi-eeprom-update ModemManager raspi-config sysstat keyboard-setup)
+declare -a services_to_enable=(alsa-restore anacron cronie hciuart bluetooth)
+#declare -a services_to_disable=(avahi-daemon lvm2-monitor lm-sensors udisks2 rpi-eeprom-update ModemManager raspi-config sysstat keyboard-setup)
 
 for service in "${services_to_enable[@]}"
 do
