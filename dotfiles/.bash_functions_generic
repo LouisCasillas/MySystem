@@ -62,7 +62,16 @@ function randnum()
 function getdir()
 {
 (
-	until sftp -b <(echo 'get -f -a -r *') 188.213.134.210:/share/completed/"$1"/; do 
+	dir="$1"
+
+	echo "$dir" | grep -q '/'
+	if [ $? -eq 0 ]; then
+		path="$dir"
+	else
+		path="/share/completed/$dir/"
+	fi
+
+	until sftp -b <(echo 'get -f -a -r *') 188.213.134.210:"$path"; do 
 		echo 'sftp failed... waiting...'
 		sleep 1m
 	done
