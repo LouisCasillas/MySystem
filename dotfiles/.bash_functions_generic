@@ -44,7 +44,7 @@ function randnum()
 	second_num="$2"
 
 	if [[ -z "$first_num" ]]; then
-		echo "$0: <start number> <optional end number>"
+		echo "$FUNCNAME: <max number> <optional: end number, if used max number becomes starting number>"
 		exit 1
 	fi
 
@@ -74,6 +74,22 @@ function getdir()
 	until sftp -b <(echo 'get -f -a -r *') 188.213.134.210:"$path"; do 
 		echo 'sftp failed... waiting...'
 		sleep 1m
+	done
+)
+}
+
+function mwait()
+{
+(
+	wait="1"
+	
+	if [[ ! -z "$2" ]]; then
+		wait="$2"
+	fi
+
+	until ! pgrep "$1" &>/dev/null; do
+		echo "waiting $wait minute(s)... [$1]"
+		sleep "$wait""m"
 	done
 )
 }
