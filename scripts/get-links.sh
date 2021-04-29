@@ -60,9 +60,11 @@ while true; do
 		i=0
 	fi
 
+# TODO: add URL to delete downloaded videos with regex sent in URL - del=filename.*
+
 	echo "$url" | grep -q '[.]'
 	if [[ "$?" == "0" ]]; then
-		sudo -u nobody -g users nohup sudo -u nobody -g users youtube-dl -c -i "$url" --exec 'mv {} /share/completed/videos/' &
+		sudo -u nobody -g users nohup youtube-dl -c -i "$url" --exec 'mv {} /share/completed/videos/' &
 	else
 		echo 'skipping...'
 	fi

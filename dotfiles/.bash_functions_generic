@@ -45,7 +45,7 @@ function randnum()
 
 	if [[ -z "$first_num" ]]; then
 		echo "$FUNCNAME: <max number> <optional: end number, if used max number becomes starting number>"
-		exit 1
+		return 1
 	fi
 
 	if [[ -z "$second_num" ]]; then
@@ -78,17 +78,151 @@ function getdir()
 )
 }
 
-function mwait()
+function pwait()
 {
 (
+	process="$1"
+
+	if [[ -z "$process" ]]; then
+		echo "$FUNCNAME: <process name regex> <optional: number of minutes to sleep, 1 minute by default>"
+		echo "Wait until a named process no longer exists."
+		return 1
+	fi
+
 	wait="1"
 	
 	if [[ ! -z "$2" ]]; then
 		wait="$2"
 	fi
 
-	until ! pgrep "$1" &>/dev/null; do
-		echo "waiting $wait minute(s)... [$1]"
+	until ! pgrep "$process" &>/dev/null; do
+		echo "waiting $wait minute(s)... [process: $process]"
+		sleep "$wait""m"
+	done
+)
+}
+
+function mwait()
+{
+(
+	file="$1"
+
+	if [[ -z "$file" ]]; then
+		echo "$FUNCNAME: <file> <optional: number of minutes to sleep, 1 minute by default>"
+		echo "Wait until the file modification time has changed."
+		return 1
+	fi
+
+	wait="1"
+	
+	if [[ ! -z "$2" ]]; then
+		wait="$2"
+	fi
+
+	if [[ ! -f "$file" ]]; then
+		echo "File not found: $file"
+		return 1
+	fi
+
+	file_mod_time="$(stat -c"%Y" "$file")"
+
+	until [[ ! -f "$file" || ( "$file_mod_time" != "$(stat -c"%Y" "$file")" ) ]]; do
+		echo "waiting $wait minute(s)... [file: $file]"
+		sleep "$wait""m"
+	done
+)
+}
+
+function fwait()
+{
+(
+	file="$1"
+
+	if [[ -z "$file" ]]; then
+		echo "$FUNCNAME: <file> <optional: number of minutes to sleep, 1 minute by default>"
+		echo "Wait until the file contents have changed."
+		return 1
+	fi
+
+	wait="1"
+	
+	if [[ ! -z "$2" ]]; then
+		wait="$2"
+	fi
+
+	if [[ ! -f "$file" ]]; then
+		echo "File not found: $file"
+		return 1
+	fi
+
+	file_hash="$(sha1sum "$file" | cut -f1 -d' ')"
+	file_mod_time="$(stat -c"%Y" "$file")"
+
+	until [[ ! -f "$file" || ( ( "$file_mod_time" != "$(stat -c"%Y" "$file")" ) && ( "$file_hash" != "$(sha1sum "$file" | cut -f1 -d' ')" ) ) ]]; do
+		echo "waiting $wait minute(s)... [file: $file]"
+		sleep "$wait""m"
+	done
+)
+}
+
+function dwait()
+{
+(
+	dir="$1"
+
+	if [[ -z "$dir" ]]; then
+		echo "$FUNCNAME: <dir> <optional: number of minutes to sleep, 1 minute by default>"
+		echo "Wait until the directory has had contents removed, added, or changed."
+		return 1
+	fi
+
+	wait="1"
+	
+	if [[ ! -z "$2" ]]; then
+		wait="$2"
+	fi
+
+	if [[ ! -d "$dir" ]]; then
+		echo "Directory not found: $dir"
+		return 1
+	fi
+
+	dir_hash="$(find "$dir" -exec stat -c "%i %Y" "{}" \; 2>/dev/null | sha1sum)"
+
+	until [[ ! -d "$dir" || ( "$dir_hash" != "$(find "$dir" -exec stat -c "%i %Y" "{}" \; 2>/dev/null | sha1sum)" ) ]]; do
+		echo "waiting $wait minute(s)... [dir: $dir]"
+		sleep "$wait""m"
+	done
+)
+}
+
+function dnwait()
+{
+(
+	dir="$1"
+
+	if [[ -z "$dir" ]]; then
+		echo "$FUNCNAME: <dir> <optional: number of minutes to sleep, 1 minute by default>"
+		echo "Wait until the directory has stopped having contents removed, added, or changed."
+		return 1
+	fi
+
+	wait="1"
+	
+	if [[ ! -z "$2" ]]; then
+		wait="$2"
+	fi
+
+	if [[ ! -d "$dir" ]]; then
+		echo "Directory not found: $dir"
+		return 1
+	fi
+
+	dir_hash=""
+
+	until [[ ( $dir_hash != "" ) && ( ! -d "$dir" || ( "$dir_hash" == "$(find "$dir" -exec stat -c "%i %Y" "{}" \; 2>/dev/null | sha1sum)" ) ) ]]; do
+		dir_hash="$(find "$dir" -exec stat -c "%i %Y" "{}" \; 2>/dev/null | sha1sum)"
+		echo "waiting $wait minute(s)... [dir: $dir]"
 		sleep "$wait""m"
 	done
 )
