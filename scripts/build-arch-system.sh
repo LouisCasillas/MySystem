@@ -157,7 +157,7 @@ else
   for package in "${pacman_packages[@]}"
   do
     echo -e "\t--------------------> Package: $package"
-    pamac isntall "$package" && echo 'success' || echo 'fail'
+    pamac install "$package" && echo 'success' || echo 'fail'
     echo -e "\t--------------------> Previous Package: $package"
     echo -e "\t--------------------> Ready for the next package?"
 
