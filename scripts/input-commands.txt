@@ -1,3 +1,0 @@
-xev # find keyboard keys
-solaar show # list Logitech keyboard info
-xmodmap -pke
