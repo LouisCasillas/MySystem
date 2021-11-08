@@ -85,20 +85,6 @@ function mcd()
 	cd "$dir"
 }
 
-function mini-workout()
-{
-	sets="$1"
-
-	if [[ -z "$sets" ]]; then
-		sets=10
-	fi
-
-	for i in $(seq "$sets"); do
-		echo "Exercise $i of $sets"
-		exercise-popup
-	done
-}
-
 alias df='df -h'
 
 # fixes for common typing mistakes
