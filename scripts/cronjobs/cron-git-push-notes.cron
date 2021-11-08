@@ -1,0 +1,1 @@
+5 8-20 * * *  cd ~/notes/ && git add -A && git commit -m "Auto-updating notes" && git push
