@@ -1,1 +1,2 @@
 pacman -Qdtq # see orphaned packages
+pacman -F $command # search pacman database for $command to find which package you need to install for the needed command
