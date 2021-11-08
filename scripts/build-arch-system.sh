@@ -106,7 +106,7 @@ pacman_packages+=(imagemagick pngcrush scrot)
 # *** Desktop/Visual Packages
 
 # X packages
-pacman_packages+=(xorg-xkill xorg-server xorg-xset xorg-xprop xdg-utils xorg-xinit xorg-xrandr xorg-xauth xorg-xmodmap xorg-xgamma xorg-xinput xorg-xlsclients xorg-xrefresh xsel xorg-xmessage)
+pacman_packages+=(xorg-xkill xorg-server xorg-xset xorg-xprop xdg-utils xorg-xinit xorg-xrandr xorg-xauth xorg-xmodmap xorg-xgamma xorg-xinput xorg-xlsclients xorg-xrefresh xsel xorg-xmessage xorg-xev)
 
 # Desktop window manager packages
 pacman_packages+=(i3-wm unclutter rofi)
