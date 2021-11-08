@@ -1,0 +1,2 @@
+# Download the first 5 youtube videos found while searching youtube for $query, downloading the video at 720p quality, write the video descriptions, and make sure the video filenames are in ascii.
+youtube-dl -f18 -c -i --max-downloads 5 --restrict-filenames --write-description "https://youtube.com/results?search_query=$query"
