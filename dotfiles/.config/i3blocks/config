@@ -1,4 +1,0 @@
-[time]
-command=$HOME/.config/i3blocks/time.sh
-color=#AAAAAA
-interval=1
