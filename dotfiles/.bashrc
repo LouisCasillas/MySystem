@@ -105,5 +105,3 @@ done
 if command -v tmux &> /dev/null && [ -z "$TMUX" ]; then
     tmux new
 fi
-
-cd /storage/emulated/0/
