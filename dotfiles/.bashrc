@@ -86,7 +86,7 @@ for file in ~/.bash_functions_*; do
 	fi
 done
 
-# start a tmux session if not already in one
+# if tmux is installed, start a tmux session if not already in one
 if command -v tmux &> /dev/null && [ -z "$TMUX" ]; then
     tmux new
 fi
