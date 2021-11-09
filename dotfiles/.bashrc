@@ -44,8 +44,6 @@ alias fgrep='fgrep --colour=auto'
 
 PS1='\[\033[01;31m\][\u@\h\[\033[01;36m\] $(pwd)\[\033[01;31m\]]\$\[\033[00m\] '
 
-complete -cf sudo
-
 # Bash won't get SIGWINCH if another process is in the foreground.
 # Enable checkwinsize so that bash will check the terminal size when
 # it regains control.  #65623
@@ -71,19 +69,6 @@ alias fd='sudo fdisk -l'
 alias m='sudo mount'
 alias u='sudo umount'
 alias d='sudo du -hs'
-
-function mcd()
-{
-	dir="$1"
-
-	pushd .
-
-	if [ ! -d "$dir" ]; then
-		mkdir -p "$dir"
-	fi
-
-	cd "$dir"
-}
 
 alias df='df -h'
 
