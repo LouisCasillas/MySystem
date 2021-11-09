@@ -65,6 +65,9 @@ function randnum()
 )
 }
 
+# All *wait* functions were created for simple command-line scripting purposes
+# If inotifywait is available on the system it would likely be a better solution
+
 function pwait()
 {
 (
