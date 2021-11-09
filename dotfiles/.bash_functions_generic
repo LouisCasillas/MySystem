@@ -22,18 +22,24 @@ function ds()
 function sort-by-alpha()
 {
 (
+	# get the first letter of each file and directory in the current directory
+	# move all files and directories into their respective single letter directory
+	# if any files are left put them into the misc/ directory
 	ls | \
 		cut -c1 | \
 		sort -u | \
 		grep -E -e "[[:alpha:]]" | \
 		while read line; do
 			mkdir -p "$line"
-			mv "$line"* "$line/"
+			mv "$line"* "$line/" 2>/dev/null
 		done
 	
-	mkdir -p misc
+	files_left="$(find . -maxdepth 1 -type f | wc -l)"
 
-	find . -maxdepth 1 -type f -exec mv "{}" misc/ \;
+	if [[ "$files_left" != "0" ]]; then
+		mkdir -p misc
+		find . -maxdepth 1 -type f -exec mv "{}" misc/ \;
+	fi
 )
 }
 
