@@ -25,8 +25,7 @@ function rls ()
 
 function rlsd ()
 {
-(
-	dir_name="$(dirname $1/-)/"
+( dir_name="$(dirname $1/-)/"
 	/usr/bin/rclone -R --dirs-only --format="sp" lsf GoogleDrive:"$dir_name" \
 			| grep -v -e uploading -e downloading \
 			| sort -rn \
@@ -150,5 +149,3 @@ function rred()
 	done < <(rlsd | tac)
 )
 }
-
-
