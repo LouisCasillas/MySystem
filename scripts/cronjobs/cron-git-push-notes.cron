@@ -1,1 +1,2 @@
+# a cronjob used to automatically commit and push notes changes to git
 5 8-20 * * *  cd ~/notes/ && git add -A && git commit -m "Auto-updating notes" && git push
