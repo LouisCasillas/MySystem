@@ -93,9 +93,6 @@ function! OpenWord()
 	exe "!xdg-open " . current_Word
 endfunction
 
-" toggle paste mode
-nnoremap <silent> <Leader>o :call OpenWord()<Enter>
-
 "set wrapmargin=2
 set linebreak
 
