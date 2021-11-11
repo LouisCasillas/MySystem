@@ -205,7 +205,7 @@ filetype plugin on
 filetype indent on
 
 " automatically create folds based on indentation level
-"set foldmethod=indent
+set foldmethod=indent
 
 " allow the file search feature to search all sub-directories recursively so files outside the immediate directory can easily be opened
 set path+=**
