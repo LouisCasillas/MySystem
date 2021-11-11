@@ -93,11 +93,6 @@ function! OpenWord()
 	exe "!xdg-open " . current_Word
 endfunction
 
-function! GetComics()
-	" change getcomics.info links to wget commands with a proper file name
-	:%s/^\(.*[/]\)\(.*\)$/wget "\1\2" -O \"\$(echo "\2" | base64 -d | sed -e 's\/^.*[\/]\/\/' -e 's\/%..\/_\/g')\"/
-endfunction
-
 " toggle paste mode
 nnoremap <silent> <Leader>o :call OpenWord()<Enter>
 
