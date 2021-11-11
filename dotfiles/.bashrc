@@ -86,6 +86,11 @@ for file in ~/.bash_functions_*; do
 	fi
 done
 
+# if there is a key map modifier file then execute it
+if [[ -r ~/.xmodmap.conf ]]; then
+	xmodmap ~/.xmodmap.conf &> /dev/null
+fi
+
 # if tmux is installed, start a tmux session if not already in one
 if command -v tmux &> /dev/null && [ -z "$TMUX" ]; then
     tmux new
