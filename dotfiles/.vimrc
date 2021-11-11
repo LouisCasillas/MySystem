@@ -1,15 +1,6 @@
-" TODO: go through all options and add if statements if they might not exist
-" on all system
-" TODO: start vim and review all default variables and registers as well as
-" vim startup
 " TODO: function to send the selection to the clipboard with xsel -b
-" TODO: vimscript shuffle function, Dictionary[ random number ] = line_number, sort on key, move lines
-" 	- strftime("%s")
-" strftime("%s")
-"  and()                   bitwise AND
-"          invert()                bitwise invert
-"                  or()                    bitwise OR
-"                          xor()                   bitwise XOR
+" TODO: create keys to allow quickly switching to other tmux window
+" TODO: create function to shuffle the lines of a file
 
 " do not force vim to behave in a vi-compatible way
 set nocompatible
