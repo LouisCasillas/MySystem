@@ -219,22 +219,6 @@ filetype indent on
 " allow the file search feature to search all sub-directories recursively so files outside the immediate directory can easily be opened
 set path+=**
 
-" commands specifically to use for HTML file
-augroup HTMLCommand
-	" removes all previously defined autocommands in this group
-	autocmd!
-	" wrap the line in HTML comment arrow
-	autocmd Filetype html nnoremap <silent> <buffer> <Leader>c I<!-- <Escape>A --><Escape>
-	" set options only for the buffer with the specified file type
-	"autocmd Filetype html setlocal tabstop=4 shiftwidth=4 softtabstop=4 textwidth=80 linebreak showbreak=>\
-	" setup auto commands to easily add HTML tag
-	autocmd FileType html inoremap <silent> <buffer> <Leader>i <em></em><Space><++><Escape>FeT>i
-	autocmd FileType html inoremap <silent> <buffer> <Leader>b <b></b><Space><++><Escape>FbT>i
-augroup END
-" end my command
-
-
-
 " netrw file browser option
 " disable header banner
 let g:netrw_banner=0
