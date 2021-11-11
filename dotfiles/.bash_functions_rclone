@@ -10,6 +10,8 @@ alias rclone="/usr/bin/rclone \
 	--drive-use-trash=false \
 	--drive-acknowledge-abuse"
 
+# TODO: Add function help messages
+
 function rls ()
 {
 (
