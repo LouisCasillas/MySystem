@@ -247,8 +247,6 @@ nmap <silent> <Down> :resize -5<Enter>
 " other text before you wanted to use the yanked text
 nmap <C-P> "0P
 
-" TODO: create keys to allow quickly switching to other tmux window
-
 " turn off vim mouse support, I prefer letting tmux control the mouse text selection
 set mouse=""
 
@@ -314,43 +312,3 @@ inoremap <silent> <S-Tab> <C-p>
 
 " Create a shortcut to quickly add templates to the current file
 "nnoremap ,html :-1read $HOME/.vim/skeleton-files/html.skeleton<CR>
-
-" while in insert mode a double space will take you to the next <++> in the document while also erasing that position holder
-"inoremap <Ctrl-Space> <Escape>/<++><Enter>"_c4l
-
-" setup HTML auto tag creation
-augroup HTML_TAG
-augroup END
-
-" idea taken from: https://www.drbunsen.org/writing-in-vim/
-" this function should setup vim to be in word processing mode
-" :WP
-"func! WordProcessorMode()
-"	setlocal formatoptions=1
-"	setlocal noexpandtab
-"	map j gj
-"	map k gk
-"	setlocal spell spelllang=en_u
-"	"set thesaurus+=/Users/sbrown/.vim/thesaurus/mthesaur.txt
-"	set complete+=
-"	set formatprg=par
-"	setlocal wrap
-"	setlocal linebreak
-"endfu
-"com! WP call WordProcessorMode()
-
-"
-"	let counter = 0
-"	inoremap <expr> <C-L> ListItem()
-"	inoremap <expr> <C-R> ListReset()
-"
-"	func ListItem()
-"	  let g:counter += 1
-"	  return g:counter . '. '
-"	endfunc
-"
-"	func ListReset()
-"	  let g:counter = 0
-"	  return ''
-"	endfunc
-" on all system
