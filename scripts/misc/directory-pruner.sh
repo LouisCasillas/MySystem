@@ -16,7 +16,7 @@ debug=1
 tmp_file="$(mktemp)"
 
 [ $debug -ge 1 ] && echo -n "Creating list of directories... "
-find . -depth -type d -not \( -iname ".*" \) > "$tmp_file"
+find . -type d -depth -not -path '*/.*' 2>/dev/null > "$tmp_file"
 [ $debug -ge 1 ] && echo "done"
 [ $debug -ge 1 ] && echo "Total directories found: $(wc -l "$tmp_file" | cut -f1 -d' ')"
 
