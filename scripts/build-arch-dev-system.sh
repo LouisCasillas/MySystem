@@ -26,12 +26,21 @@ function trap_exit()
 
 trap trap_exit SIGINT
 
+user="$1"
+
 # UID = 0 = root
 if [[ "$UID" != '0' ]]; then
 	echo 'You must be root to run this script.  Retry with sudo.'
 
 	exit 1
 fi
+
+if [[ -z "$user" ]]; then
+	echo "Specify the non-sudo user"
+	exit 1
+fi
+
+echo "$user ALL=(ALL:ALL) NOPASSWD: ALL" | tee "/etc/sudoers.d/dont-prompt-$user"
 
 declare -a pacman_packages=()
 declare -a aur_packages=()
@@ -47,7 +56,7 @@ pacman_packages+=(base base-devel multilib-devel)
 pacman_packages+=(tmux sudo sed man-db man-pages bash-completion findutils file less psmisc fakeroot fakechroot inotify-tools tree busybox lsof gawk bc coreutils which util-linux procps-ng kmod grep cronie)
 
 # Misc utility packages
-pacman_packages+=(asciinema ncdu lm_sensors discount hexedit)
+pacman_packages+=(asciinema ncdu lm_sensors discount hexedit ffmpeg calibre)
 
 # Font packages
 #pacman_packages+=()
