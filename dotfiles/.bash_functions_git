@@ -11,6 +11,16 @@ function gacp()
 	git push
 }
 
+function gsa()
+{
+	find * -maxdepth 0 -type d -exec sh -c 'cd "{}" && git status' \;
+}
+
+function gpa()
+{
+	find * -maxdepth 0 -type d -exec sh -c 'cd "{}" && git pull' \;
+}
+
 alias ga='git add'
 alias gap='git add --patch'
 alias gc='git commit -m'
@@ -23,4 +33,4 @@ alias gr='git reset'
 alias grh='git reset --hard'
 alias grm='git rm'
 alias gs='git status'
-alias gu='git config --get remote.origin.url'
+alias go='git config --get remote.origin.url'
