@@ -13,12 +13,26 @@ function gacp()
 
 function gsa()
 {
-	find * -maxdepth 0 -type d -exec sh -c 'cd "{}" && git status --short --branch' \;
+	find * -maxdepth 0 -type d | \
+		while read repo; do
+			cd "$repo"
+			echo "Repo: $repo"
+			git status --short --branch
+			echo ""
+			cd ..
+		done
 }
 
 function gpla()
 {
-	find * -maxdepth 0 -type d -exec sh -c 'cd "{}" && git pull' \;
+	find * -maxdepth 0 -type d | \
+		while read repo; do
+			cd "$repo"
+			echo "Repo: $repo"
+			git pull
+			echo ""
+			cd ..
+		done
 }
 
 alias ga='git add'
