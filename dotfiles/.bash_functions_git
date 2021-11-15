@@ -16,7 +16,7 @@ function gsa()
 	find * -maxdepth 0 -type d -exec sh -c 'cd "{}" && git status --short --branch' \;
 }
 
-function gpa()
+function gpla()
 {
 	find * -maxdepth 0 -type d -exec sh -c 'cd "{}" && git pull' \;
 }
