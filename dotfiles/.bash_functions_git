@@ -23,7 +23,7 @@ function gpla()
 
 alias ga='git add'
 alias gap='git add --patch'
-alias gc='git commit -m'
+alias gc='git commit --message'
 alias gd='git diff'
 alias gl='git log'
 alias gmv='git mv'
