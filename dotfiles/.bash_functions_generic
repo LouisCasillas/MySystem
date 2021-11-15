@@ -233,3 +233,78 @@ function dnwait()
 	done
 )
 }
+
+function ya()
+{
+(
+	num_of_videos_to_get="$1"
+
+	opt=""
+
+	if [[ -r ~/Downloads/youtube.com_cookies.txt ]]; then
+		opt="--cookies ~/Downloads/youtube.com_cookies.txt"
+	fi
+
+	if [[ ! -z "$num_of_videos_to_get" ]]; then
+		opt="$opt --max-downloads=$num_of_videos_to_get"
+	fi
+
+	if command -v aria2c &>/dev/null; then
+		opt="$opt --external-downloader aria2c"
+	fi
+
+	youtube-dl --continue --ignore-errors --format 22/18 --youtube-skip-dash-manifest --restrict-filenames \
+		--no-call-home --no-warnings --no-check-certificate --batch-file a \
+		$opt
+)
+}
+
+function yaa()
+{
+(
+	num_of_videos_to_get="$1"
+
+	opt=""
+
+	if [[ -r ~/Downloads/youtube.com_cookies.txt ]]; then
+		opt="--cookies ~/Downloads/youtube.com_cookies.txt"
+	fi
+
+	if [[ ! -z "$num_of_videos_to_get" ]]; then
+		opt="$opt --max-downloads=$num_of_videos_to_get"
+	fi
+
+	if command -v aria2c &>/dev/null; then
+		opt="$opt --external-downloader aria2c"
+	fi
+
+	youtube-dl --continue --ignore-errors --format 251/250/249 --youtube-skip-dash-manifest --restrict-filenames \
+		--no-call-home --no-warnings --no-check-certificate --batch-file a \
+		$opt
+)
+}
+
+function yaq()
+{
+(
+	num_of_videos_to_get="$1"
+
+	opt=""
+
+	if [[ -r ~/Downloads/youtube.com_cookies.txt ]]; then
+		opt="--cookies ~/Downloads/youtube.com_cookies.txt"
+	fi
+
+	if [[ ! -z "$num_of_videos_to_get" ]]; then
+		opt="$opt --max-downloads=$num_of_videos_to_get"
+	fi
+
+	if command -v aria2c &>/dev/null; then
+		opt="$opt --external-downloader aria2c"
+	fi
+
+	youtube-dl --continue --ignore-errors --format bestvideo+bestaudio --youtube-skip-dash-manifest --restrict-filenames \
+		--no-call-home --no-warnings --no-check-certificate --batch-file a \
+		$opt
+)
+}
