@@ -13,7 +13,7 @@ function gacp()
 
 function gsa()
 {
-	find * -maxdepth 0 -type d -exec sh -c 'cd "{}" && git status' \;
+	find * -maxdepth 0 -type d -exec sh -c 'cd "{}" && git status --short --branch' \;
 }
 
 function gpa()
@@ -32,5 +32,5 @@ alias gpl='git pull'
 alias gr='git reset'
 alias grh='git reset --hard'
 alias grm='git rm'
-alias gs='git status'
+alias gs='git status --short --branch'
 alias go='git config --get remote.origin.url'
