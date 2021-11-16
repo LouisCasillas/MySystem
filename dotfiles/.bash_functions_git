@@ -11,6 +11,19 @@ function gacp()
 	git push
 }
 
+function gaacp()
+{
+	git add --all && \
+	git commit -m "$1" && \
+	git push
+}
+
+function gcp()
+{
+	git commit -m "$1" && \
+	git push
+}
+
 function gsa()
 {
 	find * -maxdepth 0 -type d | \
