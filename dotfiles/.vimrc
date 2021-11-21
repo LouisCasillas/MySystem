@@ -26,6 +26,12 @@ if exists("*mkdir")
 	set viewdir=~/.vim/view/
 endif
 
+" set tab to 4 spaces so code more easily matches with online editors
+" even though I prefer tab is a symbol
+set tabstop=4
+set shiftwidth=4
+set expandtab
+
 " if this build version of vim has the autochdir option turn it on
 if exists("+autochdir")
 	set autochdir
