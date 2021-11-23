@@ -58,8 +58,10 @@ shopt -s histappend
 
 # My additions
 
-export HISTSIZE=100000
+export HISTSIZE=-1
 export HISTFILESIZE="$HISTSIZE"
+export HISTCONTROL="ignorespace:ignoredups:erasedups"
+
 export EDITOR="vim"
 
 alias mtop='top -d 1 -o %MEM'
