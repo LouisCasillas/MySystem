@@ -67,6 +67,9 @@ export EDITOR="vim"
 alias mtop='top -d 1 -o %MEM'
 alias ctop='top -d 1 -o %CPU'
 
+alias mem='ps -A -ww -o rss,user,pid,cmd --sort rss --headers'
+alias cpu='ps -A -ww -o pcpu,user,pid,cmd --sort pcpu --headers'
+
 alias fd='sudo fdisk -l'
 alias m='sudo mount'
 alias u='sudo umount'
