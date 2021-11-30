@@ -270,13 +270,15 @@ function ya()
         format="$2"
     fi
 
-	opt=""
+    if [[ "$format" != "none" ]]; then
+        opt="--format "$format""
+    fi
 
 	if [[ -r ~/Downloads/youtube.com_cookies.txt ]]; then
 		opt="$opt --cookies ~/Downloads/youtube.com_cookies.txt"
 	fi
 
-	if [[ ! -z "$num_of_videos_to_get" ]]; then
+	if [[ (! -z "$num_of_videos_to_get") && ("$num_of_videos_to_get" -gt 0) ]]; then
 		opt="$opt --playlist-end="$num_of_videos_to_get" --max-downloads=$num_of_videos_to_get"
 	fi
 	
@@ -284,7 +286,7 @@ function ya()
 		opt="$opt --external-downloader aria2c"
 	fi
 
-	youtube-dl --continue --ignore-errors --format "$format" --youtube-skip-dash-manifest --restrict-filenames \
+	youtube-dl --continue --ignore-errors --youtube-skip-dash-manifest --restrict-filenames \
 		--no-call-home --no-warnings --no-check-certificate --batch-file a \
 		$opt
 )}
@@ -297,4 +299,9 @@ function yaq()
 function yaa()
 {(
     ya "$1" "251/250/249/140"
+)}
+
+function yag()
+{(
+    ya "$1" "none"
 )}
