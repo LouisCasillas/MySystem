@@ -1,27 +1,20 @@
 function xpid()
-{
-(
+{(
 	xprop | grep PID | awk '{print $NF}'
-)
-}
+)}
 
 function ded()
-{
-(
+{(
 	find . -type d -empty -delete
-)
-}
+)}
 
 function ds()
-{
-(
+{(
 	du -hs * | sort -h
-)
-}
+)}
 
 function mcd()
-{
-(
+{(
 	dir="$1"
 
 	pushd .
@@ -31,12 +24,10 @@ function mcd()
 	fi
 
 	cd "$dir"
-)
-}
+)}
 
 function sort-by-alpha()
-{
-(
+{(
 	# get the first letter of each file and directory in the current directory
 	# move all files and directories into their respective single letter directory
 	# if any files are left put them into the misc/ directory
@@ -55,12 +46,10 @@ function sort-by-alpha()
 		mkdir -p misc
 		find . -maxdepth 1 -type f -exec mv "{}" misc/ \;
 	fi
-)
-}
+)}
 
 function randnum()
-{
-(
+{(
 	first_num="$1"
 	second_num="$2"
 
@@ -77,15 +66,13 @@ function randnum()
 	fi
 
 	echo "$(( ($RANDOM % ($second_num + 1)) + $first_num ))"
-)
-}
+)}
 
 # All *wait* functions were created for simple command-line scripting purposes
 # If inotifywait is available on the system it would likely be a better solution
 
 function pwait()
-{
-(
+{(
 	process="$1"
 
 	if [[ -z "$process" ]]; then
@@ -104,12 +91,10 @@ function pwait()
 		echo "waiting $wait minute(s)... [process: $process]"
 		sleep "$wait""m"
 	done
-)
-}
+)}
 
 function mwait()
-{
-(
+{(
 	file="$1"
 
 	if [[ -z "$file" ]]; then
@@ -135,12 +120,10 @@ function mwait()
 		echo "waiting $wait minute(s)... [file: $file]"
 		sleep "$wait""m"
 	done
-)
-}
+)}
 
 function fwait()
-{
-(
+{(
 	file="$1"
 
 	if [[ -z "$file" ]]; then
@@ -167,12 +150,10 @@ function fwait()
 		echo "waiting $wait minute(s)... [file: $file]"
 		sleep "$wait""m"
 	done
-)
-}
+)}
 
 function dwait()
-{
-(
+{(
 	dir="$1"
 
 	if [[ -z "$dir" ]]; then
@@ -198,12 +179,10 @@ function dwait()
 		echo "waiting $wait minute(s)... [dir: $dir]"
 		sleep "$wait""m"
 	done
-)
-}
+)}
 
 function dnwait()
-{
-(
+{(
 	dir="$1"
 
 	if [[ -z "$dir" ]]; then
@@ -230,80 +209,92 @@ function dnwait()
 		echo "waiting $wait minute(s)... [dir: $dir]"
 		sleep "$wait""m"
 	done
-)
-}
+)}
+
+function rename-to-numbers()
+{(
+    starting_number="$1"
+
+    if [[ -z "$starting_number" ]]; then
+        starting_number=1
+    fi
+
+    tmp_file="$(mktemp)"
+    declare -A filenames=()
+
+    find . -maxdepth 1 -type f | \
+        awk -F. -vi="$starting_number" '{
+                                            ofile=$0
+                                            nfile="./"i
+
+                                            # if the file has an extension add
+                                            # it back when renaming the file
+                                            if (NF > 2)
+                                            {
+                                                nfile=nfile"."$NF
+                                            }
+
+                                            print ofile"\t"nfile
+
+                                            i++
+                                        }' > "$tmp_file"
+    
+    while read line; do
+        ofile="$(echo "$line" | cut -f1)"
+        nfile="$(echo "$line" | cut -f2)"
+
+        if [[ "$ofile" != "$nfile" ]]; then
+            filenames["$ofile"]="$nfile"
+        fi
+    done < "$tmp_file"
+
+    while [[ "${#filenames[@]}" -gt "0" ]]; do
+        for ofile in "${!filenames[@]}"; do 
+            nfile="${filenames["$ofile"]}"
+
+            if [[ ! -f "$nfile" ]]; then
+                mv --no-clobber "$ofile" "$nfile"
+                unset "filenames["$ofile"]"
+            fi
+        done
+    done
+)}
 
 function ya()
-{
-(
+{(
 	num_of_videos_to_get="$1"
+    
+    format="22/18"
+    
+    if [[ ! -z "$2" ]]; then
+        format="$2"
+    fi
 
 	opt=""
 
 	if [[ -r ~/Downloads/youtube.com_cookies.txt ]]; then
-		opt="--cookies ~/Downloads/youtube.com_cookies.txt"
+		opt="$opt --cookies ~/Downloads/youtube.com_cookies.txt"
 	fi
 
 	if [[ ! -z "$num_of_videos_to_get" ]]; then
-		opt="$opt --max-downloads=$num_of_videos_to_get"
+		opt="$opt --playlist-end="$num_of_videos_to_get" --max-downloads=$num_of_videos_to_get"
 	fi
-
+	
 	if command -v aria2c &>/dev/null; then
 		opt="$opt --external-downloader aria2c"
 	fi
 
-	youtube-dl --continue --ignore-errors --format 22/18 --youtube-skip-dash-manifest --restrict-filenames \
+	youtube-dl --continue --ignore-errors --format "$format" --youtube-skip-dash-manifest --restrict-filenames \
 		--no-call-home --no-warnings --no-check-certificate --batch-file a \
 		$opt
-)
-}
-
-function yaa()
-{
-(
-	num_of_videos_to_get="$1"
-
-	opt=""
-
-	if [[ -r ~/Downloads/youtube.com_cookies.txt ]]; then
-		opt="--cookies ~/Downloads/youtube.com_cookies.txt"
-	fi
-
-	if [[ ! -z "$num_of_videos_to_get" ]]; then
-		opt="$opt --max-downloads=$num_of_videos_to_get"
-	fi
-
-	if command -v aria2c &>/dev/null; then
-		opt="$opt --external-downloader aria2c"
-	fi
-
-	youtube-dl --continue --ignore-errors --format 251/250/249 --youtube-skip-dash-manifest --restrict-filenames \
-		--no-call-home --no-warnings --no-check-certificate --batch-file a \
-		$opt
-)
-}
+)}
 
 function yaq()
-{
-(
-	num_of_videos_to_get="$1"
+{(
+    ya "$1" "bestvideo+bestaudio"
+)}
 
-	opt=""
-
-	if [[ -r ~/Downloads/youtube.com_cookies.txt ]]; then
-		opt="--cookies ~/Downloads/youtube.com_cookies.txt"
-	fi
-
-	if [[ ! -z "$num_of_videos_to_get" ]]; then
-		opt="$opt --max-downloads=$num_of_videos_to_get"
-	fi
-
-	if command -v aria2c &>/dev/null; then
-		opt="$opt --external-downloader aria2c"
-	fi
-
-	youtube-dl --continue --ignore-errors --format bestvideo+bestaudio --youtube-skip-dash-manifest --restrict-filenames \
-		--no-call-home --no-warnings --no-check-certificate --batch-file a \
-		$opt
-)
-}
+function yaa()
+{(
+    ya "$1" "251/250/249/140"
+)}
