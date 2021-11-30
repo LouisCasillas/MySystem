@@ -81,6 +81,17 @@ set matchpairs={:},(:),[:],<:>
 " when going to the next line keep the previous lines' indentation level
 set autoindent
 
+" incremental searches - start highlighting search term after each letter typed
+set incsearch
+" highlight search results
+set hlsearch
+
+" allow the file search feature to search all sub-directories recursively so files outside the immediate directory can easily be opened
+set path+=**
+
+" do not show when certain commands are typed nor the size of visual selections
+set noshowcmd
+
 " if this build version of vim has the autochdir option turn it on
 if exists("+autochdir")
     set autochdir
@@ -110,19 +121,9 @@ if exists("+foldmethod")
     set foldmethod=indent
 endif
 
-if exists("+path_extra")
-    " allow the file search feature to search all sub-directories recursively so files outside the immediate directory can easily be opened
-    set path+=**
-endif
-
-if exists("+cmdline_info")
-    " do not show when certain commands are typed nor the size of visual selections
-    set noshowcmd
-
-    " do not show the current row and column position in the status line because I
-    " set my own rules below
-    set noruler
-endif
+" do not show the current row and column position in the status line because I
+" set my own rules below
+set noruler
 
 if exists("+wildmenu")
     " show a menu above the command line with possible file navigation options
@@ -139,13 +140,6 @@ if exists("+statusline")
     set statusline+=%(%y\ %)
     " if the modified and/or read-only flags are set show them
     set statusline+=%(%m\ %r\ %)
-endif
-
-if exists("+extra_search")
-    " incremental searches - start highlighting search term after each letter typed
-    set incsearch
-    " highlight search results
-    set hlsearch
 endif
 
 if exists("+smartindent")
@@ -218,6 +212,7 @@ endfunction
 """ End functions
 
 "" Remaps
+" TODO: create help screen that shows my key commands
 nnoremap <silent> <Leader>d :call CreateDiffTab()<Enter>
 
 " toggle folds on the current line recursively 
