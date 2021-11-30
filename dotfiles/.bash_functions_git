@@ -1,31 +1,36 @@
+# TODO:
+# 1) turn all aliases into functions and add -C <directory> so git
+# commands can be run while outside a git repo directory
+# 2) change git add so multiple files can be passed and not just one
+
 function gac()
-{
+{(
 	git add "$1" && \
 	git commit -m "$2"
-}
+)}
 
 function gacp()
-{
+{(
 	git add "$1" && \
 	git commit -m "$2" && \
 	git push
-}
+)}
 
 function gaacp()
-{
+{(
 	git add --all && \
 	git commit -m "$1" && \
 	git push
-}
+)}
 
 function gcp()
-{
+{(
 	git commit -m "$1" && \
 	git push
-}
+)}
 
 function gsa()
-{
+{(
 	find * -maxdepth 0 -type d | \
 		while read repo; do
 			cd "$repo"
@@ -34,10 +39,10 @@ function gsa()
 			echo ""
 			cd ..
 		done
-}
+)}
 
 function gpla()
-{
+{(
 	find * -maxdepth 0 -type d | \
 		while read repo; do
 			cd "$repo"
@@ -46,7 +51,7 @@ function gpla()
 			echo ""
 			cd ..
 		done
-}
+)}
 
 alias ga='git add'
 alias gap='git add --patch'
