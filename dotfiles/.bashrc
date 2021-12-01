@@ -95,7 +95,7 @@ done
 if [[ -r ~/.xmodmap.conf ]]; then
 	xmodmap ~/.xmodmap.conf &> /dev/null
 fi
-# test
+
 # if tmux is installed, start a tmux session if not already in one
 if command -v tmux &> /dev/null && [[ "$TERM" != "screen" ]]; then
     tmux attach || tmux new
