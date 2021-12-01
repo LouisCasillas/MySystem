@@ -99,11 +99,11 @@ endif
 
 if exists("+linebreak")
     " vim will automatically break lines and wrap them to the next line
-    set linebreak
+    "set linebreak
     " if possible vim starts wrapping the line when within 2 characters of the edge
-    set wrapmargin=2
+    "set wrapmargin=2
     " the hard character limit for wrapping lines
-    set textwidth=80
+    "set textwidth=80
 endif
 
 if exists("+syntax")
