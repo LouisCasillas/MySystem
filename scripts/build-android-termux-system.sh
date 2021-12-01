@@ -44,6 +44,7 @@ ncurses
 net-tools
 openssh
 openssl
+p7zip
 patch
 pcre
 procps
@@ -62,5 +63,5 @@ unzip
 util-linux
 vim
 xz-utils
+zip
 zlib
-#use apt
