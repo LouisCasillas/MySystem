@@ -53,6 +53,13 @@ function gpla()
 		done
 )}
 
+function gignore()
+{(
+    git_repo_top_dir="$(git rev-parse --show-toplevel)"
+    echo "$1" >> "$git_repo_top_dir/.git/info/exclude" && \
+        git update-index --assume-unchanged "$1"
+)}
+
 alias ga='git add'
 alias gap='git add --patch'
 alias gc='git commit --message'
