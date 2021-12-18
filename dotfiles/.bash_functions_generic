@@ -272,18 +272,26 @@ function ya()
 
     if [[ "$format" != "none" ]]; then
         opt="--format "$format""
+        echo "Specifying the video format: $format"
+    else
+        echo 'Not specifying a video format...'
     fi
 
 	if [[ -r ~/Downloads/youtube.com_cookies.txt ]]; then
 		opt="$opt --cookies ~/Downloads/youtube.com_cookies.txt"
+        echo 'Found and using Youtube cookies...'
+    else
+        echo 'No Youtube cookies found...'
 	fi
 
 	if [[ (! -z "$num_of_videos_to_get") && ("$num_of_videos_to_get" -gt 0) ]]; then
 		opt="$opt --playlist-end="$num_of_videos_to_get" --max-downloads=$num_of_videos_to_get"
+        echo "Only downloading $num_of_videos_to_get videos..."
 	fi
 	
 	if command -v aria2c &>/dev/null; then
 		opt="$opt --external-downloader aria2c"
+        echo 'The download program 'aria2c' was found and will be used...'
 	fi
 
 	youtube-dl --continue --ignore-errors --youtube-skip-dash-manifest --restrict-filenames \
