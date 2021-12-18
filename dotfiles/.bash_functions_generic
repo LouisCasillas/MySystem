@@ -313,3 +313,11 @@ function yag()
 {(
     ya "$1" "none"
 )}
+
+function uzrm()
+{(
+	zip_file="$1"
+
+    unzip "$zip_file" && \
+        rm "$zip_file"
+)}
