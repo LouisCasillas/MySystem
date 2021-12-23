@@ -295,7 +295,7 @@ function ya()
 		--no-call-home --no-warnings --no-check-certificate --retries 'infinite' --fragment-retries 'infinite' \
         --batch-file a \
         --external-downloader aria2c \
-        --external-downloader-args "--max-concurrent-downloads=1 --max-connection-per-server=4 --max-tries=0 --retry-wait=5 --split=4 --async-dns-server='1.1.1.1' --console-log-level='error' --log-level='error' --summary-interval=0 --auto-save-interval=5 --disable-ipv6 --enable-mmap" \
+        --external-downloader-args "--max-concurrent-downloads=1 --max-connection-per-server=4 --max-tries=0 --retry-wait=5 --split=4 --console-log-level='error' --log-level='error' --summary-interval=0 --auto-save-interval=15" \
 		$opt
 )}
 
