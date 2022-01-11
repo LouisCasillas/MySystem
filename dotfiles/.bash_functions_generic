@@ -13,6 +13,11 @@ function ds()
 	du -hs * | sort -h
 )}
 
+function dsd()
+{(
+    find . -maxdepth 1 -type d -exec du -hs "{}" \; | sort -h
+)}
+
 function mcd()
 {
 	dir="$1"
