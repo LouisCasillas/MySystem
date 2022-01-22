@@ -8,6 +8,11 @@ function ded()
 	find . -type d -empty -delete
 )}
 
+function def()
+{(
+	find . -type f -empty -delete
+)}
+
 function ds()
 {(
     find . -maxdepth 1 -exec du -hs "{}" \; | sort -h
