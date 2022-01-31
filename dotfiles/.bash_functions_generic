@@ -17,12 +17,12 @@ function ds()
 {(
     find . -maxdepth 1 -exec du -hs "{}" \; | sort -h
 )}
-
-alias dsf='dsd'
 function dsd()
 {(
     find . -maxdepth 1 -type d -exec du -hs "{}" \; | sort -h
 )}
+alias dsr='ds | tac'
+alias dsdr='dsd | tac'
 
 function mcd()
 {
