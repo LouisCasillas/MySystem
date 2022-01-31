@@ -34,7 +34,7 @@ set cpoptions+=q
 " number
 set nrformats-=octal
 " allow {ctrl-A} and {ctrl-X} to increment/decrement letters
-set nrformats+=alpha
+"set nrformats+=alpha
 
 " allow vim to determine what type of file is being opened and allow rules for
 " that specific filetype
