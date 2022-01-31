@@ -96,7 +96,7 @@ function pwait()
 		wait="$2"
 	fi
 
-	until ! pgrep "$process" &>/dev/null; do
+	until ! (ps_out="$(ps auxw)"; echo "$ps_out" | grep -E -e "$process" &>/dev/null); do
 		echo "waiting $wait minute(s)... [process: $process]"
 		sleep "$wait""m"
 	done
