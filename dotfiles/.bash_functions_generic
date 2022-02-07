@@ -269,14 +269,22 @@ function rename-to-numbers()
     done
 )}
 
-function ya()
+function _ydownload()
 {(
-	num_of_videos_to_get="$1"
-    
     format="22/18"
+    batch_file="a"
+    num_of_videos_to_get="0"
     
+    if [[ ! -z "$1" ]]; then
+        format="$1"
+    fi
+
     if [[ ! -z "$2" ]]; then
-        format="$2"
+        batch_file="$2"
+    fi
+
+    if [[ ! -z "$3" ]]; then
+        num_of_videos_to_get="$3"
     fi
 
     if [[ "$format" != "none" ]]; then
@@ -293,7 +301,7 @@ function ya()
         echo 'No Youtube cookies found...'
 	fi
 
-	if [[ (! -z "$num_of_videos_to_get") && ("$num_of_videos_to_get" -gt 0) ]]; then
+	if [[ "$num_of_videos_to_get" -gt 0 ]]; then
 		opt="$opt --playlist-end="$num_of_videos_to_get" --max-downloads=$num_of_videos_to_get"
         echo "Only downloading $num_of_videos_to_get videos..."
 	fi
@@ -302,25 +310,30 @@ function ya()
     # possibly useful youtube-dl options: --user-agent, --referer, --sleep-interval
 	youtube-dl --continue --ignore-errors --youtube-skip-dash-manifest --restrict-filenames \
 		--no-call-home --no-warnings --no-check-certificate --retries 'infinite' --fragment-retries 'infinite' \
-        --batch-file a \
+        --batch-file "$batch_file" \
         --external-downloader aria2c \
         --external-downloader-args "--max-concurrent-downloads=1 --max-connection-per-server=4 --max-tries=0 --retry-wait=5 --split=4 --console-log-level='error' --log-level='error' --summary-interval=0" --exec 'echo {} >> done.txt' \
 		$opt
 )}
 
+function ya()
+{(
+    _ydownload "22/18" "$1" "$2"
+)}
+
 function yaq()
 {(
-    ya "$1" "bestvideo+bestaudio"
+    _ydownload "bestvideo+bestaudio" "$1" "$2"
 )}
 
 function yaa()
 {(
-    ya "$1" "251/250/249/140"
+    _ydownload "251/250/249/140" "$1" "$2"
 )}
 
 function yag()
 {(
-    ya "$1" "none"
+    _ydownload "none" "$1" "$2"
 )}
 
 function uzrm()
