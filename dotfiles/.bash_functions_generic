@@ -343,3 +343,8 @@ function uzrm()
     unzip "$zip_file" && \
         rm "$zip_file"
 )}
+
+function fex()
+{(
+    find . -type f | sed -e 's/^.*[.]\(.*\)$/\1/' | sort | uniq -c | sort -n
+)}
