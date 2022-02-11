@@ -305,15 +305,18 @@ function _ydownload()
 		opt="$opt --playlist-end="$num_of_videos_to_get" --max-downloads=$num_of_videos_to_get"
         echo "Only downloading $num_of_videos_to_get videos..."
 	fi
-	
 
-    # possibly useful youtube-dl options: --user-agent, --referer, --sleep-interval
-	youtube-dl --continue --ignore-errors --youtube-skip-dash-manifest --restrict-filenames \
-		--no-call-home --no-warnings --no-check-certificate --retries 'infinite' --fragment-retries 'infinite' \
-        --batch-file "$batch_file" \
-        --external-downloader aria2c \
-        --external-downloader-args "--max-concurrent-downloads=1 --max-connection-per-server=4 --max-tries=0 --retry-wait=5 --split=4 --console-log-level='error' --log-level='error' --summary-interval=0" --exec 'echo {} >> done.txt' \
-		$opt
+    cat "$batch_file" | while read url; do	
+        # possibly useful youtube-dl options: --user-agent, --referer, --sleep-interval
+        youtube-dl "$url" --continue --ignore-errors --youtube-skip-dash-manifest --restrict-filenames \
+            --no-call-home --no-warnings --no-check-certificate --retries 'infinite' --fragment-retries 'infinite' \
+            --external-downloader aria2c \
+            --external-downloader-args "--max-concurrent-downloads=1 --max-connection-per-server=4 --max-tries=0 --retry-wait=5 --split=4 --console-log-level='error' --log-level='error' --summary-interval=0" \
+            $opt && \
+            echo "$url" >> done.txt && \
+            sort "$batch_file" done.txt | uniq -u > ".$batch_file" && \
+            mv ".$batch_file" "$batch_file"
+    done
 )}
 
 function ya()
