@@ -271,17 +271,41 @@ function rename-to-numbers()
 
 function _ydownload()
 {(
+    download_program="$(which youtube-dl youtube-dl.exe | head -1)"
     format="22/18"
-    batch_file="a"
+    batch_file="$(pwd)/a"
     num_of_videos_to_get="0"
+    cookie_tmp_file=""
+
+    if [[ -z "$download_program" ]]; then
+        echo "[FATAL ERROR] No download program found..."
+        return 1
+    fi
     
     if [[ ! -z "$1" ]]; then
         format="$1"
     fi
 
     if [[ ! -z "$2" ]]; then
-        batch_file="$2"
+        echo "$2" | grep -q '/'
+        if [[ "$?" -eq "0" ]]; then
+            batch_file="$2"
+        else
+            batch_file="$(pwd)/$2"
+        fi
     fi
+
+    if [[ ! -f "$batch_file" ]]; then
+        echo -e "[ERROR] No batch file found...\nBatch file: $batch_file"
+        return 1
+    else
+        if [[ ! -r "$batch_file" ]]; then
+            echo -e "[ERROR] Batch file found but not readable...\nBatch file: $batch_file"
+            return 1
+        fi
+    fi
+
+    echo "Batch file: $batch_file"
 
     if [[ ! -z "$3" ]]; then
         num_of_videos_to_get="$3"
@@ -289,34 +313,50 @@ function _ydownload()
 
     if [[ "$format" != "none" ]]; then
         opt="--format "$format""
-        echo "Specifying the video format: $format"
+        echo "Specifying the format: $format"
     else
-        echo 'Not specifying a video format...'
+        echo 'Not specifying a format...'
     fi
 
-	if [[ -r ~/Downloads/youtube.com_cookies.txt ]]; then
-		opt="$opt --cookies ~/Downloads/youtube.com_cookies.txt"
-        echo 'Found and using Youtube cookies...'
+	if [[ "$(ls ~/Downloads/*_cookies.txt 2>/dev/null | wc -l)" -gt 0 ]]; then
+        cookie_tmp_file="$(mktemp)"
+        cat ~/Downloads/*_cookies.txt > "$cookie_tmp_file"
+
+		opt="$opt --cookies "$cookie_tmp_file""
+        echo 'Looked in ~/Downloads/ and found cookies...'
     else
-        echo 'No Youtube cookies found...'
+        echo 'Looked in ~/Downloads/ but no cookies found...'
 	fi
 
 	if [[ "$num_of_videos_to_get" -gt 0 ]]; then
 		opt="$opt --playlist-end="$num_of_videos_to_get" --max-downloads=$num_of_videos_to_get"
-        echo "Only downloading $num_of_videos_to_get videos..."
+        echo "Only downloading $num_of_videos_to_get..."
 	fi
 
-    cat "$batch_file" | while read url; do	
+    if [[ -r "done.txt" ]]; then
+        sort "$batch_file" done.txt | \
+            uniq -d | \
+            while read line; do
+                sed -i "$batch_file" -e "s/^$line$//" -e '/^$/d' 2>/dev/null
+            done
+    fi
+
+    # Note: youtube-dl.exe seems to mess with the while loop so pass the file names in on the 9th file descriptor which is generally never used by any program
+    while read -u 9 url; do
+        echo "Downloading: $url"
+
         # possibly useful youtube-dl options: --user-agent, --referer, --sleep-interval
-        youtube-dl "$url" --continue --ignore-errors --youtube-skip-dash-manifest --restrict-filenames \
+        $download_program "$url" --continue --ignore-errors --youtube-skip-dash-manifest --restrict-filenames \
             --no-call-home --no-warnings --no-check-certificate --retries 'infinite' --fragment-retries 'infinite' \
             --external-downloader aria2c \
             --external-downloader-args "--max-concurrent-downloads=1 --max-connection-per-server=4 --max-tries=0 --retry-wait=5 --split=4 --console-log-level='error' --log-level='error' --summary-interval=0" \
             $opt && \
-            echo "$url" >> done.txt && \
-            sort "$batch_file" done.txt | uniq -u > ".$batch_file" && \
-            mv ".$batch_file" "$batch_file"
-    done
+            echo "$url" >> done.txt
+    done 9< "$batch_file"
+
+    if [[ ! -z "$cookie_tmp_file" ]]; then
+        rm "$cookie_tmp_file"
+    fi
 )}
 
 function ya()
@@ -337,6 +377,11 @@ function yaa()
 function yag()
 {(
     _ydownload "none" "$1" "$2"
+)}
+
+function ya_all()
+{(
+  find . -type f -name "a" | sed -e 's/a$//' | while read dir; do (cd "$dir" && ya); done
 )}
 
 function uzrm()

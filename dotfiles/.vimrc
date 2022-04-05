@@ -1,3 +1,7 @@
+" TODO:
+" If saving a file in a directory that doesn't exist then create it first
+" before saving the file
+
 """ Set options
 " do not force vim to behave in a vi-compatible way
 set nocompatible
@@ -7,8 +11,8 @@ let mapleader = ','
 
 " set tab to 4 spaces so code more easily matches with online editors
 " even though I prefer tab is a symbol
-set tabstop=4
-set shiftwidth=4
+set tabstop=2
+set shiftwidth=2
 set expandtab
 
 " have vim save a copy of a file before writing and saving the file
@@ -245,6 +249,9 @@ noremap j gj
 noremap k gk
 noremap 0 g0
 noremap $ g$
+
+" create a quick map to go back to the last edited line
+noremap gl '.
 
 " make a quick forceful quit
 nnoremap <silent> <Leader>Q :qall!<Enter>
