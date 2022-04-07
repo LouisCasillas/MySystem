@@ -287,8 +287,7 @@ function _ydownload()
     fi
 
     if [[ ! -z "$2" ]]; then
-        echo "$2" | grep -q '/'
-        if [[ "$?" -eq "0" ]]; then
+        if [[ $(echo "$2" | grep -q '/') ]]; then
             batch_file="$2"
         else
             batch_file="$(pwd)/$2"
