@@ -323,7 +323,7 @@ function _ydownload()
     fi
 
     if [[ "$format" != "none" ]]; then
-        opt="--format "$format""
+        opt="$opt --format "$format""
         echo "Specifying the format: $format"
     else
         echo 'Not specifying a format...'
@@ -346,6 +346,7 @@ function _ydownload()
                 sed -i "$batch_file" -e "s/^$line$//" -e '/^$/d' 2>/dev/null
             done
     fi
+    echo -e "youtube-dl options being used:\n$opt"
 
     # Note: youtube-dl.exe seems to mess with the while loop so pass the file names in on the 9th file descriptor which is generally never used by any program
     while read -u 9 url; do
