@@ -287,16 +287,18 @@ function _ydownload()
     fi
 
     if [[ ! -z "$2" ]]; then
-        if [[ -z "$3" && $(echo "$2" | grep -q "^[0-9]*$") ]]; then
-          num_of_videos_to_get="$2"
-          batch_file="$(pwd)/a"
-        else
-          if [[ $(echo "$2" | grep -q '/') ]]; then
-              batch_file="$2"
+        echo "$2" | \
+          if [[ -z "$3" ]] && grep -q "^[0-9]*$"; then
+            num_of_videos_to_get="$2"
+            batch_file="$(pwd)/a"
           else
-              batch_file="$(pwd)/$2"
+            echo "$2" | \
+              if grep -q '/'; then
+                  batch_file="$2"
+              else
+                  batch_file="$(pwd)/$2"
+              fi
           fi
-        fi
     fi
 
     echo "Batch file: $batch_file"
@@ -334,7 +336,7 @@ function _ydownload()
 
 	if [[ "$num_of_videos_to_get" -gt 0 ]]; then
 		opt="$opt --playlist-end="$num_of_videos_to_get" --max-downloads=$num_of_videos_to_get"
-        echo "Only downloading $num_of_videos_to_get..."
+    echo "Only downloading $num_of_videos_to_get..."
 	fi
 
     if [[ -r "done.txt" ]]; then
