@@ -359,6 +359,8 @@ function _ydownload()
             --external-downloader-args "--max-concurrent-downloads=1 --max-connection-per-server=4 --max-tries=0 --retry-wait=5 --split=4 --console-log-level='error' --log-level='error' --summary-interval=0" \
             $opt && \
             echo "$url" >> done.txt
+
+       sleep 1
     done 9< "$batch_file"
 
     if [[ ! -z "$cookie_tmp_file" ]]; then
