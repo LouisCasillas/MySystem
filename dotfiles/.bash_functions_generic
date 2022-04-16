@@ -274,8 +274,11 @@ function _ydownload()
     download_program="$(which youtube-dl youtube-dl.exe | head -1)"
     format="22/18"
     batch_file="$(pwd)/a"
+    done_file="done.txt"
     num_of_videos_to_get="0"
     cookie_tmp_file=""
+    opt="--continue --ignore-errors --youtube-skip-dash-manifest --restrict-filenames"
+    opt="$opt --no-call-home --no-warnings --no-check-certificate --external-downloader aria2c"
 
     if [[ -z "$download_program" ]]; then
         echo "[FATAL ERROR] No download program found..."
@@ -313,6 +316,9 @@ function _ydownload()
         fi
     fi
 
+    number_of_urls="$(wc -l "$batch_file" | awk '{print $1}')"
+    echo "Number of URLs in batch file: $number_of_urls"
+
     if [[ ! -z "$3" ]]; then
         num_of_videos_to_get="$3"
     fi
@@ -339,28 +345,27 @@ function _ydownload()
         echo 'Looked in ~/Downloads/ but no cookies found...'
 	fi
 
-    if [[ -r "done.txt" ]]; then
-        sort "$batch_file" done.txt | \
+    if [[ -r "$done_file" ]]; then
+        sort "$batch_file" "$done_file" | \
             uniq -d | \
             while read line; do
-                sed -i "$batch_file" -e "s/^$line$//" -e '/^$/d' 2>/dev/null
+                sed -i "$batch_file" -e "s|^$line$||" -e '/^$/d' 2>/dev/null
             done
     fi
-    echo -e "youtube-dl options being used:\n$opt"
 
+    echo -e "youtube-dl options being used:\n$opt"
+ 
+    i=1
     # Note: youtube-dl.exe seems to mess with the while loop so pass the file names in on the 9th file descriptor which is generally never used by any program
     while read -u 9 url; do
-        echo "Downloading: $url"
+        echo "Downloading [$i/$number_of_urls]: $url"
 
         # possibly useful youtube-dl options: --user-agent, --referer, --sleep-interval
-        $download_program "$url" --continue --ignore-errors --youtube-skip-dash-manifest --restrict-filenames \
-            --no-call-home --no-warnings --no-check-certificate --retries 'infinite' --fragment-retries 'infinite' \
-            --external-downloader aria2c \
-            --external-downloader-args "--max-concurrent-downloads=1 --max-connection-per-server=4 --max-tries=0 --retry-wait=5 --split=4 --console-log-level='error' --log-level='error' --summary-interval=0" \
-            $opt && \
-            echo "$url" >> done.txt
+        $download_program "$url" $opt && \
+            echo "$url" >> "$done_file"
 
        sleep 1
+       (( i++ ))
     done 9< "$batch_file"
 
     if [[ ! -z "$cookie_tmp_file" ]]; then
