@@ -56,7 +56,7 @@ pacman_packages+=(base base-devel multilib-devel)
 pacman_packages+=(tmux sudo sed man-db man-pages bash-completion findutils file less psmisc fakeroot fakechroot inotify-tools tree busybox lsof gawk bc coreutils which util-linux procps-ng kmod grep cronie)
 
 # Misc utility packages
-pacman_packages+=(asciinema ncdu lm_sensors discount hexedit ffmpeg calibre lftp)
+pacman_packages+=(asciinema ncdu lm_sensors discount hexedit ffmpeg calibre lftp pandoc)
 
 # Font packages
 #pacman_packages+=()
@@ -197,5 +197,11 @@ echo "All packages installed."
 # manual package installs
 
 # youtube-dl
-curl -L https://yt-dl.org/downloads/latest/youtube-dl -o /usr/local/bin/youtube-dl
-chmod +x /usr/local/bin/youtube-dl
+(
+  mkdir -p ~/repos/other/ && \
+    cd ~/repos/other/ && \
+    git clone 'git@github.com:ytdl-org/youtube-dl.git' && \
+    cd youtube-dl && \
+    make && \
+    python3 setup.py install
+)
