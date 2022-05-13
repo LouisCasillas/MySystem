@@ -5,7 +5,7 @@ set -x
 # exit on any error
 set -e
 
-# purpose: install my most commonly used packages for a headless dev machine and set the settings I prefer
+# purpose: install my most commonly used packages for a dev machine and set the settings I prefer
 # prerequisites: expects an Arch system with pacman and bash already installed
 
 ### TODO
@@ -40,7 +40,7 @@ if [[ -z "$user" ]]; then
 	exit 1
 fi
 
-echo "$user ALL=(ALL:ALL) NOPASSWD: ALL" | tee "/etc/sudoers.d/dont-prompt-$user"
+[ ! -f "/etc/sudoers.d/dont-prompt-$user" ] && echo "$user ALL=(ALL:ALL) NOPASSWD: ALL" | tee "/etc/sudoers.d/dont-prompt-$user"
 
 declare -a pacman_packages=()
 declare -a aur_packages=()
@@ -56,13 +56,13 @@ pacman_packages+=(base base-devel multilib-devel)
 pacman_packages+=(tmux sudo sed man-db man-pages bash-completion findutils file less psmisc fakeroot fakechroot inotify-tools tree busybox lsof gawk bc coreutils which util-linux procps-ng kmod grep cronie)
 
 # Misc utility packages
-pacman_packages+=(asciinema ncdu lm_sensors discount hexedit ffmpeg calibre lftp pandoc)
+pacman_packages+=(asciinema ncdu lm_sensors discount hexedit ffmpeg lftp pandoc)
 
 # Font packages
 #pacman_packages+=()
 
 # Development packages
-pacman_packages+=(strace git git-crypt python-pip typescript binutils dart nodejs npm)
+pacman_packages+=(strace git git-crypt python-pip typescript binutils dart nodejs npm python python3)
 
 # Backup packages
 #pacman_packages+=()
@@ -77,7 +77,7 @@ pacman_packages+=(vim)
 pacman_packages+=(nload iotop powertop htop)
 
 # Speech packages
-#pacman_packages+=(espeak)
+pacman_packages+=(espeak)
 
 # Archive packages
 pacman_packages+=(p7zip tar gzip bzip2 xz zip unzip unrar)
@@ -119,10 +119,6 @@ pacman_packages+=(nmap tcpdump mosh openssh iptables dnsmasq bind-tools whois ne
 # Imaging packages
 pacman_packages+=(imagemagick pngcrush scrot)
 
-# My computer device packages
-# solaar - for logitech k830 keyboard - logitech unifying receiver
-#pacman_packages+=(solaar)
-
 # *** Desktop/Visual Packages
 
 # X packages
@@ -135,7 +131,7 @@ pacman_packages+=(imagemagick pngcrush scrot)
 #pacman_packages+=()
 
 # Multimedia packages
-#pacman_packages+=(vlc xpdf atril calibre)
+pacman_packages+=(vlc xpdf atril calibre)
 
 # Development packages
 #pacman_packages+=()

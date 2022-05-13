@@ -58,7 +58,7 @@ shopt -s histappend
 
 # My additions
 
-export HISTSIZE=-1
+#export HISTSIZE=-1
 export HISTFILESIZE="$HISTSIZE"
 export HISTCONTROL="ignorespace:ignoredups:erasedups"
 
