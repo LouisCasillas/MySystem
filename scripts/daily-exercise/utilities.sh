@@ -1,7 +1,7 @@
 BEEP_SOUND="beep.wav"
 FINISH_SOUND="applause.wav"
 # used with mpv - 0=silence, 100=no change
-VOLUME="50"
+VOLUME="25"
 
 function write()
 {
