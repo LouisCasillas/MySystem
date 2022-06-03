@@ -5,7 +5,7 @@ set -x
 # exit on any error
 set -e
 
-# purpose: install my most commonly used packages for a headless dev machine and set the settings I prefer
+# purpose: install my most commonly used packages for a dev machine and set the settings I prefer
 # prerequisites: expects an Arch system with pacman and bash already installed
 
 ### TODO
@@ -40,7 +40,7 @@ if [[ -z "$user" ]]; then
 	exit 1
 fi
 
-echo "$user ALL=(ALL:ALL) NOPASSWD: ALL" | tee "/etc/sudoers.d/dont-prompt-$user"
+[ ! -f "/etc/sudoers.d/dont-prompt-$user" ] && echo "$user ALL=(ALL:ALL) NOPASSWD: ALL" | tee "/etc/sudoers.d/dont-prompt-$user"
 
 declare -a pacman_packages=()
 declare -a aur_packages=()
@@ -82,7 +82,7 @@ pacman_packages+=(asciinema ncdu lm_sensors discount hexedit ffmpeg calibre lftp
 #pacman_packages+=()
 
 # Development packages
-pacman_packages+=(strace git git-crypt python-pip typescript binutils dart nodejs npm jdk8-openjdk)
+pacman_packages+=(strace git git-crypt python-pip typescript binutils dart nodejs npm jdk8-openjdk python python3)
 
 # Backup packages
 #pacman_packages+=()
@@ -141,10 +141,6 @@ pacman_packages+=(qemu)
 
 # Imaging packages
 pacman_packages+=(imagemagick pngcrush scrot)
-
-# My computer device packages
-# solaar - for logitech k830 keyboard - logitech unifying receiver
-#pacman_packages+=(solaar)
 
 # *** Desktop/Visual Packages
 
