@@ -417,3 +417,9 @@ function kotlin-run()
   jar_file="$(echo "$kotlin_file" | sed -e 's/kt$/jar/')"
   kotlinc "$kotlin_file" -include-runtime -d "$jar_file"; java -jar "$jar_file"
 )}
+
+function do-exercises()
+{(
+  cd ~/repos/MySystem/scripts/daily-exercise
+  bash "do-exercises.sh"
+)}
