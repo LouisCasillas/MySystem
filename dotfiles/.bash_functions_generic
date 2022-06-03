@@ -410,3 +410,10 @@ function fex()
 {(
     find . -type f | sed -e 's/^.*[.]\(.*\)$/\1/' | sort | uniq -c | sort -n
 )}
+
+function kotlin-run()
+{(
+  kotlin_file="$1"
+  jar_file="$(echo "$kotlin_file" | sed -e 's/kt$/jar/')"
+  kotlinc "$kotlin_file" -include-runtime -d "$jar_file"; java -jar "$jar_file"
+)}
