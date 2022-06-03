@@ -91,6 +91,13 @@ for file in ~/.bash_functions_*; do
 	fi
 done
 
+personal_bin_dir="$HOME/.local/bin"
+mkdir -p "$personal_bin_dir"
+
+if [[ "$(echo $PATH | grep -v $personal_bin_dir)" ]]; then 
+  export PATH="$PATH:$personal_bin_dir"
+fi
+
 # if there is a key map modifier file then execute it
 if [[ -r ~/.xmodmap.conf ]]; then
 	xmodmap ~/.xmodmap.conf &> /dev/null
