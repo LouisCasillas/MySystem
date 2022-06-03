@@ -1,5 +1,7 @@
 BEEP_SOUND="beep.wav"
 FINISH_SOUND="applause.wav"
+# used with mpv - 0=silence, 100=no change
+VOLUME="50"
 
 function write()
 {
@@ -16,8 +18,7 @@ function write()
 
 function speak()
 {
-  #espeak -z -p 0.4 -s 150 -g 11 -v en-us "$1" --stdout | aplay -c 2 &>/dev/null
-  espeak -z -p 0.4 -s 150 -g 11 -v en-us "$1" &>/dev/null
+  espeak -a "$VOLUME" -z -p 0.4 -s 150 -g 11 -v en-us "$1" &>/dev/null
 }
 
 function say()
@@ -29,13 +30,13 @@ function say()
 
 function play()
 {
-  if [[ "$(which aplay 2>/dev/null)" != "" ]]; then
-    aplay "$1" &>/dev/null
-  else
     if [[ "$(which mpv 2>/dev/null)" != "" ]]; then
-      mpv "$1" &>/dev/null
+      mpv --volume="$VOLUME" "$1" &>/dev/null
+    else
+      if [[ "$(which aplay 2>/dev/null)" != "" ]]; then
+        aplay "$1" &>/dev/null
+      fi
     fi
-  fi
 }
 
 function countdown()
