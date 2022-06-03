@@ -15,3 +15,16 @@ ffmpeg -y -r 1 -framerate 1/5 -pattern_type glob -i 'images/*.jpg' -vf "scale=19
 
 # if a video or image has a resolution that isn't divisible by two add this video filter
  -vf "pad=ceil(iw/2)*2:ceil(ih/2)*2" 
+
+# add a countdown timer and total duration time to the bottom right corner of a 1080p video
+video_file="video.mkv"
+duration="\'$(ffprobe -i "$video_file" 2>&1 | grep DURATION |  head -n1 | cut -d ":" -f2- | cut -d '.' -f1)\'"
+
+ffmpeg -y -i "$video_file" \
+	-filter_complex "[0:v]drawtext=text='%{pts\:hms}': \
+		x=1743: y=1000: \
+		fontsize=36: fontcolor=black[in1]; \
+    [in1]drawtext=text=none:$duration: \
+		x=1743: y=1040: \
+		fontsize=36: fontcolor=black" \
+	'video-with-countdown.mkv'
