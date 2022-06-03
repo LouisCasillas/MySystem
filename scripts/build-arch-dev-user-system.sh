@@ -44,6 +44,26 @@ echo "$user ALL=(ALL:ALL) NOPASSWD: ALL" | tee "/etc/sudoers.d/dont-prompt-$user
 
 declare -a pacman_packages=()
 declare -a aur_packages=()
+declare -a snap_packages=()
+
+# manual package installs
+
+# download my repos
+if [[ 0 == 1 ]]; then
+(
+  mkdir -p ~/repos && \
+    cd ~/repos/ && \
+    git clone git@github.com:LouisCasillas/MySystem.git && \
+    git clone git@github.com:LouisCasillas/MyNotes.git && \
+    git clone git@github.com:LouisCasillas/Python-Misc.git && \
+    git clone git@github.com:LouisCasillas/ProjectEuler-Python.git && \
+    git clone git@github.com:LouisCasillas/LeetCode-Python.git && \
+    git clone git@github.com:LouisCasillas/ProjectEuler-BASH.git && \
+    git clone git@github.com:LouisCasillas/HackerRank-Python.git && \
+    git clone git@github.com:LouisCasillas/MyPythonPortfolio.git && \
+    git clone git@github.com:LouisCasillas/SimpleAndroidApps.git
+)
+fi
 
 # Groups to install
 pacman_packages+=(base base-devel multilib-devel)
@@ -56,13 +76,13 @@ pacman_packages+=(base base-devel multilib-devel)
 pacman_packages+=(tmux sudo sed man-db man-pages bash-completion findutils file less psmisc fakeroot fakechroot inotify-tools tree busybox lsof gawk bc coreutils which util-linux procps-ng kmod grep cronie)
 
 # Misc utility packages
-pacman_packages+=(asciinema ncdu lm_sensors discount hexedit ffmpeg calibre lftp pandoc)
+pacman_packages+=(asciinema ncdu lm_sensors discount hexedit ffmpeg calibre lftp pandoc banner)
 
 # Font packages
 #pacman_packages+=()
 
 # Development packages
-pacman_packages+=(strace git git-crypt python-pip typescript binutils dart nodejs npm)
+pacman_packages+=(strace git git-crypt python-pip typescript binutils dart nodejs npm jdk8-openjdk)
 
 # Backup packages
 #pacman_packages+=()
@@ -70,17 +90,17 @@ pacman_packages+=(strace git git-crypt python-pip typescript binutils dart nodej
 # Privacy/Security packages
 pacman_packages+=(gnupg openssl)
 
-# Editing packages
-pacman_packages+=(vim)
+# Text Editing packages
+pacman_packages+=(vim notepadqq)
 
 # Monitoring packages
 pacman_packages+=(nload iotop powertop htop)
 
 # Speech packages
-#pacman_packages+=(espeak)
+pacman_packages+=(espeak-ng)
 
 # Archive packages
-pacman_packages+=(p7zip tar gzip bzip2 xz zip unzip unrar)
+pacman_packages+=(p7zip tar gzip bzip2 xz zip unzip unrar lrzip)
 
 # Web Browsing/Downloading packages
 pacman_packages+=(links aria2 wget curl rclone rsync ca-certificates)
@@ -89,7 +109,7 @@ pacman_packages+=(links aria2 wget curl rclone rsync ca-certificates)
 pacman_packages+=(exfat-utils dosfstools dos2unix)
 
 # Multimedia console packages
-#pacman_packages+=(mencoder mpv ffmpeg alsa-utils minidlna moc)
+pacman_packages+=(mencoder mpv ffmpeg alsa-utils minidlna moc)
 
 # AWS tool packages
 #pacman_packages+=()
@@ -101,7 +121,10 @@ pacman_packages+=(exfat-utils dosfstools dos2unix)
 pacman_packages+=(nmap tcpdump mosh openssh iptables dnsmasq bind-tools whois net-tools macchanger ntp)
 
 # Android dev and tool packages
-#pacman_packages+=(android-tools)
+pacman_packages+=(android-tools)
+# android-sdk-build-tools android-sdk-platform-tools android-platform)
+# unknown:android-support-repository  
+snap_packages+=(android-studio)
 
 # Graphics dev and tool packages
 #pacman_packages+=()
@@ -111,10 +134,10 @@ pacman_packages+=(nmap tcpdump mosh openssh iptables dnsmasq bind-tools whois ne
 #pacman_packages+=(amd-ucode amdvlk lib32-amdvlk opencl-mesa mesa lib32-mesa xf86-video-amdgpu vulkan-radeon lib32-vulkan-radeon lib32-libva-mesa-driver libvdpau-va-gl)
 
 # NVIDIA specific packages
-#pacman_packages+=(mhwd-nvidia nvidia-utils)
+pacman_packages+=(mhwd-nvidia nvidia-utils)
 
 # Virtualization tools
-#pacman_packages+=(qemu)
+pacman_packages+=(qemu)
 
 # Imaging packages
 pacman_packages+=(imagemagick pngcrush scrot)
@@ -126,7 +149,7 @@ pacman_packages+=(imagemagick pngcrush scrot)
 # *** Desktop/Visual Packages
 
 # X packages
-#pacman_packages+=(xorg-xkill xorg-server xorg-xset xorg-xprop xdg-utils xorg-xinit xorg-xrandr xorg-xauth xorg-xmodmap xorg-xgamma xorg-xinput xorg-xlsclients xorg-xrefresh xsel xorg-xmessage xorg-xev)
+pacman_packages+=(xorg-xkill xorg-server xorg-xset xorg-xprop xdg-utils xorg-xinit xorg-xrandr xorg-xauth xorg-xmodmap xorg-xgamma xorg-xinput xorg-xlsclients xorg-xrefresh xsel xorg-xmessage xorg-xev)
 
 # i3 Desktop window manager packages
 #pacman_packages+=(i3-wm unclutter rofi)
@@ -135,7 +158,7 @@ pacman_packages+=(imagemagick pngcrush scrot)
 #pacman_packages+=()
 
 # Multimedia packages
-#pacman_packages+=(vlc xpdf atril calibre)
+pacman_packages+=(vlc xpdf atril calibre)
 
 # Development packages
 #pacman_packages+=()
@@ -147,13 +170,14 @@ pacman_packages+=(imagemagick pngcrush scrot)
 #pacman_packages+=(dgen-sdl mednafen snes9x)
 
 # Imaging packages
-#pacman_packages+=(gimp gimp-help-en inkscape)
+pacman_packages+=(gimp gimp-help-en inkscape)
 
 # Browser packages
-#pacman_packages+=(chromium firefox opera otter-browser brave midori)
-
+# TODO: add chrome
+pacman_packages+=(chromium firefox opera otter-browser midori)
+#unknown: brave 
 # Misc Desktop packages
-#pacman_packages+=(gparted libreoffice-fresh keepassxc dia)
+pacman_packages+=(gparted libreoffice-fresh keepassxc dia)
 
 # *** install packages
 
@@ -192,16 +216,27 @@ else
 	done
 fi
 
-echo "All packages installed."
-
-# manual package installs
-
 # youtube-dl
 (
   mkdir -p ~/repos/other/ && \
     cd ~/repos/other/ && \
-    git clone 'git@github.com:ytdl-org/youtube-dl.git' && \
+    git clone https://github.com/ytdl-org/youtube-dl.git && \
     cd youtube-dl && \
     make && \
     python3 setup.py install
 )
+
+# install yay
+(
+  cd ~/repos/ && \
+    git clone https://aur.archlinux.org/yay.git && \
+    cd yay && \
+    makepkg -si
+)
+
+echo "All packages installed."
+
+device_number="$(xinput list | grep -i touchpad | sed -e 's/^.*id=\([0-9]*\).*$/\1/g')"
+xinput list-props "$device_number" | grep -i Tapping
+xinput set-prop "$device_number" 318(above) 1
+xinput set-prop "$device_number" 326 1
