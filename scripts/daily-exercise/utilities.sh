@@ -1,7 +1,9 @@
 BEEP_SOUND="beep.wav"
 FINISH_SOUND="applause.wav"
-# used with mpv - 0=silence, 100=no change
+# 0=silence, 100=no change
 VOLUME="25"
+HALFWAY_MESSAGE="Halfway there!  Keep going!"
+LAST_SET_MESSAGE="Last round!"
 
 function write()
 {
@@ -48,7 +50,7 @@ function countdown()
   if [[ "$speaking_time" == "" ]]; then
     seconds_of_speaking="0"
   else
-    seconds_of_speaking="$((1000 * ($total_time - $speaking_time - 1)))"
+    seconds_of_speaking="$((1000 * ($total_time - $speaking_time)))"
   fi
     
   initial_start_time=$(date +%s.%3N)

@@ -10,13 +10,12 @@ SLOW_COUNT=60
 for ((i=0;i<$SETS;i++))
 do
     if [[ "$i" -eq "$MID_SET" ]]; then
-      say "Halfway there!  Keep going!"
+      say "$HALFWAY_MESSAGE"
     else
       if [[ "$i" -eq "$LAST_SET" ]]; then
-        say "Last round!"
+        say "$LAST_SET_MESSAGE"
       fi
     fi
-
     write "Set: $(( $i + 1 )) / $SETS"
     
     say "SLOW"
