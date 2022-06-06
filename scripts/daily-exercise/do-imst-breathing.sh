@@ -18,6 +18,8 @@ do
       fi
     fi
 
+    write "Set: $(( $i + 1 )) / $SETS"
+
     say "IN"
     countdown "$IN_COUNT"
     say "OUT"

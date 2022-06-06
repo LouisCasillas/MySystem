@@ -18,6 +18,9 @@ done
 say "Beginning exercises for reps. Hit any key after completing each exercise."
 
 cat "$REP_FILE" | while read exercise; do
+
+  write "Set: $(( $i + 1 )) / $SETS"
+
   say "$exercise"
   countdown "$TIME_PER_EXERCISE" "yes"
 

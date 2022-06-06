@@ -16,6 +16,8 @@ do
         say "Last round!"
       fi
     fi
+
+    write "Set: $(( $i + 1 )) / $SETS"
     
     say "SLOW"
     countdown "$SLOW_COUNT" "yes" 1
