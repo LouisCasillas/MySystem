@@ -45,7 +45,7 @@ cat "$REP_FILE" | while read exercise; do
 
   (( i++ ))
 
-  read -n 1
+  read -n 1 </dev/tty
 done
 
 play "$FINISH_SOUND"
