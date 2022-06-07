@@ -1,12 +1,12 @@
 . utilities.sh
 
-beginning_announcement "Ok time for box breathing!" "Sit down." 8
+beginning_announcement "Time for box breathing!" "Stand up." 8
 
 SETS=15
 MID_SET="$(( $SETS / 2 ))"
 LAST_SET="$(( $SETS - 1 ))"
 IN_COUNT=6
-HOLD_COUNT=8
+HOLD_COUNT=6
 OUT_COUNT=6
 
 for ((i=0;i<$SETS;i++))
@@ -21,17 +21,17 @@ do
 
     write "Set: $(( $i + 1 )) / $SETS"
 
-    say "IN"
-    countdown "$IN_COUNT" "yes" 0
+    say_loud "IN"
+    countdown "$IN_COUNT"
 
-    say "HOLD"
-    countdown "$HOLD_COUNT" "yes" 0
+    say_loud "HOLD"
+    countdown "$HOLD_COUNT"
 
-    say "OUT"
-    countdown "$IN_COUNT" "yes" 0
+    say_loud "OUT"
+    countdown "$IN_COUNT"
 
-    say "HOLD"
-    countdown "$HOLD_COUNT" "yes" 0
+    say_loud "HOLD"
+    countdown "$HOLD_COUNT"
 
 done
 
