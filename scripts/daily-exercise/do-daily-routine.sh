@@ -4,7 +4,7 @@ working_dir="$(dirname `readlink $0` &>/dev/null)"
     cd $working_dir
   fi
 
-  #bash do-box-breathing.sh
+  bash do-box-breathing.sh
   bash do-imst-breathing.sh
   bash do-daily-exercises.sh
   bash do-fast-cardio.sh
