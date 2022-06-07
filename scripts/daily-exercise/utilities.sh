@@ -20,7 +20,7 @@ function write()
 
 function speak()
 {
-  espeak -a "$VOLUME" -z -p 0.4 -s 150 -g 11 -v en-us "$1" &>/dev/null
+  espeak -a "$VOLUME" -z -p 0.4 -s 225 -g 11 -v en-us "$1" &>/dev/null
 }
 
 function say()
