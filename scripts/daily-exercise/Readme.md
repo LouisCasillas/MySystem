@@ -12,6 +12,9 @@
         - Slow cardio ended by sprints.
       - Slow steady cardio
 
+  - Daily calorie goal
+    - 2,300 kcal
+
   - Streak
     - [x] June 06, 2022
     - [x] June 07, 2022
