@@ -6,9 +6,7 @@ TIME_FILE="exercises-for-time.txt"
 
 readarray -t time_exercises < "$TIME_FILE"
 
-beginning_announcement "Ok time for daily exercises!" "" 8
-
-say_medium "Beginning exercises for time"
+beginning_announcement "Time for daily exercises for time!" "" 8
 
 SETS="$(wc -l $TIME_FILE | cut -f1 -d' ')"
 MID_SET="$(( $SETS / 2 ))"

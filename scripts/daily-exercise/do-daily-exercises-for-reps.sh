@@ -6,9 +6,7 @@ REP_FILE="exercises-for-reps.txt"
 
 readarray -t rep_exercises < "$REP_FILE"
 
-beginning_announcement "Ok time for daily exercises!" "Get your hand squeezers, yoga blocks, and ab wheel." 8
-
-say_medium "Beginning exercises for reps."
+beginning_announcement "Time for daily exercises for reps!" "Get your hand squeezers, yoga blocks, and ab wheel." 8
 
 SETS="$(wc -l $REP_FILE | cut -f1 -d' ')"
 MID_SET="$(( $SETS / 2 ))"

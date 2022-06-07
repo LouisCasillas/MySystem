@@ -1,6 +1,6 @@
 . utilities.sh
 
-beginning_announcement "Ok time for fast cardio!" "" 8
+beginning_announcement "Time for fast cardio!" "" 8
 
 SETS=3
 MID_SET="$(( $SETS / 2 ))"
