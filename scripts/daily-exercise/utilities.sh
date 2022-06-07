@@ -171,7 +171,7 @@ function countdown()
   done
 
   if [[ "$want_beep" == "yes" ]]; then
-    setVolume "$MEDIUM_VOLUME"
+    setVolume "$LOUD_VOLUME"
     play "$BEEP_SOUND"
     resetVolume
   fi
@@ -192,7 +192,7 @@ function beginning_announcement()
 
   warmup_speakers
 
-  setVolume "$MEDIUM_VOLUME"
+  setVolume "$LOUD_VOLUME"
   setSpeechSpeed "$SLOW_SPEECH_SPEED"
   say "$exercise_announcement"
   say "$needed_equipment"
