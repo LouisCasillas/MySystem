@@ -4,6 +4,16 @@ FINISH_SOUND="applause.wav"
 VOLUME="25"
 HALFWAY_MESSAGE="Halfway there!  Keep going!"
 LAST_SET_MESSAGE="Last round!"
+# TODO:
+# change volume upon new exercise and play it twice
+# add beep to end of exercise
+# applause halfway through daily exercise
+# change speed for new exercises
+# change yti stretch speech
+#change rep time
+# allow to move to mext rep exercise
+# fast cardio - beep after slow
+# louder cheer
 
 function write()
 {
