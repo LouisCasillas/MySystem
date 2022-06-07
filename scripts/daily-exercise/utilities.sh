@@ -1,19 +1,40 @@
 BEEP_SOUND="beep.wav"
 FINISH_SOUND="applause.wav"
-# 0=silence, 100=no change
+
+# 0=silence, 100=no change, 200=doubled volume
+_VOLUME="25"
 VOLUME="25"
-HALFWAY_MESSAGE="Halfway there!  Keep going!"
+MEDIUM_VOLUME="50"
+LOUD_VOLUME="100"
+SUPER_LOUD_VOLUME="150"
+
+# speech in words per minute
+_SPEECH_SPEED="225"
+SPEECH_SPEED="225"
+SLOW_SPEECH_SPEED="175"
+
+HALFWAY_MESSAGE="Halfway there! Keep going!"
 LAST_SET_MESSAGE="Last round!"
-# TODO:
-# change volume upon new exercise and play it twice
-# add beep to end of exercise
-# applause halfway through daily exercise
-# change speed for new exercises
-# change yti stretch speech
-#change rep time
-# allow to move to mext rep exercise
-# fast cardio - beep after slow
-# louder cheer
+
+function setVolume()
+{
+    VOLUME="$1"
+}
+
+function resetVolume()
+{
+  VOLUME="$_VOLUME"
+}
+
+function setSpeechSpeed()
+{
+    SPEECH_SPEED="$1"
+}
+
+function resetSpeechSpeed()
+{
+  SPEECH_SPEED="$_SPEECH_SPEED"
+}
 
 function write()
 {
@@ -30,7 +51,7 @@ function write()
 
 function speak()
 {
-  espeak -a "$VOLUME" -z -p 0.4 -s 225 -g 11 -v en-us "$1" &>/dev/null
+  espeak -a "$VOLUME" -z -p 0.4 -s "$SPEECH_SPEED" -g 11 -v en-us "$1" &>/dev/null
 }
 
 function say()
@@ -39,6 +60,35 @@ function say()
   speak "$1"
 }
 
+function say_medium()
+{
+  setVolume "$MEDIUM_VOLUME"
+  setSpeechSpeed "$SLOW_SPEECH_SPEED"
+  write "$1"
+  speak "$1"
+  resetVolume
+  resetSpeechSpeed
+}
+
+function say_loud()
+{
+  setVolume "$LOUD_VOLUME"
+  setSpeechSpeed "$SLOW_SPEECH_SPEED"
+  write "$1"
+  speak "$1"
+  resetVolume
+  resetSpeechSpeed
+}
+
+function say_super_loud()
+{
+  setVolume "$SUPER_LOUD_VOLUME"
+  setSpeechSpeed "$SLOW_SPEECH_SPEED"
+  write "$1"
+  speak "$1"
+  resetVolume
+  resetSpeechSpeed
+}
 
 function play()
 {
@@ -51,10 +101,41 @@ function play()
     fi
 }
 
+function play_medium()
+{
+  setVolume "$MEDIUM_VOLUME"
+  play "$1"
+  resetVolume
+}
+
+function play_loud()
+{
+  setVolume "$LOUD_VOLUME"
+  play "$1"
+  resetVolume
+}
+
+function play_super_loud()
+{
+  setVolume "$SUPER_LOUD_VOLUME"
+  play "$1"
+  resetVolume
+}
+
 function countdown()
 {
+  # trap ctrl-c so the user can immediately end the countdown
+  trap go_to_next_exercise INT
+  function go_to_next_exercise()
+  {
+    _i=0
+    want_beep=""
+  }
+
   total_time="$1"
   want_beep="$2"
+
+  # only start speaking the countdown numbers once this number is reached
   speaking_time="$3"
   
   if [[ "$speaking_time" == "" ]]; then
@@ -89,9 +170,13 @@ function countdown()
     done
   done
 
-  if [[ "$want_beep" ]]; then
+  if [[ "$want_beep" == "yes" ]]; then
+    setVolume "$MEDIUM_VOLUME"
     play "$BEEP_SOUND"
+    resetVolume
   fi
+
+  trap - INT
 }
 
 function warmup_speakers()
@@ -104,8 +189,15 @@ function beginning_announcement()
 {
   exercise_announcement="$1"
   needed_equipment="$2"
+
   warmup_speakers
+
+  setVolume "$MEDIUM_VOLUME"
+  setSpeechSpeed "$SLOW_SPEECH_SPEED"
   say "$exercise_announcement"
   say "$needed_equipment"
+  resetVolume
+  resetSpeechSpeed
+
   countdown "$3"
 }

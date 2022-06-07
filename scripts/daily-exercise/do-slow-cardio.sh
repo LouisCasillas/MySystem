@@ -10,10 +10,10 @@ SLOW_COUNT=60
 for ((i=0;i<$SETS;i++))
 do
     if [[ "$i" -eq "$MID_SET" ]]; then
-      say "$HALFWAY_MESSAGE"
+      say_medium "$HALFWAY_MESSAGE"
     else
       if [[ "$i" -eq "$LAST_SET" ]]; then
-        say "$LAST_SET_MESSAGE"
+        say_medium "$LAST_SET_MESSAGE"
       fi
     fi
     write "Set: $(( $i + 1 )) / $SETS"
@@ -22,5 +22,4 @@ do
     countdown "$SLOW_COUNT" "yes" 1
 done
 
-play "$FINISH_SOUND"
-
+play_medium "$FINISH_SOUND"
