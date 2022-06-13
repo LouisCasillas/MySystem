@@ -17,19 +17,17 @@ i=0
 ORIGINAL_IFS="$IFS"
 IFS="$(echo -e '\n\b')"
 for exercise in ${time_exercises[@]}; do
-  if [[ "$i" -eq "$MID_SET" ]]; then
-    say_medium "$HALFWAY_MESSAGE"
-  fi
+	halfway_encouragement
 
-  write "Set: $(( $i + 1 )) / $SETS"
+	write "Set: $(( $i + 1 )) / $SETS"
 
-  say_loud "$exercise"
-  sleep 0.25
-  say_loud "$exercise"
+	say_loud "$exercise"
+	sleep 0.25
+	say_loud "$exercise"
 
-  countdown "$TIME_PER_EXERCISE" "yes" 5
+	countdown "$TIME_PER_EXERCISE" "yes" 5
 
-  (( i++ ))
+	(( i++ ))
 done
 IFS="$ORIGINAL_IFS"
 

@@ -17,24 +17,22 @@ i=0
 ORIGINAL_IFS="$IFS"
 IFS="$(echo -e '\n\b')"
 for exercise in ${rep_exercises[@]}; do
-  if [[ "$i" -eq "$MID_SET" ]]; then
-    say_medium "$HALFWAY_MESSAGE"
-  fi
+	encouragement
 
-  write "Set: $(( $i + 1 )) / $SETS"
+	write "Set: $(( $i + 1 )) / $SETS"
 
-  say_loud "$exercise"
-  sleep 0.25
-  say_loud "$exercise"
+	say_loud "$exercise"
+	sleep 0.25
+	say_loud "$exercise"
 
-  countdown "$TIME_PER_EXERCISE" "yes" 5
+	countdown "$TIME_PER_EXERCISE" "yes" 5
 
-  (( i++ ))
+	(( i++ ))
 
-  if [[ "$i" -lt "$SETS" ]]; then
-    say_loud "Press any key"
-    read -n 1
-  fi
+	if [[ "$i" -lt "$SETS" ]]; then
+		say_loud "Press any key"
+		read -n 1
+	fi
 done
 IFS="$ORIGINAL_IFS"
 

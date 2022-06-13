@@ -10,22 +10,17 @@ SLOW_COUNT=55
 
 for ((i=0;i<$SETS;i++))
 do
-    if [[ "$i" -eq "$MID_SET" ]]; then
-      say_medium "$HALFWAY_MESSAGE"
-    else
-      if [[ "$i" -eq "$LAST_SET" ]]; then
-        say_medium "$LAST_SET_MESSAGE"
-      fi
-    fi
+	halfway_encouragement
+	last_rep_message
 
-    write "Set: $(( $i + 1 )) / $SETS"
+	write "Set: $(( $i + 1 )) / $SETS"
 
-    say_medium "SLOW"
-    countdown "$SLOW_COUNT" "yes" 5
+	say_medium "SLOW"
+	countdown "$SLOW_COUNT" "yes" 5
 
-    say_super_loud "FAST"
-    play_super_loud "$BEEP_SOUND"
-    countdown "$FAST_COUNT" "yes"
+	say_super_loud "FAST"
+	play_super_loud "$BEEP_SOUND"
+	countdown "$FAST_COUNT" "yes"
 done
 
 play_medium "$FINISH_SOUND"

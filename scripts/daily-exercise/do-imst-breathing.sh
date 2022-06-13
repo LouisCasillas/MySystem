@@ -10,21 +10,15 @@ OUT_COUNT=3
 
 for ((i=0;i<$SETS;i++))
 do
-    if [[ "$i" -eq "$MID_SET" ]]; then
-      say_medium "$HALFWAY_MESSAGE"
-    else
-      if [[ "$i" -eq "$LAST_SET" ]]; then
-        say_medium "$LAST_SET_MESSAGE"
-      fi
-    fi
+	halfway_encouragement
 
-    write "Set: $(( $i + 1 )) / $SETS"
+	write "Set: $(( $i + 1 )) / $SETS"
 
-    say_loud "IN"
-    countdown "$IN_COUNT"
+	say_loud "IN"
+	countdown "$IN_COUNT"
 
-    say_loud "OUT"
-    countdown "$OUT_COUNT"
+	say_loud "OUT"
+	countdown "$OUT_COUNT"
 done
 
 play_medium "$FINISH_SOUND"

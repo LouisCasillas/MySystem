@@ -1,38 +1,31 @@
-. utilities.sh
+	utilities.sh
 
-beginning_announcement "Time for box breathing!" "Stand up." 8
+	ginning_announcement "Time for box breathing!" "Stand up." 8
 
-SETS=15
-MID_SET="$(( $SETS / 2 ))"
-LAST_SET="$(( $SETS - 1 ))"
-IN_COUNT=6
-HOLD_COUNT=6
-OUT_COUNT=6
+	TS=15
+	D_SET="$(( $SETS / 2 ))"
+	ST_SET="$(( $SETS - 1 ))"
+	_COUNT=6
+	LD_COUNT=6
+	T_COUNT=6
 
-for ((i=0;i<$SETS;i++))
-do
-    if [[ "$i" -eq "$MID_SET" ]]; then
-      say_medium "$HALFWAY_MESSAGE"
-    else
-      if [[ "$i" -eq "$LAST_SET" ]]; then
-        say_medium "$LAST_SET_MESSAGE"
-      fi
-    fi
+	r ((i=0;i<$SETS;i++))
+	
+	halfway_encouragement
 
-    write "Set: $(( $i + 1 )) / $SETS"
+	write "Set: $(( $i + 1 )) / $SETS"
 
-    say_loud "IN"
-    countdown "$IN_COUNT"
+	say_loud "IN"
+	countdown "$IN_COUNT"
 
-    say_loud "HOLD"
-    countdown "$HOLD_COUNT"
+	say_loud "HOLD"
+	countdown "$HOLD_COUNT"
 
-    say_loud "OUT"
-    countdown "$IN_COUNT"
+	say_loud "OUT"
+	countdown "$IN_COUNT"
 
-    say_loud "HOLD"
-    countdown "$HOLD_COUNT"
+	say_loud "HOLD"
+	countdown "$HOLD_COUNT"
+	ne
 
-done
-
-play_medium "$FINISH_SOUND"
+	ay_medium "$FINISH_SOUND"
