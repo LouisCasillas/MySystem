@@ -16,6 +16,4 @@
     - 2,300 kcal
 
   - Streak
-    - [x] June 08, 2022
-    - [x] June 07, 2022
-    - [x] June 06, 2022
+    - [x] June 13, 2022
