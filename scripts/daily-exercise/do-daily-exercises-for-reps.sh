@@ -31,9 +31,10 @@ for exercise in ${rep_exercises[@]}; do
 
   (( i++ ))
 
-  say_loud "Press any key"
-
-  read -n 1
+  if [[ "$i" -lt "$SETS" ]]; then
+    say_loud "Press any key"
+    read -n 1
+  fi
 done
 IFS="$ORIGINAL_IFS"
 
