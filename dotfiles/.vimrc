@@ -9,11 +9,10 @@ set nocompatible
 " set the <Leader> key
 let mapleader = ','
 
-" set tab to 4 spaces so code more easily matches with online editors
-" even though I prefer tab is a symbol
+" set tab to 2 spaces
 set tabstop=2
 set shiftwidth=2
-set expandtab
+set noexpandtab
 
 " have vim save a copy of a file before writing and saving the file
 set backup
