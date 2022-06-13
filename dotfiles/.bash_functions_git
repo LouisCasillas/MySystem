@@ -63,7 +63,7 @@ function gignore()
 alias ga='git add'
 alias gap='git add --patch'
 alias gc='git commit --message'
-alias gd='git diff'
+alias gd='git diff -G.'
 alias gl='git log'
 alias gmv='git mv'
 alias gp='git push'
