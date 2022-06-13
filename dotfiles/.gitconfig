@@ -3,3 +3,5 @@
 	name = Louis Casillas
 [pull]
 	rebase = false
+[core]
+	fileMode = false
