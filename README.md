@@ -1,2 +1,1 @@
-# MySystem
-My system build scripts and dotfiles
+# My system build scripts, dotfiles, and miscellaneous useful scripts
