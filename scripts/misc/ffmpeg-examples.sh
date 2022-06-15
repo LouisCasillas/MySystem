@@ -28,3 +28,6 @@ ffmpeg -y -i "$video_file" \
 		x=1743: y=1040: \
 		fontsize=36: fontcolor=black" \
 	'video-with-countdown.mkv'
+
+# ffmpeg - remove silence from audio files
+ffmpeg -i audio_file.mp3 -af silenceremove=stop_periods=-1:stop_duration=1:stop_threshold=-40dB audio_file_no_silence.mp3
