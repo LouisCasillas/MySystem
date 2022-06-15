@@ -1,16 +1,16 @@
-	utilities.sh
+. utilities.sh
 
-	ginning_announcement "Time for box breathing!" "Stand up." 8
+beginning_announcement "Time for box breathing!" "Stand up." 8
 
-	TS=15
-	D_SET="$(( $SETS / 2 ))"
-	ST_SET="$(( $SETS - 1 ))"
-	_COUNT=6
-	LD_COUNT=6
-	T_COUNT=6
+SETS=15
+MID_SET="$(( $SETS / 2 ))"
+LAST_SET="$(( $SETS - 1 ))"
+IN_COUNT=6
+HOLD_COUNT=6
+OUT_COUNT=6
 
-	r ((i=0;i<$SETS;i++))
-	
+for ((i=0;i<$SETS;i++))
+do
 	halfway_encouragement
 
 	write "Set: $(( $i + 1 )) / $SETS"
@@ -26,6 +26,6 @@
 
 	say_loud "HOLD"
 	countdown "$HOLD_COUNT"
-	ne
+done
 
-	ay_medium "$FINISH_SOUND"
+play_medium "$FINISH_SOUND"
