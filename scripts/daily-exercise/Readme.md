@@ -12,6 +12,7 @@
 			- Sprints
 				- Slow cardio ended by sprint, repeat.
 			- Slow steady cardio
+				- Weekly goal: 100 miles
 
 	- Daily calorie goal
 		- 2,300 kcal
