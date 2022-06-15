@@ -271,7 +271,7 @@ function rename-to-numbers()
 
 function _ydownload()
 {(
-    download_program="$(which youtube-dl youtube-dl.exe | head -1)"
+    download_program="$(command -v youtube-dl youtube-dl.exe | head -1)"
     format="22/18"
     batch_file="$(pwd)/a"
     done_file="done.txt"
