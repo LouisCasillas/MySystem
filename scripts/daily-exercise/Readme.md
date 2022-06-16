@@ -11,6 +11,7 @@
 					- Slow cardio ended by sprint, repeat.
 				- Slow steady cardio
 					- Weekly bicycle goal: 100 miles
+					- Weekly running goal: 3 times
 
 		- PM
 			- Breathing exercises
