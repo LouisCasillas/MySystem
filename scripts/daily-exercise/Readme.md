@@ -1,21 +1,27 @@
 # My daily exercises
 
 	- Type and order of exercises.
-		- Breathing exercises
-			- Box breathing.
-			- IMST breathing.
-		- Daily exercises
-			- Exercises for time.
-			- Exercises for reps.
-		- Cardio
-			- Usually cardio is done on an exercise bike.
-			- Sprints
-				- Slow cardio ended by sprint, repeat.
-			- Slow steady cardio
-				- Weekly goal: 100 miles
+		- AM
+			- Breathing exercises
+				- Box breathing.
+				- IMST breathing.
+			- Cardio
+				- Cardio is usually done on an exercise bike or outside jogging/running.
+				- Sprints
+					- Slow cardio ended by sprint, repeat.
+				- Slow steady cardio
+					- Weekly bicycle goal: 100 miles
+
+		- PM
+			- Breathing exercises
+				- Box breathing.
+			- Daily exercises
+				- Exercises for time.
+				- Exercises for reps.
 
 	- Daily calorie goal
 		- 2,300 kcal
 
 	- Streak
+		- [x] June 16, 2022
 		- [x] June 15, 2022
