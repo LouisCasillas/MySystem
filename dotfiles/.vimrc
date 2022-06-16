@@ -260,6 +260,9 @@ nnoremap <silent> <Leader>q :wqall!<Enter>
 " make a quick save file command
 nnoremap <Leader>s :w!<Enter>
 
+" make a quick reload file command
+nnoremap <Leader>r :e!<Enter>
+
 " make a wordcount command
 nnoremap <Leader>c :echo wordcount()<Enter>
 
