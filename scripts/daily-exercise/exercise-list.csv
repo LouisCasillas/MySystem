@@ -1,233 +1,233 @@
-Exercise                                         Cardio Exercises   Dumbbell   Bodyweight Exercises   Band Exercises   Abs     Boxing
-180 Jump Squats                                  TRUE               FALSE      FALSE                  FALSE            FALSE   FALSE
-Ab Roller                                        FALSE              FALSE      TRUE                   FALSE            TRUE    FALSE
-Arm Thrusters                                    FALSE              TRUE       FALSE                  FALSE            FALSE   FALSE
-Arnold Press - Sitting                           FALSE              TRUE       FALSE                  FALSE            FALSE   FALSE
-Arnold Press - Sitting                           FALSE              FALSE      TRUE                   FALSE            FALSE   FALSE
-Belly Angels                                     FALSE              TRUE       FALSE                  TRUE             FALSE   FALSE
-Big Circles - Sitting                            FALSE              FALSE      TRUE                   FALSE            FALSE   FALSE
-Bird Dogs                                        FALSE              TRUE       FALSE                  FALSE            FALSE   FALSE
-Bow Pull                                         FALSE              TRUE       FALSE                  FALSE            FALSE   FALSE
-Bridge                                           TRUE               FALSE      FALSE                  FALSE            FALSE   FALSE
-Bridge - Forward Neck                            TRUE               FALSE      FALSE                  FALSE            FALSE   FALSE
-Bridge - Glute                                   TRUE               FALSE      FALSE                  FALSE            FALSE   FALSE
-Bridge - Glute - Single Leg                      TRUE               FALSE      FALSE                  FALSE            FALSE   FALSE
-Bridge - Glute with Press                        TRUE               FALSE      FALSE                  FALSE            FALSE   FALSE
-Bridge with Knee Squeeze                         FALSE              FALSE      FALSE                  FALSE            FALSE   FALSE
-Bunny Hop                                        TRUE               FALSE      FALSE                  FALSE            FALSE   FALSE
-Burpees                                          TRUE               FALSE      FALSE                  FALSE            FALSE   FALSE
-Burpees - Eight Count                            FALSE              TRUE       TRUE                   FALSE            FALSE   FALSE
-Burpees - Single Leg                             FALSE              TRUE       TRUE                   FALSE            FALSE   FALSE
-Burpees - Star Jump                              FALSE              TRUE       FALSE                  FALSE            FALSE   FALSE
-Burpees - Toss                                   FALSE              FALSE      FALSE                  FALSE            FALSE   FALSE
-Burpees - Tuck Jump                              FALSE              FALSE      TRUE                   TRUE             FALSE   FALSE
-Calf Jump                                        FALSE              FALSE      TRUE                   TRUE             FALSE   FALSE
-Calf Raises                                      FALSE              FALSE      FALSE                  TRUE             FALSE   FALSE
-Calf Raises - Single Leg                         FALSE              FALSE      FALSE                  TRUE             FALSE   FALSE
-Chest Press                                      FALSE              TRUE       TRUE                   FALSE            TRUE    FALSE
-Chest Press to Toss                              FALSE              FALSE      TRUE                   FALSE            TRUE    FALSE
-Clam Shells - Lateral                            FALSE              TRUE       FALSE                  FALSE            FALSE   FALSE
-Clam Shells - Lying                              FALSE              TRUE       FALSE                  FALSE            FALSE   FALSE
-Crab Walk - Forward                              FALSE              FALSE      FALSE                  FALSE            FALSE   FALSE
-Crab Walk - Side                                 FALSE              TRUE       TRUE                   FALSE            TRUE    FALSE
-Crunch - Hollow Body                             FALSE              TRUE       TRUE                   TRUE             TRUE    FALSE
-Crunch - Standing Knee                           FALSE              FALSE      TRUE                   TRUE             TRUE    FALSE
-Crunch with Overhead Press                       FALSE              TRUE       FALSE                  FALSE            TRUE    FALSE
-Crunch with Pass Through Legs                    FALSE              FALSE      TRUE                   FALSE            TRUE    FALSE
-Crunch with Toss                                 FALSE              FALSE      FALSE                  FALSE            FALSE   FALSE
-Crunches                                         FALSE              TRUE       TRUE                   TRUE             FALSE   FALSE
-Crunches - Bicycle                               FALSE              TRUE       FALSE                  TRUE             FALSE   FALSE
-Crunches - Reverse                               FALSE              TRUE       FALSE                  TRUE             FALSE   FALSE
-Crunches - Reverse with Press                    FALSE              TRUE       FALSE                  FALSE            FALSE   FALSE
-Crunches - Side                                  FALSE              TRUE       FALSE                  TRUE             FALSE   FALSE
-Cuban Press - Four Position Overhead Press       FALSE              TRUE       FALSE                  FALSE            FALSE   FALSE
-Curls                                            FALSE              FALSE      FALSE                  FALSE            FALSE   FALSE
-Curls - Bottom Half                              FALSE              TRUE       TRUE                   TRUE             FALSE   FALSE
-Curls - Concentration                            FALSE              TRUE       FALSE                  FALSE            FALSE   FALSE
-Curls - Drag                                     FALSE              FALSE      TRUE                   FALSE            TRUE    FALSE
-Curls - Hammer                                   FALSE              TRUE       FALSE                  FALSE            FALSE   FALSE
-Curls - Hang                                     FALSE              TRUE       FALSE                  FALSE            FALSE   FALSE
-Curls - Lying Leg                                FALSE              TRUE       FALSE                  FALSE            FALSE   FALSE
-Curls - Top Half                                 FALSE              FALSE      TRUE                   FALSE            FALSE   FALSE
-Curls - Zottman                                  FALSE              FALSE      TRUE                   FALSE            FALSE   FALSE
-Dead Bug Reach                                   FALSE              FALSE      TRUE                   FALSE            FALSE   FALSE
-Deadlift                                         FALSE              FALSE      FALSE                  FALSE            FALSE   FALSE
-Deadlift - Stiff Leg                             FALSE              TRUE       TRUE                   FALSE            FALSE   FALSE
-Deadlift with Shrug to Chin                      TRUE               FALSE      TRUE                   FALSE            FALSE   FALSE
-Dips                                             FALSE              TRUE       FALSE                  FALSE            FALSE   FALSE
-Donkey Kicks - Standing                          FALSE              FALSE      TRUE                   FALSE            FALSE   FALSE
-Donkey Kicks - Stomach                           FALSE              FALSE      TRUE                   FALSE            FALSE   FALSE
-Elliptical Climbers                              FALSE              FALSE      TRUE                   FALSE            FALSE   FALSE
-Falling Tower                                    FALSE              FALSE      TRUE                   FALSE            FALSE   FALSE
-False Jumping                                    FALSE              FALSE      TRUE                   TRUE             FALSE   FALSE
-Farmer's Walk                                    FALSE              TRUE       TRUE                   TRUE             FALSE   FALSE
-Finger Extensors - Fast                          FALSE              TRUE       TRUE                   TRUE             FALSE   FALSE
-Finger Extensors - Hold                          FALSE              TRUE       TRUE                   TRUE             FALSE   FALSE
-Finger Squeezers - Fast                          FALSE              FALSE      TRUE                   FALSE            FALSE   FALSE
-Finger Squeezers - Hold                          FALSE              TRUE       FALSE                  FALSE            FALSE   FALSE
-Fire Hydrants                                    FALSE              TRUE       FALSE                  FALSE            FALSE   FALSE
-Flies - High                                     FALSE              FALSE      TRUE                   FALSE            FALSE   FALSE
-Flies - Low                                      FALSE              FALSE      TRUE                   FALSE            FALSE   FALSE
-Flies - Middle                                   FALSE              FALSE      TRUE                   FALSE            FALSE   FALSE
-Flutter Kicks                                    FALSE              TRUE       TRUE                   FALSE            FALSE   FALSE
-Flutter Kicks with Press                         FALSE              TRUE       TRUE                   FALSE            FALSE   FALSE
-Forearm Rolls                                    FALSE              TRUE       FALSE                  FALSE            FALSE   FALSE
-Forward Leg Lifts                                FALSE              FALSE      TRUE                   FALSE            FALSE   FALSE
-Goblet Squat                                     FALSE              TRUE       FALSE                  FALSE            FALSE   FALSE
-Good Mornings                                    FALSE              FALSE      FALSE                  FALSE            FALSE   FALSE
-Gracie Drill                                     FALSE              FALSE      TRUE                   FALSE            FALSE   FALSE
-Grip Squeezers - Fast                            FALSE              FALSE      TRUE                   FALSE            FALSE   FALSE
-Grip Squeezers - Hold                            FALSE              TRUE       FALSE                  FALSE            FALSE   FALSE
-Halo                                             TRUE               FALSE      TRUE                   FALSE            FALSE   FALSE
-Squats - Hindu                                   FALSE              FALSE      TRUE                   FALSE            TRUE    FALSE
-Hip Ups                                          FALSE              FALSE      TRUE                   FALSE            FALSE   FALSE
-Hip Ups with Neck Supporting                     FALSE              TRUE       TRUE                   FALSE            TRUE    FALSE
-Hollow Body Rock                                 FALSE              TRUE       TRUE                   FALSE            FALSE   FALSE
-Hyperextensions - Lying Arms                     FALSE              TRUE       TRUE                   FALSE            FALSE   FALSE
-Hyperextensions - Lying Legs                     TRUE               FALSE      FALSE                  FALSE            FALSE   FALSE
-Jogging                                          TRUE               FALSE      FALSE                  FALSE            FALSE   FALSE
-Jump Rope                                        FALSE              FALSE      FALSE                  FALSE            FALSE   FALSE
-Jump with Knee Tuck                              FALSE              FALSE      FALSE                  FALSE            FALSE   FALSE
-Jump-Jump-Squat                                  TRUE               FALSE      TRUE                   FALSE            FALSE   FALSE
-Jumping Jacks                                    TRUE               FALSE      TRUE                   FALSE            FALSE   FALSE
-Jumping Jacks - Half                             FALSE              FALSE      FALSE                  FALSE            FALSE   FALSE
-Jumping Lunges                                   TRUE               TRUE       FALSE                  FALSE            FALSE   FALSE
-Kettlebell Swings                                TRUE               FALSE      TRUE                   FALSE            FALSE   FALSE
-Kicks and Knees                                  FALSE              FALSE      FALSE                  FALSE            FALSE   FALSE
-L-Sit                                            FALSE              FALSE      TRUE                   FALSE            FALSE   FALSE
-Lateral Leg Raises                               FALSE              FALSE      TRUE                   TRUE             FALSE   FALSE
-Leg Abduction - Seated                           FALSE              FALSE      TRUE                   FALSE            FALSE   FALSE
-Leg Abduction - Side                             FALSE              TRUE       TRUE                   FALSE            FALSE   FALSE
-Leg Reach Throughs                               FALSE              TRUE       TRUE                   FALSE            FALSE   FALSE
-Lunge - Curtsy                                   FALSE              TRUE       FALSE                  FALSE            FALSE   FALSE
-Lunge - Reverse with Pass Under Leg              FALSE              TRUE       TRUE                   FALSE            FALSE   FALSE
-Lunge - Sideways                                 FALSE              TRUE       FALSE                  TRUE             FALSE   FALSE
-Lunge - Stationary with Curls                    FALSE              TRUE       TRUE                   FALSE            FALSE   FALSE
-Lunge - Step Downs with Yoga Blocks              FALSE              FALSE      FALSE                  FALSE            FALSE   FALSE
-Lunge with Jumps                                 FALSE              TRUE       TRUE                   FALSE            FALSE   FALSE
-Lunge with Kick                                  FALSE              TRUE       FALSE                  FALSE            FALSE   FALSE
-Lunge with Overhead Press                        FALSE              TRUE       FALSE                  FALSE            FALSE   FALSE
-Lunge with Overhead Tricep Extension             FALSE              TRUE       TRUE                   FALSE            FALSE   FALSE
-Lunges                                           FALSE              TRUE       TRUE                   FALSE            FALSE   FALSE
-Lunges - Stationary                              FALSE              FALSE      TRUE                   FALSE            FALSE   FALSE
-Lying Side Threaded Leg Lifts                    TRUE               FALSE      TRUE                   FALSE            FALSE   FALSE
-Mountain Climbers                                FALSE              FALSE      TRUE                   TRUE             FALSE   FALSE
-Neck Pulls                                       FALSE              FALSE      FALSE                  FALSE            FALSE   FALSE
-Overhead Press                                   FALSE              FALSE      FALSE                  FALSE            FALSE   FALSE
-Overhead Toss                                    FALSE              TRUE       TRUE                   FALSE            FALSE   FALSE
-Pistol Hold                                      FALSE              FALSE      TRUE                   TRUE             TRUE    FALSE
-Planche Lean                                     FALSE              FALSE      TRUE                   TRUE             TRUE    FALSE
-Plank - Back Kick                                FALSE              FALSE      TRUE                   TRUE             TRUE    FALSE
-Plank - Dolphin Pushups                          FALSE              FALSE      TRUE                   FALSE            TRUE    FALSE
-Plank - One Leg One Arm                          FALSE              FALSE      TRUE                   TRUE             TRUE    FALSE
-Plank - Reverse                                  FALSE              FALSE      FALSE                  FALSE            FALSE   FALSE
-Plank - Roll to Each Hand                        FALSE              FALSE      TRUE                   TRUE             TRUE    FALSE
-Plank - Shoulder Touches                         FALSE              TRUE       TRUE                   TRUE             TRUE    FALSE
-Plank - Side with Arm Raise                      FALSE              FALSE      TRUE                   TRUE             TRUE    FALSE
-Plank - Side with Leg Raise                      FALSE              FALSE      TRUE                   TRUE             TRUE    FALSE
-Plank - Side with Pulses                         FALSE              FALSE      TRUE                   TRUE             TRUE    FALSE
-Plank - Superman                                 FALSE              FALSE      TRUE                   TRUE             TRUE    FALSE
-Plank - Tripod                                   FALSE              FALSE      TRUE                   TRUE             TRUE    FALSE
-Plank - Up-Downs                                 FALSE              FALSE      TRUE                   FALSE            TRUE    FALSE
-Plank - Wide                                     FALSE              FALSE      TRUE                   TRUE             TRUE    FALSE
-Plank Jacks                                      FALSE              FALSE      TRUE                   TRUE             TRUE    FALSE
-Plank with Leg Lifts                             FALSE              FALSE      FALSE                  FALSE            FALSE   TRUE
-Punches                                          FALSE              FALSE      FALSE                  FALSE            FALSE   TRUE
-Punches - Hook-Uppercut                          FALSE              FALSE      FALSE                  FALSE            FALSE   TRUE
-Punches - Hooks                                  FALSE              FALSE      FALSE                  FALSE            FALSE   TRUE
-Punches - Jab-Cross                              FALSE              FALSE      FALSE                  FALSE            FALSE   TRUE
-Punches - Jab-Cross-Hook-Duck-Uppercut           FALSE              FALSE      FALSE                  FALSE            FALSE   TRUE
-Punches - Jab-Hook                               FALSE              FALSE      FALSE                  FALSE            FALSE   TRUE
-Punches - Jab-Uppercut                           FALSE              FALSE      FALSE                  FALSE            FALSE   TRUE
-Punches - Jabs                                   FALSE              FALSE      FALSE                  FALSE            FALSE   TRUE
-Punches - Slow                                   TRUE               FALSE      FALSE                  FALSE            FALSE   TRUE
-Punches - Speed                                  TRUE               FALSE      FALSE                  FALSE            FALSE   TRUE
-Punches - Speed - Hook-Uppercut                  TRUE               FALSE      FALSE                  FALSE            FALSE   TRUE
-Punches - Speed - Hooks                          TRUE               FALSE      FALSE                  FALSE            FALSE   TRUE
-Punches - Speed - Jab-Cross                      TRUE               FALSE      FALSE                  FALSE            FALSE   TRUE
-Punches - Speed - Jab-Cross-Hook-Duck-Uppercut   TRUE               FALSE      FALSE                  FALSE            FALSE   TRUE
-Punches - Speed - Jab-Hook                       TRUE               FALSE      FALSE                  FALSE            FALSE   TRUE
-Punches - Speed - Jab-Uppercut                   TRUE               FALSE      FALSE                  FALSE            FALSE   TRUE
-Punches - Speed - Jabs                           TRUE               FALSE      FALSE                  FALSE            FALSE   TRUE
-Punches - Speed - Overhead Jabs                  TRUE               FALSE      FALSE                  FALSE            FALSE   TRUE
-Punches - Speed - Three Types                    TRUE               FALSE      FALSE                  FALSE            FALSE   TRUE
-Punches - Speed - Uppercut                       FALSE              FALSE      FALSE                  FALSE            FALSE   TRUE
-Punches - Uppercuts                              FALSE              FALSE      TRUE                   FALSE            FALSE   FALSE
-Pushups                                          FALSE              FALSE      TRUE                   FALSE            FALSE   FALSE
-Pushups - Archer                                 FALSE              FALSE      TRUE                   FALSE            FALSE   FALSE
-Pushups - Clap                                   FALSE              FALSE      TRUE                   FALSE            FALSE   FALSE
-Pushups - Crucifix                               FALSE              FALSE      TRUE                   FALSE            FALSE   FALSE
-Pushups - Diamond                                FALSE              FALSE      TRUE                   FALSE            FALSE   FALSE
-Pushups - Dive-Bomb                              FALSE              FALSE      TRUE                   FALSE            FALSE   FALSE
-Pushups - Explosive Staggered                    FALSE              FALSE      TRUE                   FALSE            FALSE   FALSE
-Pushups - Extended                               FALSE              FALSE      TRUE                   FALSE            FALSE   FALSE
-Pushups - Fingertips                             FALSE              FALSE      TRUE                   FALSE            FALSE   FALSE
-Pushups - Frog                                   FALSE              FALSE      TRUE                   FALSE            FALSE   FALSE
-Pushups - Handstand                              FALSE              FALSE      TRUE                   FALSE            FALSE   FALSE
-Pushups - Narrow                                 FALSE              FALSE      TRUE                   FALSE            FALSE   FALSE
-Pushups - Pseudo Planche                         FALSE              FALSE      TRUE                   FALSE            FALSE   FALSE
-Pushups - Reverse                                FALSE              FALSE      TRUE                   FALSE            FALSE   FALSE
-Pushups - Reverse Hand                           FALSE              FALSE      FALSE                  FALSE            FALSE   FALSE
-Pushups - Single Arm                             FALSE              FALSE      TRUE                   FALSE            FALSE   FALSE
-Pushups - Slow                                   FALSE              FALSE      TRUE                   FALSE            FALSE   FALSE
-Pushups - Spiderman                              FALSE              FALSE      TRUE                   FALSE            FALSE   FALSE
-Pushups - Staggered                              FALSE              FALSE      TRUE                   FALSE            FALSE   FALSE
-Pushups - Typewriter                             FALSE              FALSE      TRUE                   FALSE            FALSE   FALSE
-Pushups - Walkout                                FALSE              FALSE      TRUE                   FALSE            FALSE   FALSE
-Pushups - Wide                                   FALSE              FALSE      TRUE                   FALSE            FALSE   FALSE
-Pushups with Foot Tap                            FALSE              FALSE      TRUE                   FALSE            FALSE   FALSE
-Pushups with Torso Rotation                      FALSE              FALSE      TRUE                   FALSE            TRUE    FALSE
-Reach Up Toe Taps                                FALSE              FALSE      TRUE                   FALSE            FALSE   FALSE
-Rolls                                            TRUE               FALSE      FALSE                  FALSE            FALSE   FALSE
-Rowing Machine                                   FALSE              TRUE       FALSE                  FALSE            FALSE   FALSE
-Rows - Bent Over                                 FALSE              TRUE       TRUE                   TRUE             FALSE   FALSE
-Rows - High                                      FALSE              TRUE       TRUE                   TRUE             FALSE   FALSE
-Rows - Low                                       FALSE              TRUE       TRUE                   TRUE             FALSE   FALSE
-Rows - Middle                                    FALSE              TRUE       TRUE                   FALSE            FALSE   FALSE
-Rows - Renegade                                  FALSE              FALSE      FALSE                  FALSE            FALSE   FALSE
-Running Knee Taps                                FALSE              FALSE      TRUE                   FALSE            TRUE    FALSE
-Russian Twists                                   FALSE              TRUE       FALSE                  FALSE            FALSE   FALSE
-Scissor Toe Tap - Walking                        FALSE              FALSE      FALSE                  TRUE             FALSE   FALSE
-Seated Scissor Kicks                             FALSE              FALSE      TRUE                   TRUE             FALSE   FALSE
-Shadow Box                                       TRUE               FALSE      FALSE                  FALSE            FALSE   TRUE
-Shake Weight                                     TRUE               FALSE      TRUE                   FALSE            FALSE   FALSE
-Shrimps - Side to Side                           FALSE              FALSE      TRUE                   FALSE            FALSE   FALSE
-Shrugs                                           FALSE              TRUE       TRUE                   TRUE             FALSE   FALSE
-Side Bend                                        FALSE              TRUE       FALSE                  FALSE            FALSE   FALSE
-Situps                                           FALSE              TRUE       TRUE                   FALSE            TRUE    FALSE
-Skaters                                          TRUE               FALSE      FALSE                  FALSE            FALSE   FALSE
-Skull Crusher                                    FALSE              TRUE       FALSE                  FALSE            FALSE   FALSE
-Sledgehammer                                     FALSE              TRUE       FALSE                  FALSE            FALSE   FALSE
-Spear Throws                                     FALSE              FALSE      TRUE                   FALSE            FALSE   FALSE
-Spear Thrusts                                    FALSE              FALSE      TRUE                   FALSE            FALSE   FALSE
-Squats                                           FALSE              TRUE       TRUE                   TRUE             FALSE   FALSE
-Squats - Cossack                                 FALSE              TRUE       TRUE                   TRUE             FALSE   FALSE
-Squats - Goblet                                  FALSE              TRUE       FALSE                  TRUE             FALSE   FALSE
-Squats - Pistol                                  FALSE              TRUE       TRUE                   TRUE             FALSE   FALSE
-Squats - Plie                                    FALSE              TRUE       TRUE                   TRUE             FALSE   FALSE
-Squats - Shrimp                                  FALSE              FALSE      TRUE                   TRUE             FALSE   FALSE
-Squats - Side Walk                               FALSE              TRUE       TRUE                   TRUE             FALSE   FALSE
-Squats - Single Leg                              FALSE              TRUE       TRUE                   TRUE             FALSE   FALSE
-Squats - Surrenders                              FALSE              TRUE       TRUE                   TRUE             FALSE   FALSE
-Squats - Wide                                    FALSE              TRUE       TRUE                   TRUE             FALSE   FALSE
-Squats with Hip Abduction                        FALSE              TRUE       TRUE                   TRUE             FALSE   FALSE
-Squats with Overhead Press                       FALSE              TRUE       FALSE                  FALSE            FALSE   FALSE
-Squats with Overhead Toss                        FALSE              FALSE      FALSE                  FALSE            FALSE   FALSE
-Squats with Punches                              TRUE               FALSE      TRUE                   TRUE             FALSE   FALSE
-Squats with Throw                                FALSE              FALSE      FALSE                  FALSE            FALSE   FALSE
-Star Jumpers                                     FALSE              FALSE      FALSE                  FALSE            FALSE   FALSE
-Step-ups                                         TRUE               FALSE      TRUE                   FALSE            FALSE   FALSE
-Supermans                                        FALSE              FALSE      TRUE                   FALSE            FALSE   FALSE
-Supermans - Alternating Arm Leg                  FALSE              FALSE      TRUE                   FALSE            FALSE   FALSE
-Swimmers                                         FALSE              FALSE      TRUE                   FALSE            FALSE   FALSE
-Tricep Extension - Sitting                       FALSE              TRUE       FALSE                  FALSE            FALSE   FALSE
-Tricep Kickbacks                                 FALSE              TRUE       FALSE                  FALSE            FALSE   FALSE
-Turkish Get Up                                   FALSE              TRUE       FALSE                  FALSE            FALSE   FALSE
-V-Up                                             FALSE              FALSE      TRUE                   FALSE            TRUE    FALSE
-V-Up - Tuck                                      FALSE              FALSE      TRUE                   FALSE            TRUE    FALSE
-Wall Sit with Rotation                           FALSE              FALSE      FALSE                  FALSE            FALSE   FALSE
-Wall Sits                                        FALSE              FALSE      FALSE                  FALSE            FALSE   FALSE
-Windmill - Sitting                               FALSE              TRUE       FALSE                  FALSE            FALSE   FALSE
-Wood Chop                                        FALSE              TRUE       FALSE                  FALSE            FALSE   FALSE
-Wrist Curl                                       FALSE              TRUE       FALSE                  TRUE             FALSE   FALSE
-Wrist Curl - Reverse                             FALSE              TRUE       FALSE                  TRUE             FALSE   FALSE
+Exercise,                                        Cardio Exercises,  Dumbbell,  Bodyweight Exercises,  Band Exercises,  Abs,    Boxing
+180 Jump Squats,                                 TRUE,              FALSE,     FALSE,                 FALSE,           FALSE,  FALSE
+Ab Roller,                                       FALSE,             FALSE,     TRUE,                  FALSE,           TRUE,   FALSE
+Arm Thrusters,                                   FALSE,             TRUE,      FALSE,                 FALSE,           FALSE,  FALSE
+Arnold Press - Sitting,                          FALSE,             TRUE,      FALSE,                 FALSE,           FALSE,  FALSE
+Arnold Press - Sitting,                          FALSE,             FALSE,     TRUE,                  FALSE,           FALSE,  FALSE
+Belly Angels,                                    FALSE,             TRUE,      FALSE,                 TRUE,            FALSE,  FALSE
+Big Circles - Sitting,                           FALSE,             FALSE,     TRUE,                  FALSE,           FALSE,  FALSE
+Bird Dogs,                                       FALSE,             TRUE,      FALSE,                 FALSE,           FALSE,  FALSE
+Bow Pull,                                        FALSE,             TRUE,      FALSE,                 FALSE,           FALSE,  FALSE
+Bridge,                                          TRUE,              FALSE,     FALSE,                 FALSE,           FALSE,  FALSE
+Bridge - Forward Neck,                           TRUE,              FALSE,     FALSE,                 FALSE,           FALSE,  FALSE
+Bridge - Glute,                                  TRUE,              FALSE,     FALSE,                 FALSE,           FALSE,  FALSE
+Bridge - Glute - Single Leg,                     TRUE,              FALSE,     FALSE,                 FALSE,           FALSE,  FALSE
+Bridge - Glute with Press,                       TRUE,              FALSE,     FALSE,                 FALSE,           FALSE,  FALSE
+Bridge with Knee Squeeze,                        FALSE,             FALSE,     FALSE,                 FALSE,           FALSE,  FALSE
+Bunny Hop,                                       TRUE,              FALSE,     FALSE,                 FALSE,           FALSE,  FALSE
+Burpees,                                         TRUE,              FALSE,     FALSE,                 FALSE,           FALSE,  FALSE
+Burpees - Eight Count,                           FALSE,             TRUE,      TRUE,                  FALSE,           FALSE,  FALSE
+Burpees - Single Leg,                            FALSE,             TRUE,      TRUE,                  FALSE,           FALSE,  FALSE
+Burpees - Star Jump,                             FALSE,             TRUE,      FALSE,                 FALSE,           FALSE,  FALSE
+Burpees - Toss,                                  FALSE,             FALSE,     FALSE,                 FALSE,           FALSE,  FALSE
+Burpees - Tuck Jump,                             FALSE,             FALSE,     TRUE,                  TRUE,            FALSE,  FALSE
+Calf Jump,                                       FALSE,             FALSE,     TRUE,                  TRUE,            FALSE,  FALSE
+Calf Raises,                                     FALSE,             FALSE,     FALSE,                 TRUE,            FALSE,  FALSE
+Calf Raises - Single Leg,                        FALSE,             FALSE,     FALSE,                 TRUE,            FALSE,  FALSE
+Chest Press,                                     FALSE,             TRUE,      TRUE,                  FALSE,           TRUE,   FALSE
+Chest Press to Toss,                             FALSE,             FALSE,     TRUE,                  FALSE,           TRUE,   FALSE
+Clam Shells - Lateral,                           FALSE,             TRUE,      FALSE,                 FALSE,           FALSE,  FALSE
+Clam Shells - Lying,                             FALSE,             TRUE,      FALSE,                 FALSE,           FALSE,  FALSE
+Crab Walk - Forward,                             FALSE,             FALSE,     FALSE,                 FALSE,           FALSE,  FALSE
+Crab Walk - Side,                                FALSE,             TRUE,      TRUE,                  FALSE,           TRUE,   FALSE
+Crunch - Hollow Body,                            FALSE,             TRUE,      TRUE,                  TRUE,            TRUE,   FALSE
+Crunch - Standing Knee,                          FALSE,             FALSE,     TRUE,                  TRUE,            TRUE,   FALSE
+Crunch with Overhead Press,                      FALSE,             TRUE,      FALSE,                 FALSE,           TRUE,   FALSE
+Crunch with Pass Through Legs,                   FALSE,             FALSE,     TRUE,                  FALSE,           TRUE,   FALSE
+Crunch with Toss,                                FALSE,             FALSE,     FALSE,                 FALSE,           FALSE,  FALSE
+Crunches,                                        FALSE,             TRUE,      TRUE,                  TRUE,            FALSE,  FALSE
+Crunches - Bicycle,                              FALSE,             TRUE,      FALSE,                 TRUE,            FALSE,  FALSE
+Crunches - Reverse,                              FALSE,             TRUE,      FALSE,                 TRUE,            FALSE,  FALSE
+Crunches - Reverse with Press,                   FALSE,             TRUE,      FALSE,                 FALSE,           FALSE,  FALSE
+Crunches - Side,                                 FALSE,             TRUE,      FALSE,                 TRUE,            FALSE,  FALSE
+Cuban Press - Four Position Overhead Press,      FALSE,             TRUE,      FALSE,                 FALSE,           FALSE,  FALSE
+Curls,                                           FALSE,             FALSE,     FALSE,                 FALSE,           FALSE,  FALSE
+Curls - Bottom Half,                             FALSE,             TRUE,      TRUE,                  TRUE,            FALSE,  FALSE
+Curls - Concentration,                           FALSE,             TRUE,      FALSE,                 FALSE,           FALSE,  FALSE
+Curls - Drag,                                    FALSE,             FALSE,     TRUE,                  FALSE,           TRUE,   FALSE
+Curls - Hammer,                                  FALSE,             TRUE,      FALSE,                 FALSE,           FALSE,  FALSE
+Curls - Hang,                                    FALSE,             TRUE,      FALSE,                 FALSE,           FALSE,  FALSE
+Curls - Lying Leg,                               FALSE,             TRUE,      FALSE,                 FALSE,           FALSE,  FALSE
+Curls - Top Half,                                FALSE,             FALSE,     TRUE,                  FALSE,           FALSE,  FALSE
+Curls - Zottman,                                 FALSE,             FALSE,     TRUE,                  FALSE,           FALSE,  FALSE
+Dead Bug Reach,                                  FALSE,             FALSE,     TRUE,                  FALSE,           FALSE,  FALSE
+Deadlift,                                        FALSE,             FALSE,     FALSE,                 FALSE,           FALSE,  FALSE
+Deadlift - Stiff Leg,                            FALSE,             TRUE,      TRUE,                  FALSE,           FALSE,  FALSE
+Deadlift with Shrug to Chin,                     TRUE,              FALSE,     TRUE,                  FALSE,           FALSE,  FALSE
+Dips,                                            FALSE,             TRUE,      FALSE,                 FALSE,           FALSE,  FALSE
+Donkey Kicks - Standing,                         FALSE,             FALSE,     TRUE,                  FALSE,           FALSE,  FALSE
+Donkey Kicks - Stomach,                          FALSE,             FALSE,     TRUE,                  FALSE,           FALSE,  FALSE
+Elliptical Climbers,                             FALSE,             FALSE,     TRUE,                  FALSE,           FALSE,  FALSE
+Falling Tower,                                   FALSE,             FALSE,     TRUE,                  FALSE,           FALSE,  FALSE
+False Jumping,                                   FALSE,             FALSE,     TRUE,                  TRUE,            FALSE,  FALSE
+Farmer's Walk,                                   FALSE,             TRUE,      TRUE,                  TRUE,            FALSE,  FALSE
+Finger Extensors - Fast,                         FALSE,             TRUE,      TRUE,                  TRUE,            FALSE,  FALSE
+Finger Extensors - Hold,                         FALSE,             TRUE,      TRUE,                  TRUE,            FALSE,  FALSE
+Finger Squeezers - Fast,                         FALSE,             FALSE,     TRUE,                  FALSE,           FALSE,  FALSE
+Finger Squeezers - Hold,                         FALSE,             TRUE,      FALSE,                 FALSE,           FALSE,  FALSE
+Fire Hydrants,                                   FALSE,             TRUE,      FALSE,                 FALSE,           FALSE,  FALSE
+Flies - High,                                    FALSE,             FALSE,     TRUE,                  FALSE,           FALSE,  FALSE
+Flies - Low,                                     FALSE,             FALSE,     TRUE,                  FALSE,           FALSE,  FALSE
+Flies - Middle,                                  FALSE,             FALSE,     TRUE,                  FALSE,           FALSE,  FALSE
+Flutter Kicks,                                   FALSE,             TRUE,      TRUE,                  FALSE,           FALSE,  FALSE
+Flutter Kicks with Press,                        FALSE,             TRUE,      TRUE,                  FALSE,           FALSE,  FALSE
+Forearm Rolls,                                   FALSE,             TRUE,      FALSE,                 FALSE,           FALSE,  FALSE
+Forward Leg Lifts,                               FALSE,             FALSE,     TRUE,                  FALSE,           FALSE,  FALSE
+Goblet Squat,                                    FALSE,             TRUE,      FALSE,                 FALSE,           FALSE,  FALSE
+Good Mornings,                                   FALSE,             FALSE,     FALSE,                 FALSE,           FALSE,  FALSE
+Gracie Drill,                                    FALSE,             FALSE,     TRUE,                  FALSE,           FALSE,  FALSE
+Grip Squeezers - Fast,                           FALSE,             FALSE,     TRUE,                  FALSE,           FALSE,  FALSE
+Grip Squeezers - Hold,                           FALSE,             TRUE,      FALSE,                 FALSE,           FALSE,  FALSE
+Halo,                                            TRUE,              FALSE,     TRUE,                  FALSE,           FALSE,  FALSE
+Squats - Hindu,                                  FALSE,             FALSE,     TRUE,                  FALSE,           TRUE,   FALSE
+Hip Ups,                                         FALSE,             FALSE,     TRUE,                  FALSE,           FALSE,  FALSE
+Hip Ups with Neck Supporting,                    FALSE,             TRUE,      TRUE,                  FALSE,           TRUE,   FALSE
+Hollow Body Rock,                                FALSE,             TRUE,      TRUE,                  FALSE,           FALSE,  FALSE
+Hyperextensions - Lying Arms,                    FALSE,             TRUE,      TRUE,                  FALSE,           FALSE,  FALSE
+Hyperextensions - Lying Legs,                    TRUE,              FALSE,     FALSE,                 FALSE,           FALSE,  FALSE
+Jogging,                                         TRUE,              FALSE,     FALSE,                 FALSE,           FALSE,  FALSE
+Jump Rope,                                       FALSE,             FALSE,     FALSE,                 FALSE,           FALSE,  FALSE
+Jump with Knee Tuck,                             FALSE,             FALSE,     FALSE,                 FALSE,           FALSE,  FALSE
+"Jump,                                            Jump,              Squat",   TRUE,                  FALSE,           TRUE,   FALSE,   FALSE,  FALSE
+Jumping Jacks,                                   TRUE,              FALSE,     TRUE,                  FALSE,           FALSE,  FALSE
+Jumping Jacks - Half,                            FALSE,             FALSE,     FALSE,                 FALSE,           FALSE,  FALSE
+Jumping Lunges,                                  TRUE,              TRUE,      FALSE,                 FALSE,           FALSE,  FALSE
+Kettlebell Swings,                               TRUE,              FALSE,     TRUE,                  FALSE,           FALSE,  FALSE
+Kicks and Knees,                                 FALSE,             FALSE,     FALSE,                 FALSE,           FALSE,  FALSE
+L-Sit,                                           FALSE,             FALSE,     TRUE,                  FALSE,           FALSE,  FALSE
+Lateral Leg Raises,                              FALSE,             FALSE,     TRUE,                  TRUE,            FALSE,  FALSE
+Leg Abduction - Seated,                          FALSE,             FALSE,     TRUE,                  FALSE,           FALSE,  FALSE
+Leg Abduction - Side,                            FALSE,             TRUE,      TRUE,                  FALSE,           FALSE,  FALSE
+Leg Reach Throughs,                              FALSE,             TRUE,      TRUE,                  FALSE,           FALSE,  FALSE
+Lunge - Curtsy,                                  FALSE,             TRUE,      FALSE,                 FALSE,           FALSE,  FALSE
+Lunge - Reverse with Pass Under Leg,             FALSE,             TRUE,      TRUE,                  FALSE,           FALSE,  FALSE
+Lunge - Sideways,                                FALSE,             TRUE,      FALSE,                 TRUE,            FALSE,  FALSE
+Lunge - Stationary with Curls,                   FALSE,             TRUE,      TRUE,                  FALSE,           FALSE,  FALSE
+Lunge - Step Downs with Yoga Blocks,             FALSE,             FALSE,     FALSE,                 FALSE,           FALSE,  FALSE
+Lunge with Jumps,                                FALSE,             TRUE,      TRUE,                  FALSE,           FALSE,  FALSE
+Lunge with Kick,                                 FALSE,             TRUE,      FALSE,                 FALSE,           FALSE,  FALSE
+Lunge with Overhead Press,                       FALSE,             TRUE,      FALSE,                 FALSE,           FALSE,  FALSE
+Lunge with Overhead Tricep Extension,            FALSE,             TRUE,      TRUE,                  FALSE,           FALSE,  FALSE
+Lunges,                                          FALSE,             TRUE,      TRUE,                  FALSE,           FALSE,  FALSE
+Lunges - Stationary,                             FALSE,             FALSE,     TRUE,                  FALSE,           FALSE,  FALSE
+Lying Side Threaded Leg Lifts,                   TRUE,              FALSE,     TRUE,                  FALSE,           FALSE,  FALSE
+Mountain Climbers,                               FALSE,             FALSE,     TRUE,                  TRUE,            FALSE,  FALSE
+Neck Pulls,                                      FALSE,             FALSE,     FALSE,                 FALSE,           FALSE,  FALSE
+Overhead Press,                                  FALSE,             FALSE,     FALSE,                 FALSE,           FALSE,  FALSE
+Overhead Toss,                                   FALSE,             TRUE,      TRUE,                  FALSE,           FALSE,  FALSE
+Pistol Hold,                                     FALSE,             FALSE,     TRUE,                  TRUE,            TRUE,   FALSE
+Planche Lean,                                    FALSE,             FALSE,     TRUE,                  TRUE,            TRUE,   FALSE
+Plank - Back Kick,                               FALSE,             FALSE,     TRUE,                  TRUE,            TRUE,   FALSE
+Plank - Dolphin Pushups,                         FALSE,             FALSE,     TRUE,                  FALSE,           TRUE,   FALSE
+Plank - One Leg One Arm,                         FALSE,             FALSE,     TRUE,                  TRUE,            TRUE,   FALSE
+Plank - Reverse,                                 FALSE,             FALSE,     FALSE,                 FALSE,           FALSE,  FALSE
+Plank - Roll to Each Hand,                       FALSE,             FALSE,     TRUE,                  TRUE,            TRUE,   FALSE
+Plank - Shoulder Touches,                        FALSE,             TRUE,      TRUE,                  TRUE,            TRUE,   FALSE
+Plank - Side with Arm Raise,                     FALSE,             FALSE,     TRUE,                  TRUE,            TRUE,   FALSE
+Plank - Side with Leg Raise,                     FALSE,             FALSE,     TRUE,                  TRUE,            TRUE,   FALSE
+Plank - Side with Pulses,                        FALSE,             FALSE,     TRUE,                  TRUE,            TRUE,   FALSE
+Plank - Superman,                                FALSE,             FALSE,     TRUE,                  TRUE,            TRUE,   FALSE
+Plank - Tripod,                                  FALSE,             FALSE,     TRUE,                  TRUE,            TRUE,   FALSE
+Plank - Up-Downs,                                FALSE,             FALSE,     TRUE,                  FALSE,           TRUE,   FALSE
+Plank - Wide,                                    FALSE,             FALSE,     TRUE,                  TRUE,            TRUE,   FALSE
+Plank Jacks,                                     FALSE,             FALSE,     TRUE,                  TRUE,            TRUE,   FALSE
+Plank with Leg Lifts,                            FALSE,             FALSE,     FALSE,                 FALSE,           FALSE,  TRUE
+Punches,                                         FALSE,             FALSE,     FALSE,                 FALSE,           FALSE,  TRUE
+Punches - Hook-Uppercut,                         FALSE,             FALSE,     FALSE,                 FALSE,           FALSE,  TRUE
+Punches - Hooks,                                 FALSE,             FALSE,     FALSE,                 FALSE,           FALSE,  TRUE
+Punches - Jab-Cross,                             FALSE,             FALSE,     FALSE,                 FALSE,           FALSE,  TRUE
+Punches - Jab-Cross-Hook-Duck-Uppercut,          FALSE,             FALSE,     FALSE,                 FALSE,           FALSE,  TRUE
+Punches - Jab-Hook,                              FALSE,             FALSE,     FALSE,                 FALSE,           FALSE,  TRUE
+Punches - Jab-Uppercut,                          FALSE,             FALSE,     FALSE,                 FALSE,           FALSE,  TRUE
+Punches - Jabs,                                  FALSE,             FALSE,     FALSE,                 FALSE,           FALSE,  TRUE
+Punches - Slow,                                  TRUE,              FALSE,     FALSE,                 FALSE,           FALSE,  TRUE
+Punches - Speed,                                 TRUE,              FALSE,     FALSE,                 FALSE,           FALSE,  TRUE
+Punches - Speed - Hook-Uppercut,                 TRUE,              FALSE,     FALSE,                 FALSE,           FALSE,  TRUE
+Punches - Speed - Hooks,                         TRUE,              FALSE,     FALSE,                 FALSE,           FALSE,  TRUE
+Punches - Speed - Jab-Cross,                     TRUE,              FALSE,     FALSE,                 FALSE,           FALSE,  TRUE
+Punches - Speed - Jab-Cross-Hook-Duck-Uppercut,  TRUE,              FALSE,     FALSE,                 FALSE,           FALSE,  TRUE
+Punches - Speed - Jab-Hook,                      TRUE,              FALSE,     FALSE,                 FALSE,           FALSE,  TRUE
+Punches - Speed - Jab-Uppercut,                  TRUE,              FALSE,     FALSE,                 FALSE,           FALSE,  TRUE
+Punches - Speed - Jabs,                          TRUE,              FALSE,     FALSE,                 FALSE,           FALSE,  TRUE
+Punches - Speed - Overhead Jabs,                 TRUE,              FALSE,     FALSE,                 FALSE,           FALSE,  TRUE
+Punches - Speed - Three Types,                   TRUE,              FALSE,     FALSE,                 FALSE,           FALSE,  TRUE
+Punches - Speed - Uppercut,                      FALSE,             FALSE,     FALSE,                 FALSE,           FALSE,  TRUE
+Punches - Uppercuts,                             FALSE,             FALSE,     TRUE,                  FALSE,           FALSE,  FALSE
+Pushups,                                         FALSE,             FALSE,     TRUE,                  FALSE,           FALSE,  FALSE
+Pushups - Archer,                                FALSE,             FALSE,     TRUE,                  FALSE,           FALSE,  FALSE
+Pushups - Clap,                                  FALSE,             FALSE,     TRUE,                  FALSE,           FALSE,  FALSE
+Pushups - Crucifix,                              FALSE,             FALSE,     TRUE,                  FALSE,           FALSE,  FALSE
+Pushups - Diamond,                               FALSE,             FALSE,     TRUE,                  FALSE,           FALSE,  FALSE
+Pushups - Dive-Bomb,                             FALSE,             FALSE,     TRUE,                  FALSE,           FALSE,  FALSE
+Pushups - Explosive Staggered,                   FALSE,             FALSE,     TRUE,                  FALSE,           FALSE,  FALSE
+Pushups - Extended,                              FALSE,             FALSE,     TRUE,                  FALSE,           FALSE,  FALSE
+Pushups - Fingertips,                            FALSE,             FALSE,     TRUE,                  FALSE,           FALSE,  FALSE
+Pushups - Frog,                                  FALSE,             FALSE,     TRUE,                  FALSE,           FALSE,  FALSE
+Pushups - Handstand,                             FALSE,             FALSE,     TRUE,                  FALSE,           FALSE,  FALSE
+Pushups - Narrow,                                FALSE,             FALSE,     TRUE,                  FALSE,           FALSE,  FALSE
+Pushups - Pseudo Planche,                        FALSE,             FALSE,     TRUE,                  FALSE,           FALSE,  FALSE
+Pushups - Reverse,                               FALSE,             FALSE,     TRUE,                  FALSE,           FALSE,  FALSE
+Pushups - Reverse Hand,                          FALSE,             FALSE,     FALSE,                 FALSE,           FALSE,  FALSE
+Pushups - Single Arm,                            FALSE,             FALSE,     TRUE,                  FALSE,           FALSE,  FALSE
+Pushups - Slow,                                  FALSE,             FALSE,     TRUE,                  FALSE,           FALSE,  FALSE
+Pushups - Spiderman,                             FALSE,             FALSE,     TRUE,                  FALSE,           FALSE,  FALSE
+Pushups - Staggered,                             FALSE,             FALSE,     TRUE,                  FALSE,           FALSE,  FALSE
+Pushups - Typewriter,                            FALSE,             FALSE,     TRUE,                  FALSE,           FALSE,  FALSE
+Pushups - Walkout,                               FALSE,             FALSE,     TRUE,                  FALSE,           FALSE,  FALSE
+Pushups - Wide,                                  FALSE,             FALSE,     TRUE,                  FALSE,           FALSE,  FALSE
+Pushups with Foot Tap,                           FALSE,             FALSE,     TRUE,                  FALSE,           FALSE,  FALSE
+Pushups with Torso Rotation,                     FALSE,             FALSE,     TRUE,                  FALSE,           TRUE,   FALSE
+Reach Up Toe Taps,                               FALSE,             FALSE,     TRUE,                  FALSE,           FALSE,  FALSE
+Rolls,                                           TRUE,              FALSE,     FALSE,                 FALSE,           FALSE,  FALSE
+Rowing Machine,                                  FALSE,             TRUE,      FALSE,                 FALSE,           FALSE,  FALSE
+Rows - Bent Over,                                FALSE,             TRUE,      TRUE,                  TRUE,            FALSE,  FALSE
+Rows - High,                                     FALSE,             TRUE,      TRUE,                  TRUE,            FALSE,  FALSE
+Rows - Low,                                      FALSE,             TRUE,      TRUE,                  TRUE,            FALSE,  FALSE
+Rows - Middle,                                   FALSE,             TRUE,      TRUE,                  FALSE,           FALSE,  FALSE
+Rows - Renegade,                                 FALSE,             FALSE,     FALSE,                 FALSE,           FALSE,  FALSE
+Running Knee Taps,                               FALSE,             FALSE,     TRUE,                  FALSE,           TRUE,   FALSE
+Russian Twists,                                  FALSE,             TRUE,      FALSE,                 FALSE,           FALSE,  FALSE
+Scissor Toe Tap - Walking,                       FALSE,             FALSE,     FALSE,                 TRUE,            FALSE,  FALSE
+Seated Scissor Kicks,                            FALSE,             FALSE,     TRUE,                  TRUE,            FALSE,  FALSE
+Shadow Box,                                      TRUE,              FALSE,     FALSE,                 FALSE,           FALSE,  TRUE
+Shake Weight,                                    TRUE,              FALSE,     TRUE,                  FALSE,           FALSE,  FALSE
+Shrimps - Side to Side,                          FALSE,             FALSE,     TRUE,                  FALSE,           FALSE,  FALSE
+Shrugs,                                          FALSE,             TRUE,      TRUE,                  TRUE,            FALSE,  FALSE
+Side Bend,                                       FALSE,             TRUE,      FALSE,                 FALSE,           FALSE,  FALSE
+Situps,                                          FALSE,             TRUE,      TRUE,                  FALSE,           TRUE,   FALSE
+Skaters,                                         TRUE,              FALSE,     FALSE,                 FALSE,           FALSE,  FALSE
+Skull Crusher,                                   FALSE,             TRUE,      FALSE,                 FALSE,           FALSE,  FALSE
+Sledgehammer,                                    FALSE,             TRUE,      FALSE,                 FALSE,           FALSE,  FALSE
+Spear Throws,                                    FALSE,             FALSE,     TRUE,                  FALSE,           FALSE,  FALSE
+Spear Thrusts,                                   FALSE,             FALSE,     TRUE,                  FALSE,           FALSE,  FALSE
+Squats,                                          FALSE,             TRUE,      TRUE,                  TRUE,            FALSE,  FALSE
+Squats - Cossack,                                FALSE,             TRUE,      TRUE,                  TRUE,            FALSE,  FALSE
+Squats - Goblet,                                 FALSE,             TRUE,      FALSE,                 TRUE,            FALSE,  FALSE
+Squats - Pistol,                                 FALSE,             TRUE,      TRUE,                  TRUE,            FALSE,  FALSE
+Squats - Plie,                                   FALSE,             TRUE,      TRUE,                  TRUE,            FALSE,  FALSE
+Squats - Shrimp,                                 FALSE,             FALSE,     TRUE,                  TRUE,            FALSE,  FALSE
+Squats - Side Walk,                              FALSE,             TRUE,      TRUE,                  TRUE,            FALSE,  FALSE
+Squats - Single Leg,                             FALSE,             TRUE,      TRUE,                  TRUE,            FALSE,  FALSE
+Squats - Surrenders,                             FALSE,             TRUE,      TRUE,                  TRUE,            FALSE,  FALSE
+Squats - Wide,                                   FALSE,             TRUE,      TRUE,                  TRUE,            FALSE,  FALSE
+Squats with Hip Abduction,                       FALSE,             TRUE,      TRUE,                  TRUE,            FALSE,  FALSE
+Squats with Overhead Press,                      FALSE,             TRUE,      FALSE,                 FALSE,           FALSE,  FALSE
+Squats with Overhead Toss,                       FALSE,             FALSE,     FALSE,                 FALSE,           FALSE,  FALSE
+Squats with Punches,                             TRUE,              FALSE,     TRUE,                  TRUE,            FALSE,  FALSE
+Squats with Throw,                               FALSE,             FALSE,     FALSE,                 FALSE,           FALSE,  FALSE
+Star Jumpers,                                    FALSE,             FALSE,     FALSE,                 FALSE,           FALSE,  FALSE
+Step-ups,                                        TRUE,              FALSE,     TRUE,                  FALSE,           FALSE,  FALSE
+Supermans,                                       FALSE,             FALSE,     TRUE,                  FALSE,           FALSE,  FALSE
+Supermans - Alternating Arm Leg,                 FALSE,             FALSE,     TRUE,                  FALSE,           FALSE,  FALSE
+Swimmers,                                        FALSE,             FALSE,     TRUE,                  FALSE,           FALSE,  FALSE
+Tricep Extension - Sitting,                      FALSE,             TRUE,      FALSE,                 FALSE,           FALSE,  FALSE
+Tricep Kickbacks,                                FALSE,             TRUE,      FALSE,                 FALSE,           FALSE,  FALSE
+Turkish Get Up,                                  FALSE,             TRUE,      FALSE,                 FALSE,           FALSE,  FALSE
+V-Up,                                            FALSE,             FALSE,     TRUE,                  FALSE,           TRUE,   FALSE
+V-Up - Tuck,                                     FALSE,             FALSE,     TRUE,                  FALSE,           TRUE,   FALSE
+Wall Sit with Rotation,                          FALSE,             FALSE,     FALSE,                 FALSE,           FALSE,  FALSE
+Wall Sits,                                       FALSE,             FALSE,     FALSE,                 FALSE,           FALSE,  FALSE
+Windmill - Sitting,                              FALSE,             TRUE,      FALSE,                 FALSE,           FALSE,  FALSE
+Wood Chop,                                       FALSE,             TRUE,      FALSE,                 FALSE,           FALSE,  FALSE
+Wrist Curl,                                      FALSE,             TRUE,      FALSE,                 TRUE,            FALSE,  FALSE
+Wrist Curl - Reverse,                            FALSE,             TRUE,      FALSE,                 TRUE,            FALSE,  FALSE
