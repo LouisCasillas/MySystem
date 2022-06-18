@@ -284,6 +284,9 @@ nmap <C-P> "0P
 " toggle paste mode
 nnoremap <silent> <Leader>p :set paste! <Enter>
 
+" toggle line numbers
+nnoremap <silent> <Leader>n :set number! <Enter>
+
 " delete a whole word under the cursor or directly in-front of the cursor
 nnoremap <silent> <Leader>x daW
 "" End remaps
