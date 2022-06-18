@@ -63,6 +63,7 @@ export HISTFILESIZE="$HISTSIZE"
 export HISTCONTROL="ignorespace:ignoredups:erasedups"
 
 export EDITOR="vim"
+alias vim="vim -o"
 
 alias mtop='top -d 1 -o %MEM'
 alias ctop='top -d 1 -o %CPU'
