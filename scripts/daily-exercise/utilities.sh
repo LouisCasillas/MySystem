@@ -2,8 +2,7 @@ BEEP_SOUND="beep.wav"
 FINISH_SOUND="applause.wav"
 
 # TODO:
-# move encouragement messages into utilities
-# streamline other files to remove duplicate code for loops and others if possible
+# move encouragement messages into utilities, streamline other files to remove duplicate code for loops and others if possible
 # check if a key has already been buffered and don't play press any key message 
 # add extra exercise script
 # bug: if I ctrl-z it starts counting out loud no matter the time 
@@ -21,13 +20,24 @@ SPEECH_SPEED="225"
 SLOW_SPEECH_SPEED="175"
 
 README_FILENAME="Readme.md"
+EXERCISE_CHECK_STRING="&check;"
+EXERCISE_EMPTY_STRING="----"
+
 BOX_BREATHING_COLUMN=2
 IMST_BREATHING_COLUMN=3
 FAST_CARDIO_COLUMN=4
 SLOW_CARDIO_COLUMN=5
 DAILY_FOR_TIME_COLUMN=6
 DAILY_FOR_REPS_COLUMN=7
-OTHER_EXERCISE_COLUMN=8
+EXTRA_EXERCISE_COLUMN=8
+
+BOX_BREATHING_SCRIPT="do-box-breathing.sh"
+IMST_BREATHING_SCRIPT="do-imst-breathing.sh"
+FAST_CARDIO_SCRIPT="do-fast-cardio.sh"
+SLOW_CARDIO_SCRIPT="do-slow-cardio.sh"
+DAILY_FOR_TIME_SCRIPT="do-daily-exercises-for-time.sh"
+DAILY_FOR_REPS_SCRIPT="do-daily-exercises-for-reps.sh"
+EXTRA_EXERCISE_SCRIPT="do-extra-exercise.sh"
 
 HALFWAY_MESSAGE="Halfway there! Keep going!"
 LAST_SET_MESSAGE="Last round!"
@@ -241,15 +251,10 @@ function last_rep_message()
 	fi
 }
 
-function add_checkmark_to_readme()
+function get_current_date_row()
 {
-	column="$1"
-
 	current_date="$(date +"%B %d, %Y")"
 	today_row="$(grep --line-number --max-count=1 --no-messages -- "$current_date" "$README_FILENAME")"
-
-	readme_line_number=""
-	readme_line=""
 
 	if [[ -z "$today_row" ]]; then
 		readme_line_number="$(grep --line-number --max-count=1 --no-messages -- '---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- |' "$README_FILENAME" | cut -d: -f1)"
@@ -258,12 +263,68 @@ function add_checkmark_to_readme()
 		(( readme_line_number++ ))
 
 		readme_line="$current_date | ---- | ---- | ---- | ---- | ---- | ---- | ---- |"
+		sed -i -e "$readme_line_number c $readme_line" "$README_FILENAME"
 	else
 		readme_line_number="$(echo "$today_row" | cut -d: -f1)"
 		readme_line="$(echo "$today_row" | cut -d: -f2-)"
 	fi
+}
 
-	new_line="$(echo -n $readme_line | tr '|' '\n' | sed "$column c \ &check; " | tr '\n' '|')"
+function add_checkmark_to_readme()
+{
+	column="$1"
+
+	readme_line_number=""
+	readme_line=""
+
+	get_current_date_row
+
+	new_line="$(echo -n $readme_line | tr '|' '\n' | sed "$column c \ $EXERCISE_CHECK_STRING " | tr '\n' '|')"
 
 	sed -i -e "$readme_line_number c $new_line" "$README_FILENAME"
+}
+
+function get_remaining_exercise_groups()
+{
+	readme_line=""
+	get_current_date_row
+
+	read -ra remaining_exercise_groups < <(echo $readme_line | tr '|' '\n' | grep -n -e "$EXERCISE_EMPTY_STRING" | cut -d: -f1 | tr '\n' ' ');
+}
+
+function start_random_exercise_script()
+{
+	remaining_exercise_groups=()
+	get_remaining_exercise_groups
+	num_of_exercise_groups="${#remaining_exercise_groups[@]}"
+
+	random_choice="$(( $RANDOM % $num_of_exercise_groups ))"
+	random_exercise_group="${remaining_exercise_groups[$random_choice]}"
+	random_exercise_group_script=""
+
+	case "$random_exercise_group" in
+		$BOX_BREATHING_COLUMN)
+			random_exercise_group_script="$BOX_BREATHING_SCRIPT"
+			;;
+		$IMST_BREATHING_COLUMN)
+			random_exercise_group_script="$IMST_BREATHING_SCRIPT"
+			;;
+		$FAST_CARDIO_COLUMN)
+			random_exercise_group_script="$FAST_CARDIO_SCRIPT"
+			;;
+		$SLOW_CARDIO_COLUMN)
+			random_exercise_group_script="$SLOW_CARDIO_SCRIPT"
+			;;
+		$DAILY_FOR_TIME_COLUMN)
+			random_exercise_group_script="$DAILY_FOR_TIME_SCRIPT"
+			;;
+		$DAILY_FOR_REPS_COLUMN)
+			random_exercise_group_script="$DAILY_FOR_REPS_SCRIPT"
+			;;
+		$EXTRA_EXERCISE_COLUMN)
+			random_exercise_group_script="$EXTRA_EXERCISE_SCRIPT"
+			;;
+	esac
+
+	bash "$random_exercise_group_script"
 }

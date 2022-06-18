@@ -27,5 +27,5 @@
 
 ## Streak
 
-Date | Box Breathing | IMST Breathing | Fast Cardio | Slow Cardio | Daily For Time | Daily for Reps | Other Exercise |
+Date | Box Breathing | IMST Breathing | Fast Cardio | Slow Cardio | Daily For Time | Daily for Reps | Extra Exercise |
 ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- |
