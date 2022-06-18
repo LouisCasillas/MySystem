@@ -8,11 +8,11 @@ readarray -t rep_exercises < "$REP_FILE"
 
 beginning_announcement "Time for daily exercises for reps!" "Get your hand squeezers, yoga blocks, and ab wheel." 8
 
-SETS="$(wc -l $REP_FILE | cut -f1 -d' ')"
+SETS="${#rep_exercises[@]}"
 i=0
 
 # set the for loop to break on newlines instead of spaces
-ORIGINAL_IFS="$IFS"
+_IFS="$IFS"
 IFS="$(echo -e '\n\b')"
 for exercise in ${rep_exercises[@]}; do
 	encouragement
@@ -32,7 +32,7 @@ for exercise in ${rep_exercises[@]}; do
 		read -n 1
 	fi
 done
-IFS="$ORIGINAL_IFS"
+IFS="$_IFS"
 
 add_checkmark_to_readme $DAILY_FOR_REPS_COLUMN
 

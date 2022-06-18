@@ -8,11 +8,11 @@ readarray -t time_exercises < "$TIME_FILE"
 
 beginning_announcement "Time for daily exercises for time!" "Get boxing gloves." 8
 
-SETS="$(wc -l $TIME_FILE | cut -f1 -d' ')"
+SETS="${#time_exercises[@]}"
 i=0
 
 # set the for loop to break on newlines instead of spaces
-ORIGINAL_IFS="$IFS"
+_IFS="$IFS"
 IFS="$(echo -e '\n\b')"
 for exercise in ${time_exercises[@]}; do
 	halfway_encouragement
@@ -27,7 +27,7 @@ for exercise in ${time_exercises[@]}; do
 
 	(( i++ ))
 done
-IFS="$ORIGINAL_IFS"
+IFS="$_IFS"
 
 add_checkmark_to_readme $DAILY_FOR_TIME_COLUMN
 

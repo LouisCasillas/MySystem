@@ -13,7 +13,7 @@ do
 	write "Set: $(( $i + 1 )) / $SETS"
 	
 	say "SLOW"
-	countdown "$SLOW_COUNT" "yes" 1
+	countdown "$SLOW_COUNT" "yes" 5
 done
 
 add_checkmark_to_readme $SLOW_CARDIO_COLUMN
