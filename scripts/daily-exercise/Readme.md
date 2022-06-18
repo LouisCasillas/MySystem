@@ -27,7 +27,5 @@
 
 ## Streak
 
-Date | Box Breathing | IMST Breathing | Sprints | Slow Cardio | Daily For Time | Daily for Reps | Other Exercise |
+Date | Box Breathing | IMST Breathing | Fast Cardio | Slow Cardio | Daily For Time | Daily for Reps | Other Exercise |
 ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- |
-June 16, 2022 | &check; | &check; | &check; | &check; | &check; | &check; | ---- |
-

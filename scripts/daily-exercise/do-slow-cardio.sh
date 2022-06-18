@@ -18,4 +18,6 @@ do
 	countdown "$SLOW_COUNT" "yes" 1
 done
 
+add_checkmark_to_readme $SLOW_CARDIO_COLUMN
+
 play_medium "$FINISH_SOUND"

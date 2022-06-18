@@ -5,6 +5,7 @@ FINISH_SOUND="applause.wav"
 # move encouragement messages into utilities
 # streamline other files to remove duplicate code for loops and others if possible
 # check if a key has already been buffered and don't play press any key message 
+# add extra exercise script
 # bug: if I ctrl-z it starts counting out loud no matter the time 
 
 # 0=silence, 100=no change, 200=doubled volume
@@ -18,6 +19,15 @@ SUPER_LOUD_VOLUME="150"
 _SPEECH_SPEED="225"
 SPEECH_SPEED="225"
 SLOW_SPEECH_SPEED="175"
+
+README_FILENAME="Readme.md"
+BOX_BREATHING_COLUMN=2
+IMST_BREATHING_COLUMN=3
+FAST_CARDIO_COLUMN=4
+SLOW_CARDIO_COLUMN=5
+DAILY_FOR_TIME_COLUMN=6
+DAILY_FOR_REPS_COLUMN=7
+OTHER_EXERCISE_COLUMN=8
 
 HALFWAY_MESSAGE="Halfway there! Keep going!"
 LAST_SET_MESSAGE="Last round!"
@@ -229,4 +239,31 @@ function last_rep_message()
 	if [[ "$i" -eq "$LAST_SET" ]]; then
 		say_medium "$LAST_SET_MESSAGE"
 	fi
+}
+
+function add_checkmark_to_readme()
+{
+	column="$1"
+
+	current_date="$(date +"%B %d, %Y")"
+	today_row="$(grep --line-number --max-count=1 --no-messages -- "$current_date" "$README_FILENAME")"
+
+	readme_line_number=""
+	readme_line=""
+
+	if [[ -z "$today_row" ]]; then
+		readme_line_number="$(grep --line-number --max-count=1 --no-messages -- '---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- |' "$README_FILENAME" | cut -d: -f1)"
+
+		sed -i -e "$readme_line_number p" "$README_FILENAME"
+		(( readme_line_number++ ))
+
+		readme_line="$current_date | ---- | ---- | ---- | ---- | ---- | ---- | ---- |"
+	else
+		readme_line_number="$(echo "$today_row" | cut -d: -f1)"
+		readme_line="$(echo "$today_row" | cut -d: -f2-)"
+	fi
+
+	new_line="$(echo -n $readme_line | tr '|' '\n' | sed "$column c \ &check; " | tr '\n' '|')"
+
+	sed -i -e "$readme_line_number c $new_line" "$README_FILENAME"
 }

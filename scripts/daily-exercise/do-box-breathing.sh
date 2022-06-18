@@ -28,4 +28,6 @@ do
 	countdown "$HOLD_COUNT"
 done
 
+add_checkmark_to_readme $BOX_BREATHING_COLUMN
+
 play_medium "$FINISH_SOUND"

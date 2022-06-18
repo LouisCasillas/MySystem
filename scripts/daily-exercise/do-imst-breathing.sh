@@ -21,4 +21,6 @@ do
 	countdown "$OUT_COUNT"
 done
 
+add_checkmark_to_readme $IMST_BREATHING_COLUMN
+
 play_medium "$FINISH_SOUND"

@@ -23,4 +23,6 @@ do
 	countdown "$FAST_COUNT" "yes"
 done
 
+add_checkmark_to_readme $FAST_CARDIO_COLUMN
+
 play_medium "$FINISH_SOUND"

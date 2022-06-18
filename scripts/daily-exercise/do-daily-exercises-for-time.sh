@@ -31,4 +31,6 @@ for exercise in ${time_exercises[@]}; do
 done
 IFS="$ORIGINAL_IFS"
 
+add_checkmark_to_readme $DAILY_FOR_TIME_COLUMN
+
 play_medium "$FINISH_SOUND"
