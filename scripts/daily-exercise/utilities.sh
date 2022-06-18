@@ -4,10 +4,8 @@ FINISH_SOUND="applause.wav"
 # TODO:
 # move encouragement messages into utilities
 # streamline other files to remove duplicate code for loops and others if possible
-# add table chart with checkboxes to readme for streak so I can be honest of I don't do one part
-# add Makefile that grabs reps and time to Readme.md
-# bug: if I ctrl-z it starts counting out loud no matter the time 
 # check if a key has already been buffered and don't play press any key message 
+# bug: if I ctrl-z it starts counting out loud no matter the time 
 
 # 0=silence, 100=no change, 200=doubled volume
 _VOLUME="25"
