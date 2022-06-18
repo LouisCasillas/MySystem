@@ -3,8 +3,6 @@
 beginning_announcement "Time for box breathing!" "Stand up." 8
 
 SETS=15
-MID_SET="$(( $SETS / 2 ))"
-LAST_SET="$(( $SETS - 1 ))"
 IN_COUNT=6
 HOLD_COUNT=6
 OUT_COUNT=6

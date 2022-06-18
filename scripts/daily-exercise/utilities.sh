@@ -239,13 +239,15 @@ function beginning_announcement()
 
 function halfway_encouragement()
 {
+	MID_SET="$(( $SETS / 2 ))"
 	if [[ "$i" -eq "$MID_SET" ]]; then
 		say_medium "$HALFWAY_MESSAGE"
 	fi
 }
 
-function last_rep_message()
+function last_set_message()
 {
+	LAST_SET="$(( $SETS - 1 ))"
 	if [[ "$i" -eq "$LAST_SET" ]]; then
 		say_medium "$LAST_SET_MESSAGE"
 	fi

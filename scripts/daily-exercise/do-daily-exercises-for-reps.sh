@@ -9,8 +9,6 @@ readarray -t rep_exercises < "$REP_FILE"
 beginning_announcement "Time for daily exercises for reps!" "Get your hand squeezers, yoga blocks, and ab wheel." 8
 
 SETS="$(wc -l $REP_FILE | cut -f1 -d' ')"
-MID_SET="$(( $SETS / 2 ))"
-LAST_SET="$(( $SETS - 1 ))"
 i=0
 
 # set the for loop to break on newlines instead of spaces

@@ -9,8 +9,6 @@ readarray -t time_exercises < "$TIME_FILE"
 beginning_announcement "Time for daily exercises for time!" "Get boxing gloves." 8
 
 SETS="$(wc -l $TIME_FILE | cut -f1 -d' ')"
-MID_SET="$(( $SETS / 2 ))"
-LAST_SET="$(( $SETS - 1 ))"
 i=0
 
 # set the for loop to break on newlines instead of spaces

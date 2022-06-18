@@ -3,15 +3,13 @@
 beginning_announcement "Time for fast cardio!" "" 8
 
 SETS=3
-MID_SET="$(( $SETS / 2 ))"
-LAST_SET="$(( $SETS - 1 ))"
 FAST_COUNT=6
 SLOW_COUNT=55
 
 for ((i=0;i<$SETS;i++))
 do
 	halfway_encouragement
-	last_rep_message
+	last_set_message
 
 	write "Set: $(( $i + 1 )) / $SETS"
 

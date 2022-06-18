@@ -3,8 +3,6 @@
 beginning_announcement "Time for I M S T breathing!" "Get your mouth cover and stand up." 8
 
 SETS=50
-MID_SET="$(( $SETS / 2 ))"
-LAST_SET="$(( $SETS - 1 ))"
 IN_COUNT=9
 OUT_COUNT=3
 
