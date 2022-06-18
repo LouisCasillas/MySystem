@@ -23,6 +23,11 @@
 	- Daily calorie goal
 		- 2,300 kcal
 
+------------
+
 	- Streak
-		- [x] June 16, 2022
-		- [x] June 15, 2022
+
+	Date | Box Breathing | IMST Breathing | Sprints | Slow Cardio | Daily For Time | Daily for Reps | Other Exercise |
+	---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- |
+	June 16, 2022 | &check; | &check; | ---- | ---- | ---- | ---- | ---- |
+
