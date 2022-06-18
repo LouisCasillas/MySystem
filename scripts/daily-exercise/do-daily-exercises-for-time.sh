@@ -17,7 +17,7 @@ IFS="$(echo -e '\n\b')"
 for exercise in ${time_exercises[@]}; do
 	halfway_encouragement
 
-	write "Set: $(( $i + 1 )) / $SETS"
+	print_set
 
 	say_loud "$exercise"
 	sleep 0.25

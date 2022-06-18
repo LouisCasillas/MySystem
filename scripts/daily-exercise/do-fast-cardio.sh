@@ -11,13 +11,14 @@ do
 	halfway_encouragement
 	last_set_message
 
-	write "Set: $(( $i + 1 )) / $SETS"
+	print_set
 
 	say_medium "SLOW"
 	countdown "$SLOW_COUNT" "yes" 5
 
 	say_super_loud "FAST"
 	play_super_loud "$BEEP_SOUND"
+
 	countdown "$FAST_COUNT" "yes"
 done
 

@@ -15,9 +15,9 @@ i=0
 _IFS="$IFS"
 IFS="$(echo -e '\n\b')"
 for exercise in ${rep_exercises[@]}; do
-	encouragement
+	halfway_encouragement
 
-	write "Set: $(( $i + 1 )) / $SETS"
+	print_set
 
 	say_loud "$exercise"
 	sleep 0.25
@@ -27,6 +27,7 @@ for exercise in ${rep_exercises[@]}; do
 
 	(( i++ ))
 
+	# don't ask for a key press on the last set
 	if [[ "$i" -lt "$SETS" ]]; then
 		say_loud "Press any key"
 		read -n 1

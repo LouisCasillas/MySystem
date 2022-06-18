@@ -11,7 +11,7 @@ for ((i=0;i<$SETS;i++))
 do
 	halfway_encouragement
 
-	write "Set: $(( $i + 1 )) / $SETS"
+	print_set
 
 	say_loud "IN"
 	countdown "$IN_COUNT"

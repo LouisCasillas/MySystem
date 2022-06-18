@@ -2,10 +2,9 @@ BEEP_SOUND="beep.wav"
 FINISH_SOUND="applause.wav"
 
 # TODO:
-# move encouragement messages into utilities, streamline other files to remove duplicate code for loops and others if possible
 # check if a key has already been buffered and don't play press any key message 
 # add extra exercise script
-# bug: if I ctrl-z it starts counting out loud no matter the time 
+# bug: if I ctrl-z it starts counting out loud no matter the time, also when using earbuds on phone and change volume
 
 # 0=silence, 100=no change, 200=doubled volume
 _VOLUME="25"
@@ -329,4 +328,9 @@ function start_random_exercise_script()
 	esac
 
 	bash "$random_exercise_group_script"
+}
+
+function print_set()
+{
+	write "Set: $(( $i + 1 )) / $SETS"
 }
