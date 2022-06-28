@@ -38,6 +38,7 @@ SLOW_CARDIO_SCRIPT="do-slow-cardio.sh"
 DAILY_FOR_TIME_SCRIPT="do-daily-exercises-for-time.sh"
 DAILY_FOR_REPS_SCRIPT="do-daily-exercises-for-reps.sh"
 EXTRA_EXERCISE_SCRIPT="do-extra-exercise.sh"
+BICYCLE_MILEAGE_SCRIPT="add-bicycle-mileage.sh"
 
 HALFWAY_MESSAGE="Halfway there! Keep going!"
 LAST_SET_MESSAGE="Last round!"
@@ -162,7 +163,7 @@ function countdown()
 	# TODO:
 	# split want_beep into want_halfway_beep and want_ending_beep
 	want_beep="$2"
-	halfway_time="$(( $total_time / 2))"
+	halfway_time="$(( $total_time / 2 ))"
 
 	# only start speaking the countdown numbers once this number is reached
 	speaking_time="$3"
