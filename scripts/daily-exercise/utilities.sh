@@ -261,12 +261,17 @@ function get_current_date_row()
 	today_row="$(grep --line-number --max-count=1 --no-messages -- "$current_date" "$README_FILENAME")"
 
 	if [[ -z "$today_row" ]]; then
-		readme_line_number="$(grep --line-number --max-count=1 --no-messages -- '---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- |' "$README_FILENAME" | cut -d: -f1)"
+		readme_line_number="$(grep --line-number --max-count=1 --no-messages -- '---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- |' "$README_FILENAME" | cut -d: -f1)"
 
-		sed -i -e "$readme_line_number p" "$README_FILENAME"
+		if [[ -z "$readme_line_number" ]]; then
+			readme_line_number="$(wc -l "$README_FILENAME" | cut -d' ' -f1)"
+		fi
+
+		sed -i -e "$readme_line_number""a \n" "$README_FILENAME"
+
 		(( readme_line_number++ ))
 
-		readme_line="$current_date | ---- | ---- | ---- | ---- | ---- | ---- | ---- |"
+		readme_line="$current_date | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- |"
 		sed -i -e "$readme_line_number c $readme_line" "$README_FILENAME"
 	else
 		readme_line_number="$(echo "$today_row" | cut -d: -f1)"
@@ -279,13 +284,18 @@ function add_checkmark_to_readme()
 	# TODO: Make sure that an empty line with only ---- is added for the table to work
 
 	column="$1"
+	message="$2"
 
 	readme_line_number=""
 	readme_line=""
 
 	get_current_date_row
 
-	new_line="$(echo -n $readme_line | tr '|' '\n' | sed "$column c \ $EXERCISE_CHECK_STRING " | tr '\n' '|')"
+	if [[ ! -z "$message" ]]; then
+		new_line="$(echo -n $readme_line | tr '|' '\n' | sed "$column c \ $EXERCISE_CHECK_STRING - $message " | tr '\n' '|')"
+	else
+		new_line="$(echo -n $readme_line | tr '|' '\n' | sed "$column c \ $EXERCISE_CHECK_STRING " | tr '\n' '|')"
+	fi
 
 	sed -i -e "$readme_line_number c $new_line" "$README_FILENAME"
 }
