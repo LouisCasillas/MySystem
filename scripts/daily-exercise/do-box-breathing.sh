@@ -26,6 +26,6 @@ do
 	countdown "$HOLD_COUNT"
 done
 
-add_checkmark_to_readme $BOX_BREATHING_COLUMN
+add_checkmark_to_readme $BOX_BREATHING_README_COLUMN
 
 play_medium "$FINISH_SOUND"

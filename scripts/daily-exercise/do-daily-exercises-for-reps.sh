@@ -35,6 +35,6 @@ for exercise in ${rep_exercises[@]}; do
 done
 IFS="$_IFS"
 
-add_checkmark_to_readme $DAILY_FOR_REPS_COLUMN
+add_checkmark_to_readme $DAILY_FOR_REPS_README_COLUMN
 
 play_medium "$FINISH_SOUND"

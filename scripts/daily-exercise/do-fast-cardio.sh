@@ -22,6 +22,6 @@ do
 	countdown "$FAST_COUNT" "yes"
 done
 
-add_checkmark_to_readme $FAST_CARDIO_COLUMN
+add_checkmark_to_readme $FAST_CARDIO_README_COLUMN "$type_of_cardio"
 
 play_medium "$FINISH_SOUND"

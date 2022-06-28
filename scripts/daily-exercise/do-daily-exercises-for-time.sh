@@ -29,6 +29,6 @@ for exercise in ${time_exercises[@]}; do
 done
 IFS="$_IFS"
 
-add_checkmark_to_readme $DAILY_FOR_TIME_COLUMN
+add_checkmark_to_readme $DAILY_FOR_TIME_README_COLUMN
 
 play_medium "$FINISH_SOUND"
