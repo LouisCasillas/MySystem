@@ -1,4 +1,4 @@
-Exercise,                                        Cardio Exercises,  Dumbbell,  Bodyweight Exercises,  Band Exercises,  Abs,    Boxing
+Exercise,                                        Cardio,  Dumbbell,  Bodyweight,  Band,  Ab,    Boxing
 180 Jump Squats,                                 TRUE,              FALSE,     FALSE,                 FALSE,           FALSE,  FALSE
 Ab Roller,                                       FALSE,             FALSE,     TRUE,                  FALSE,           TRUE,   FALSE
 Arm Thrusters,                                   FALSE,             TRUE,      FALSE,                 FALSE,           FALSE,  FALSE
@@ -88,7 +88,7 @@ Hyperextensions - Lying Legs,                    TRUE,              FALSE,     F
 Jogging,                                         TRUE,              FALSE,     FALSE,                 FALSE,           FALSE,  FALSE
 Jump Rope,                                       FALSE,             FALSE,     FALSE,                 FALSE,           FALSE,  FALSE
 Jump with Knee Tuck,                             FALSE,             FALSE,     FALSE,                 FALSE,           FALSE,  FALSE
-"Jump,                                            Jump,              Squat",   TRUE,                  FALSE,           TRUE,   FALSE,   FALSE,  FALSE
+Jump-Jump-Squat,                                 TRUE,              FALSE,     TRUE,                  FALSE,           FALSE,  FALSE
 Jumping Jacks,                                   TRUE,              FALSE,     TRUE,                  FALSE,           FALSE,  FALSE
 Jumping Jacks - Half,                            FALSE,             FALSE,     FALSE,                 FALSE,           FALSE,  FALSE
 Jumping Lunges,                                  TRUE,              TRUE,      FALSE,                 FALSE,           FALSE,  FALSE
