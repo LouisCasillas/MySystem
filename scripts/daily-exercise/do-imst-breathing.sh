@@ -13,10 +13,10 @@ do
 	print_set
 
 	say_loud "IN"
-	countdown "$IN_COUNT"
+	countdown "$IN_COUNT" "no" 0
 
 	say_loud "OUT"
-	countdown "$OUT_COUNT"
+	countdown "$OUT_COUNT" "no" 0
 done
 
 add_checkmark_to_readme $IMST_BREATHING_README_COLUMN
