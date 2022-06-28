@@ -1,5 +1,7 @@
 . utilities.sh
 
+read -p 'What exercise are you doing for cardio? ' type_of_cardio
+
 beginning_announcement "Time for fast cardio!" "" 8
 
 SETS=3

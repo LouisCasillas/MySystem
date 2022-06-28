@@ -1,5 +1,7 @@
 . utilities.sh
 
+read -p 'What exercise are you doing for cardio? ' type_of_cardio
+
 beginning_announcement "Time for slow cardio!" "" 8
 
 SETS=15
@@ -16,6 +18,6 @@ do
 	countdown "$SLOW_COUNT" "yes" 5
 done
 
-add_checkmark_to_readme $SLOW_CARDIO_COLUMN
+add_checkmark_to_readme $SLOW_CARDIO_README_COLUMN "$type_of_cardio"
 
 play_medium "$FINISH_SOUND"
