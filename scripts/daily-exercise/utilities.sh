@@ -159,6 +159,8 @@ function countdown()
 	}
 
 	total_time="$1"
+	# TODO:
+	# split want_beep into want_halfway_beep and want_ending_beep
 	want_beep="$2"
 	halfway_time="$(( $total_time / 2))"
 
@@ -274,6 +276,8 @@ function get_current_date_row()
 
 function add_checkmark_to_readme()
 {
+	# TODO: Make sure that an empty line with only ---- is added for the table to work
+
 	column="$1"
 
 	readme_line_number=""
