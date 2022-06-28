@@ -6,7 +6,6 @@
 			- Box breathing.
 			- IMST breathing.
 		- Cardio
-			- Note: Cardio is usually done on an exercise bike or outside jogging/running.
 			- Sprints
 				- Slow cardio ended by sprint, repeat.
 			- Slow steady cardio
@@ -25,7 +24,7 @@
 
 ------------
 
-## Streak
+## Exercise Log
 
-Date | Box Breathing | IMST Breathing | Fast Cardio | Slow Cardio | Daily For Time | Daily for Reps | Extra Exercise |
----- | ---- | ---- | ---- | ---- | ---- | ---- | ---- |
+Date | Box Breathing | IMST Breathing | Fast Cardio | Slow Cardio | Daily For Time | Daily for Reps | Extra Exercise | Bicycle Mileage |
+June 27, 2022 | &check; | &check; | ---- | &check; | ---- | ---- | ---- | ---- |
