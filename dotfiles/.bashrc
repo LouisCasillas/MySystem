@@ -89,6 +89,11 @@ alias rs='rsync --recursive --verbose --ipv4 --progress --partial --checksum --s
 for file in ~/.bash_functions_*; do
 	if [[ -r "$file" ]] ; then
 		. "$file"
+
+		# TODO: make all functions usable in bash scripts
+		#for function_name in `sed -n -e 's/function \([^_].*\)[(].*$/\1/p' "$file"`; do
+		#	export -f $function_name
+		#done
 	fi
 done
 
